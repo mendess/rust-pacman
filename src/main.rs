@@ -6,18 +6,18 @@ use piston::input::*;
 use glutin_window::GlutinWindow as Window;
 use opengl_graphics::{ GlGraphics, OpenGL };
 
+use crate::pacman::PacManState;
+
 pub struct App {
     gl: GlGraphics,
-    rotation: f64,
-    going_back: bool,
-    position: (f64, f64),
+    game: PacManState,
 }
 
 impl App {
     fn render(&mut self, args: &RenderArgs) {
         use graphics::*;
 
-        const GREEN: [f32; 4] = [0.0, 1.0, 0.0, 1.0];
+        const BLACK: [f32; 4] = [0.0, 0.0, 0.0, 0.0];
         const RED:   [f32; 4] = [1.0, 0.0, 0.0, 1.0];
 
         let square = rectangle::square(0.0, 0.0, 50.0);
@@ -25,11 +25,11 @@ impl App {
         let (x,y) = (args.width / 2.0 + self.position.0, args.height / 2.0 + self.position.1);
 
         self.gl.draw(args.viewport(), |c , gl| {
-            clear(GREEN, gl);
+            clear(BLACK, gl);
             let transform = c.transform.trans(x, y)
                 .rot_rad(rotation)
                 .trans(-25.0, -25.0);
-            rectangle(RED, square, transform, gl);
+            rectangle(RED, square, transform);
         });
     }
 
@@ -70,8 +70,8 @@ fn main() {
     let opengl = OpenGL::V3_2;
 
     let mut window: Window = WindowSettings::new(
-        "spinning-square",
-        [200, 200]
+        "pacman",
+        [500, 500]
         )
         .opengl(opengl)
         .exit_on_esc(true)
@@ -80,9 +80,7 @@ fn main() {
 
     let mut app = App {
         gl: GlGraphics::new(opengl),
-        rotation: 0.0,
-        going_back: false,
-        position: (0.0, 0.0),
+        game: PacManState::default(),
     };
 
     let mut events = Events::new(EventSettings::new());
