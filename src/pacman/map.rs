@@ -26,7 +26,7 @@ impl Map {
     pub fn get(&self, x: u32, y: u32) -> Option<Tile> {
         let (x, y) = (x as usize, y as usize);
         if x * y < MAP_WIDTH * MAP_HEIGHT {
-            Some(self.tiles[(MAP_WIDTH * x + y)])
+            Some(self.tiles[MAP_WIDTH * y + x])
         } else {
             None
         }
@@ -34,19 +34,11 @@ impl Map {
 
     fn set(&mut self, x: u32, y: u32, tile: Tile) {
         let (x, y) = (x as usize, y as usize);
-        self.tiles[MAP_WIDTH * x + y] = tile;
+        self.tiles[MAP_WIDTH * y + x] = tile;
     }
 
     pub fn consume(&mut self, x: u32, y: u32) {
         self.set(x, y, Tile::NotWall(PU::Empty))
-    }
-
-    pub const fn width() -> u32 {
-        MAP_WIDTH as u32
-    }
-
-    pub const fn height() -> u32 {
-        MAP_HEIGHT as u32
     }
 
     pub fn scan_lines(&self) -> ScanLine {
@@ -72,11 +64,11 @@ impl Default for Map {
             "######.##### ## #####.######",
             "######.##### ## #####.######",
             "######.##          ##.######",
-            "######.##          ##.######",
-            "######.##          ##.######",
-            "#     .              .     #",
-            "######.##          ##.######",
-            "######.##          ##.######",
+            "######.## ######## ##.######",
+            "######.## #      # ##.######",
+            "#     .   #      #   .     #",
+            "######.## #      # ##.######",
+            "######.## ######## ##.######",
             "######.##          ##.######",
             "######.## ######## ##.######",
             "######.## ######## ##.######",
@@ -94,7 +86,6 @@ impl Default for Map {
 
         let map :Vec<Tile> = map_str.iter().flat_map(|x| x.chars())
             .filter_map(|c| {
-                print!("{:?}", c);
                 match c {
                     '#' => Some(Tile::Wall),
                     '.' => Some(Tile::NotWall(PU::Dot)),
@@ -103,7 +94,6 @@ impl Default for Map {
                     _ => None,
                 }
             }).collect();
-        println!("{}", map.len());
         let mut m = [Tile::NotWall(PU::Empty); MAP_WIDTH * MAP_HEIGHT];
         for i in 0..map.len() {
             m[i] = map[i];

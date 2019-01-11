@@ -4,7 +4,6 @@ mod controler;
 
 use piston::window::WindowSettings;
 use piston::event_loop::{ EventSettings, Events };
-use piston::event_loop::EventLoop;
 use piston::input::RenderEvent;
 use glutin_window::GlutinWindow as Window;
 use opengl_graphics::{ GlGraphics, OpenGL };
@@ -25,7 +24,7 @@ fn main() {
         .unwrap();
 
     let mut gl = GlGraphics::new(opengl);
-    let mut controler = Controler::new(Pacman::default());
+    let mut controler = Controler::new(Pacman::new());
     let view = View::new();
 
     let mut events = Events::new(EventSettings::new());
