@@ -4,7 +4,7 @@ use self::map::Map;
 use self::map::Tile;
 use self::map::PU;
 
-pub struct PacManState {
+pub struct Pacman {
     map: Map,
     lives: u8,
     score: u32,
@@ -16,6 +16,7 @@ pub struct PacManState {
     ghostbusting: bool,
 }
 
+#[derive(Copy, Clone)]
 pub enum Direction {
     Up, Down, Left, Right
 }
@@ -26,12 +27,19 @@ struct Ghost {
     ttr: f64,
 }
 
-impl PacManState {
+pub struct Stats {
+    pub lives: u8,
+    pub score: u32,
+    pub level: u32,
+    pub ghostbusting: bool,
+}
+
+impl Pacman {
     pub fn new() -> Self {
-        PacManState::default()
+        Pacman::default()
     }
 
-    pub fn change_direction(&mut self, direction: Direction) {
+    pub fn set_direction(&mut self, direction: Direction) {
         self.direction = direction;
     }
 
@@ -41,10 +49,10 @@ impl PacManState {
 
     fn move_pacman(&mut self) {
         let (tx, ty) = match self.direction {
-            Direction::Up => (self.x - 1, self.y),
-            Direction::Down => (self.x + 1, self.y),
-            Direction::Left => (self.x, self.y - 1),
-            Direction::Right => (self.x, self.y + 1),
+            Direction::Up => (self.x, self.y - 1),
+            Direction::Down => (self.x, self.y + 1),
+            Direction::Left => (self.x - 1, self.y),
+            Direction::Right => (self.x + 1, self.y),
         };
         let tile = match self.map.get(tx, ty) {
             None => (),
@@ -67,11 +75,40 @@ impl PacManState {
             },
         };
     }
+
+    pub fn map(&self) -> &Map {
+        &self.map
+    }
+
+    pub fn player(&self) -> (u32, u32, Direction) {
+        (self.x, self.y, self.direction)
+    }
+
+    pub fn ghosts(&self) -> &[Ghost] {
+        &self.ghosts
+    }
+
+    pub fn stats(&self) -> Stats {
+        Stats {
+            lives: self.lives,
+            score: self.score,
+            level: self.level,
+            ghostbusting: self.ghostbusting,
+        }
+    }
+
+    pub const fn map_width() -> u32 {
+        self::map::Map::width()
+    }
+
+    pub const fn map_height() -> u32 {
+        self::map::Map::height()
+    }
 }
 
-impl Default for PacManState {
+impl Default for Pacman {
     fn default() -> Self {
-        PacManState {
+        Pacman {
             map: Map::default(),
             lives: 5,
             score: 0,

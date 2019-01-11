@@ -1,6 +1,9 @@
 
+const MAP_WIDTH :u32 = 28;
+const MAP_HEIGHT :u32 = 29;
+
 pub struct Map {
-    tiles: [Tile; 25*28],
+    tiles: [Tile; (MAP_WIDTH*MAP_HEIGHT) as usize],
 }
 
 #[derive(Clone, Copy)]
@@ -22,27 +25,34 @@ impl Map {
     }
 
     pub fn get(&self, x: u32, y: u32) -> Option<Tile> {
-        if x * y < 25 * 28 {
-            Some(self.tiles[(28 * x + y) as usize])
+        if x * y < MAP_WIDTH * MAP_HEIGHT {
+            Some(self.tiles[(MAP_WIDTH * x + y) as usize])
         } else {
             None
         }
     }
 
     fn set(&mut self, x: u32, y: u32, tile: Tile) {
-        self.tiles[(28 * x + y) as usize] = tile;
+        self.tiles[(MAP_WIDTH * x + y) as usize] = tile;
     }
 
     pub fn consume(&mut self, x: u32, y: u32) {
         self.set(x, y, Tile::NotWall(PU::Empty))
     }
 
+    pub const fn width() -> u32 {
+        MAP_WIDTH
+    }
+
+    pub const fn height() -> u32 {
+        MAP_HEIGHT
+    }
 }
 
 impl Default for Map {
     fn default() -> Self {
         let mut m = Map {
-            tiles: [Tile::NotWall(PU::Empty); 25 * 28],
+            tiles: [Tile::NotWall(PU::Empty); (MAP_WIDTH * MAP_HEIGHT) as usize],
         };
         for i in 0..28 {
             m.set(0, i, Tile::Wall);
