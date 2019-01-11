@@ -1,4 +1,4 @@
-use crate::pacman::{ Pacman, Direction };
+use crate::pacman::{ Pacman, Direction, map::Map };
 use piston::input::Event;
 use piston::input::{ PressEvent, UpdateEvent };
 use piston::input::Button;
@@ -26,7 +26,7 @@ impl Controler {
         }
 
         if let Some(u) = event.update_args() {
-            self.game.tick();
+            self.game.tick(u.dt);
         }
 
         false
@@ -40,7 +40,11 @@ impl Controler {
         super::pacman::Pacman::map_height()
     }
 
-    pub fn get_player(&self) -> (u32, u32, Direction) {
+    pub fn get_player(&self) -> (f64, f64, Direction) {
         self.game.player()
+    }
+
+    pub fn get_map(&self) -> &Map {
+        self.game.map()
     }
 }

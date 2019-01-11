@@ -1,4 +1,4 @@
-mod map;
+pub mod map;
 
 use self::map::Map;
 use self::map::Tile;
@@ -9,11 +9,12 @@ pub struct Pacman {
     lives: u8,
     score: u32,
     level: u32,
-    x: u32,
-    y: u32,
+    x: f64,
+    y: f64,
     direction: Direction,
     ghosts: [Ghost; 4],
     ghostbusting: bool,
+    delta: f64,
 }
 
 #[derive(Copy, Clone)]
@@ -21,7 +22,7 @@ pub enum Direction {
     Up, Down, Left, Right
 }
 
-struct Ghost {
+pub struct Ghost {
     x: u32,
     y: u32,
     ttr: f64,
@@ -43,18 +44,19 @@ impl Pacman {
         self.direction = direction;
     }
 
-    pub fn tick(&mut self) {
-        self.move_pacman();
+    pub fn tick(&mut self, dt: f64) {
+        self.move_pacman(dt);
     }
 
-    fn move_pacman(&mut self) {
+    fn move_pacman(&mut self, dt: f64) {
         let (tx, ty) = match self.direction {
-            Direction::Up => (self.x, self.y - 1),
-            Direction::Down => (self.x, self.y + 1),
-            Direction::Left => (self.x - 1, self.y),
-            Direction::Right => (self.x + 1, self.y),
+            Direction::Up => (self.x, self.y - (dt * 4.0)),
+            Direction::Down => (self.x, self.y + (dt * 4.0)),
+            Direction::Left => (self.x - (dt * 4.0), self.y),
+            Direction::Right => (self.x + (dt * 4.0), self.y),
         };
-        let tile = match self.map.get(tx, ty) {
+        let (x, y) = (tx.floor() as u32, ty.floor() as u32);
+        match self.map.get(x, y) {
             None => (),
             Some(Tile::Wall) => (),
             Some(Tile::NotWall(pu)) => {
@@ -63,24 +65,24 @@ impl Pacman {
                 match pu {
                     PU::Empty => (),
                     PU::Dot => {
-                        self.map.consume(tx, ty);
+                        self.map.consume(x, y);
                         self.score += 10;
                     },
                     PU::PowerUp => {
-                        self.map.consume(tx, ty);
+                        self.map.consume(x, y);
                         self.ghostbusting = true;
                         self.score += 100;
                     },
                 }
             },
-        };
+        }
     }
 
     pub fn map(&self) -> &Map {
         &self.map
     }
 
-    pub fn player(&self) -> (u32, u32, Direction) {
+    pub fn player(&self) -> (f64, f64, Direction) {
         (self.x, self.y, self.direction)
     }
 
@@ -113,8 +115,8 @@ impl Default for Pacman {
             lives: 5,
             score: 0,
             level: 1,
-            x: 1,
-            y: 1,
+            x: 1.0,
+            y: 1.0,
             direction: Direction::Left,
             ghosts: [
                 Ghost{ x: 5, y: 5, ttr: 0.0 },
@@ -123,6 +125,7 @@ impl Default for Pacman {
                 Ghost{ x: 5, y: 5, ttr: 0.0 }
             ],
             ghostbusting: false,
+            delta: 0.0,
         }
     }
 }

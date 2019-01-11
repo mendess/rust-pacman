@@ -1,6 +1,5 @@
-
-const MAP_WIDTH :u32 = 28;
-const MAP_HEIGHT :u32 = 29;
+const MAP_WIDTH :usize = 28;
+const MAP_HEIGHT :usize = 31;
 
 pub struct Map {
     tiles: [Tile; (MAP_WIDTH*MAP_HEIGHT) as usize],
@@ -25,15 +24,17 @@ impl Map {
     }
 
     pub fn get(&self, x: u32, y: u32) -> Option<Tile> {
+        let (x, y) = (x as usize, y as usize);
         if x * y < MAP_WIDTH * MAP_HEIGHT {
-            Some(self.tiles[(MAP_WIDTH * x + y) as usize])
+            Some(self.tiles[(MAP_WIDTH * x + y)])
         } else {
             None
         }
     }
 
     fn set(&mut self, x: u32, y: u32, tile: Tile) {
-        self.tiles[(MAP_WIDTH * x + y) as usize] = tile;
+        let (x, y) = (x as usize, y as usize);
+        self.tiles[MAP_WIDTH * x + y] = tile;
     }
 
     pub fn consume(&mut self, x: u32, y: u32) {
@@ -41,27 +42,94 @@ impl Map {
     }
 
     pub const fn width() -> u32 {
-        MAP_WIDTH
+        MAP_WIDTH as u32
     }
 
     pub const fn height() -> u32 {
-        MAP_HEIGHT
+        MAP_HEIGHT as u32
+    }
+
+    pub fn scan_lines(&self) -> ScanLine {
+        ScanLine {
+            map: &self,
+            line: 0,
+        }
     }
 }
 
 impl Default for Map {
     fn default() -> Self {
-        let mut m = Map {
-            tiles: [Tile::NotWall(PU::Empty); (MAP_WIDTH * MAP_HEIGHT) as usize],
-        };
-        for i in 0..28 {
-            m.set(0, i, Tile::Wall);
-            m.set(24, i, Tile::Wall);
+        let map_str = [
+            "############################",
+            "#............##............#",
+            "#.####.#####.##.#####.####.#",
+            "#X####.#####.##.#####.####X#",
+            "#.####.#####.##.#####.####.#",
+            "#..........................#",
+            "#.####.##.########.##.####.#",
+            "#.####.##.########.##.####.#",
+            "#......##....##....##......#",
+            "######.##### ## #####.######",
+            "######.##### ## #####.######",
+            "######.##          ##.######",
+            "######.##          ##.######",
+            "######.##          ##.######",
+            "#     .              .     #",
+            "######.##          ##.######",
+            "######.##          ##.######",
+            "######.##          ##.######",
+            "######.## ######## ##.######",
+            "######.## ######## ##.######",
+            "#............##............#",
+            "#.####.#####.##.#####.####.#",
+            "#.####.#####.##.#####.####.#",
+            "#X..##................##..X#",
+            "###.##.##.########.##.##.###",
+            "###.##.##.########.##.##.###",
+            "#......##....##....##......#",
+            "#.##########.##.##########.#",
+            "#.##########.##.##########.#",
+            "#..........................#",
+            "############################"];
+
+        let map :Vec<Tile> = map_str.iter().flat_map(|x| x.chars())
+            .filter_map(|c| {
+                print!("{:?}", c);
+                match c {
+                    '#' => Some(Tile::Wall),
+                    '.' => Some(Tile::NotWall(PU::Dot)),
+                    ' ' => Some(Tile::NotWall(PU::Empty)),
+                    'X' => Some(Tile::NotWall(PU::PowerUp)),
+                    _ => None,
+                }
+            }).collect();
+        println!("{}", map.len());
+        let mut m = [Tile::NotWall(PU::Empty); MAP_WIDTH * MAP_HEIGHT];
+        for i in 0..map.len() {
+            m[i] = map[i];
         }
-        for i in 1..24 {
-            m.set(i, 0, Tile::Wall);
-            m.set(i, 27, Tile::Wall);
+        Map {
+            tiles: m
         }
-        m
+    }
+}
+
+pub struct ScanLine<'a> {
+    map: &'a Map,
+    line: usize,
+}
+
+
+impl<'a> Iterator for ScanLine<'a> {
+    type Item = &'a [Tile];
+
+    fn next(&mut self) -> Option<&'a [Tile]> {
+        let line_start = self.line * MAP_WIDTH;
+        self.line += 1;
+        if line_start >= self.map.tiles.len() {
+            None
+        } else {
+            Some(&self.map.tiles[line_start..(line_start + MAP_WIDTH)])
+        }
     }
 }
