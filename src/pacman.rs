@@ -15,10 +15,8 @@ pub struct Pacman {
     lives: u8,
     score: u32,
     level: u32,
-    x: u32,
-    y: u32,
-    xf: f64,
-    yf: f64,
+    x: f64,
+    y: f64,
     direction: Direction,
     direction_intent: Direction,
     ghosts: [Ghost; 4],
@@ -29,7 +27,7 @@ pub struct Pacman {
 
 #[derive(Copy, Clone, Debug)]
 pub enum Direction {
-    Up, Down, Left, Right, Still
+    Up, Down, Left, Right
 }
 
 #[allow(dead_code)]
@@ -57,46 +55,44 @@ impl Pacman {
     }
 
     pub fn tick(&mut self, dt: f64) {
-        self.ticks += 1;
+        self.ticks += 1; // TODO: make this usefull
         self.move_pacman(dt);
     }
 
-    pub fn update_float_coords(&mut self, dt: f64) {
-        let delta = dt * 10.0;
-        match self.direction {
-            Direction::Up =>    self.yf -= delta,
-            Direction::Down =>  self.yf += delta,
-            Direction::Left =>  self.xf -= delta,
-            Direction::Right => self.xf += delta,
-            Direction::Still => (),
-        };
-    }
-
-    fn move_pacman(&mut self, _dt: f64) {
+    fn move_pacman(&mut self, dt: f64) {
         if self.can_turn() {
             self.direction = self.direction_intent;
         }
         let (x, y) = match self.direction {
-            Direction::Up => (self.x, self.y - 1),
-            Direction::Down => (self.x, self.y + 1),
-            Direction::Left => (self.x - 1, self.y),
-            Direction::Right => (self.x + 1, self.y),
-            Direction::Still => return,
+            Direction::Up => (self.x, self.y - (dt * 4.0)),
+            Direction::Down => (self.x, self.y + (dt * 4.0)),
+            Direction::Left => (self.x - (dt * 4.0), self.y),
+            Direction::Right => (self.x + (dt * 4.0), self.y),
         };
-        match self.map.get(x, y) {
+        let (past_center, nextPost@(x, y)) = match self.direction {
+            Direction::Up    => (y < y.round(), (x as u32          , y.floor() as u32)),
+            Direction::Down  => (y > y.round(), (x as u32          , y.ceil() as u32)),
+            Direction::Left  => (x > x.round(), (x.floor() as u32  , y as u32)),
+            Direction::Right => (x < x.round(), (x.ceil() as u32, y as u32)),
+        };
+        if past_center {
+
+        }
+        let (ix, iy) = (x.round() as u32, y.round() as u32); // truncate
+        match self.map.get(ix, iy) {
             None => (),
-            Some(Tile::Wall) => self.direction = Direction::Still,
+            Some(Tile::Wall) => (),
             Some(Tile::NotWall(pu)) => {
                 self.x = x;
                 self.y = y;
                 match pu {
                     PU::Empty => (),
                     PU::Dot => {
-                        self.map.consume(x, y);
+                        self.map.consume(ix, iy);
                         self.score += 10;
                     },
                     PU::PowerUp => {
-                        self.map.consume(x, y);
+                        self.map.consume(ix, iy);
                         self.ghost_mode = GhostMode::Frightened;
                         self.score += 100;
                     },
@@ -107,13 +103,12 @@ impl Pacman {
 
     fn can_turn(&self) -> bool {
         let (x, y) = match self.direction_intent {
-            Direction::Up => (self.x, self.y - 1),
-            Direction::Down => (self.x, self.y + 1),
-            Direction::Left => (self.x - 1, self.y),
-            Direction::Right => (self.x + 1, self.y),
-            Direction::Still => unreachable!(),
+            Direction::Up => (self.x, self.y - 1.0),
+            Direction::Down => (self.x, self.y + 1.0),
+            Direction::Left => (self.x - 1.0, self.y),
+            Direction::Right => (self.x + 1.0, self.y),
         };
-        match self.map.get(x, y) {
+        match self.map.get(x.floor() as u32, y.floor() as u32) {
             None => false,
             Some(Tile::Wall) => false,
             _ => true
@@ -148,10 +143,8 @@ impl Default for Pacman {
             lives: 5,
             score: 0,
             level: 1,
-            x: 1,
-            y: 1,
-            xf: 1.0,
-            yf: 1.0,
+            x: 1.0,
+            y: 1.0,
             direction: Direction::Left,
             direction_intent: Direction::Left,
             ghosts: [

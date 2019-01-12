@@ -17,22 +17,21 @@ impl Controler {
         if let Some(k) = event.press_args() {
             use piston::input::keyboard::Key;
             match k {
-                Button::Keyboard(Key::Up) => self.game.set_direction_intent(Direction::Up),
-                Button::Keyboard(Key::Down) => self.game.set_direction_intent(Direction::Down),
-                Button::Keyboard(Key::Left) => self.game.set_direction_intent(Direction::Left),
+                Button::Keyboard(Key::Up)    => self.game.set_direction_intent(Direction::Up),
+                Button::Keyboard(Key::Down)  => self.game.set_direction_intent(Direction::Down),
+                Button::Keyboard(Key::Left)  => self.game.set_direction_intent(Direction::Left),
                 Button::Keyboard(Key::Right) => self.game.set_direction_intent(Direction::Right),
                 Button::Keyboard(Key::Q) => return true,
+                Button::Keyboard(Key::K) => self.game.set_direction_intent(Direction::Up),
+                Button::Keyboard(Key::J) => self.game.set_direction_intent(Direction::Down),
+                Button::Keyboard(Key::H) => self.game.set_direction_intent(Direction::Left),
+                Button::Keyboard(Key::L) => self.game.set_direction_intent(Direction::Right),
                 _ => (),
             }
         }
 
         if let Some(u) = event.update_args() {
-            self.delta += u.dt;
-            self.game.update_float_coords(u.dt);
-            if self.delta > 0.1 {
-                self.delta -= 0.1;
-                self.game.tick(u.dt);
-            }
+            self.game.tick(u.dt);
         }
 
         false
