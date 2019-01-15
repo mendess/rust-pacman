@@ -45,9 +45,6 @@ impl Pacman {
 
     pub fn set_direction_intent(&mut self, direction: Direction) {
         self.direction_intent = direction;
-        if self.can_turn() {
-            self.direction = self.direction_intent;
-        }
     }
 
     pub fn direction_intent(&self) -> Direction {
@@ -60,9 +57,9 @@ impl Pacman {
     }
 
     fn move_pacman(&mut self, dt: f64) {
-        // if self.can_turn() {
-        //     self.direction = self.direction_intent;
-        // }
+        if self.can_turn() {
+            self.direction = self.direction_intent;
+        }
         let (x, y) = match self.direction {
             Direction::Up => (self.x, self.y - (dt * 4.0)),
             Direction::Down => (self.x, self.y + (dt * 4.0)),
@@ -84,7 +81,7 @@ impl Pacman {
             };
             println!("{:?}, {:?}", (x,y), (ix, iy));
             match self.map.get(ix, iy) {
-                None | Some(Tile::Wall) => { self.x = self.x.round(); self.y = self.x.round(); }
+                None | Some(Tile::Wall) => { self.x = self.x.round(); self.y = self.y.round(); }
                 Some(Tile::NotWall(pu)) => {
                     self.x = x;
                     self.y = y;
@@ -111,12 +108,12 @@ impl Pacman {
 
     fn can_turn(&self) -> bool {
         let (x, y) = match self.direction_intent {
-            Direction::Up => (self.x, self.y - 1.0),
-            Direction::Down => (self.x, self.y + 1.0),
-            Direction::Left => (self.x - 1.0, self.y),
-            Direction::Right => (self.x + 1.0, self.y),
+            Direction::Up    => (self.x,       (self.y - 1.0).floor()),
+            Direction::Down  => (self.x,       (self.y + 1.0).ceil()),
+            Direction::Left  => ((self.x - 1.0).floor(), self.y),
+            Direction::Right => ((self.x + 1.0).ceil(), self.y),
         };
-        match self.map.get(x.floor() as u32, y.floor() as u32) {
+        match self.map.get(x as u32, y as u32) {
             None => false,
             Some(Tile::Wall) => false,
             _ => true
