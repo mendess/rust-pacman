@@ -25,7 +25,7 @@ pub struct Pacman {
     delta: f64,
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub enum Direction {
     Up, Down, Left, Right
 }
@@ -57,66 +57,95 @@ impl Pacman {
     }
 
     fn move_pacman(&mut self, dt: f64) {
-        if self.can_turn() {
-            self.direction = self.direction_intent;
+        match self.can_turn(dt) {
+            Some((x, y)) => {
+                self.x = x;
+                self.y = y;
+                // match pu {
+                //     PU::Empty => (),
+                //     PU::Dot | PU::PowerUp => {
+                //         self.score += self.map.consume(ix, iy);
+                //     },
+                // }
+                self.direction = self.direction_intent;
+            },
+            None => {
+                let (x, y) = self.target_pos(dt);
+                let past_center = match self.direction {
+                    Direction::Up    => y < y.round(),
+                    Direction::Down  => y > y.round(),
+                    Direction::Left  => x < x.round(),
+                    Direction::Right => x > x.round(),
+                };
+                if past_center {
+                    let (ix, iy) = match self.direction {
+                        Direction::Up    => (x as u32        , y.floor() as u32),
+                        Direction::Down  => (x as u32        , y.ceil() as u32),
+                        Direction::Left  => (x.floor() as u32, y as u32),
+                        Direction::Right => (x.ceil() as u32 , y as u32),
+                    };
+                    println!("{:?}, {:?}", (x,y), (ix, iy));
+                    match self.map.get(ix, iy) {
+                        None | Some(Tile::Wall) => {
+                            self.x = self.x.round(); self.y = self.y.round();
+                        }
+                        Some(Tile::NotWall(pu)) => {
+                            self.x = x;
+                            self.y = y;
+                            match pu {
+                                PU::Empty => (),
+                                PU::Dot => {
+                                    self.map.consume(ix, iy);
+                                    self.score += 10;
+                                },
+                                PU::PowerUp => {
+                                    self.map.consume(ix, iy);
+                                    self.ghost_mode = GhostMode::Frightened;
+                                    self.score += 100;
+                                },
+                            }
+                        },
+                    }
+                } else {
+                    self.x = x;
+                    self.y = y;
+                }
+                println!("{:?}", (self.x, self.y));
+            }
         }
-        let (x, y) = match self.direction {
+    }
+
+    fn target_pos(&self, dt: f64) -> (f64, f64) {
+        match self.direction {
             Direction::Up => (self.x, self.y - (dt * 4.0)),
             Direction::Down => (self.x, self.y + (dt * 4.0)),
             Direction::Left => (self.x - (dt * 4.0), self.y),
             Direction::Right => (self.x + (dt * 4.0), self.y),
-        };
-        let past_center = match self.direction {
-            Direction::Up    => y < y.round(),
-            Direction::Down  => y > y.round(),
-            Direction::Left  => x < x.round(),
-            Direction::Right => x > x.round(),
-        };
-        if past_center {
-            let (ix, iy) = match self.direction {
-                Direction::Up    => (x as u32          , y.floor() as u32),
-                Direction::Down  => (x as u32          , y.ceil() as u32),
-                Direction::Left  => (x.floor() as u32  , y as u32),
-                Direction::Right => (x.ceil() as u32, y as u32),
-            };
-            println!("{:?}, {:?}", (x,y), (ix, iy));
-            match self.map.get(ix, iy) {
-                None | Some(Tile::Wall) => { self.x = self.x.round(); self.y = self.y.round(); }
-                Some(Tile::NotWall(pu)) => {
-                    self.x = x;
-                    self.y = y;
-                    match pu {
-                        PU::Empty => (),
-                        PU::Dot => {
-                            self.map.consume(ix, iy);
-                            self.score += 10;
-                        },
-                        PU::PowerUp => {
-                            self.map.consume(ix, iy);
-                            self.ghost_mode = GhostMode::Frightened;
-                            self.score += 100;
-                        },
-                    }
-                },
-            }
-        } else {
-            self.x = x;
-            self.y = y;
         }
-        println!("{:?}", (self.x, self.y));
     }
 
-    fn can_turn(&self) -> bool {
-        let (x, y) = match self.direction_intent {
-            Direction::Up    => (self.x,       (self.y - 1.0).floor()),
-            Direction::Down  => (self.x,       (self.y + 1.0).ceil()),
-            Direction::Left  => ((self.x - 1.0).floor(), self.y),
-            Direction::Right => ((self.x + 1.0).ceil(), self.y),
-        };
-        match self.map.get(x as u32, y as u32) {
-            None => false,
-            Some(Tile::Wall) => false,
-            _ => true
+    fn curved_target_pos(&self, dt: f64) -> Option<(f64, f64)> {
+        use self::Direction::*;
+        let (tx, ty) = self.target_pos(dt);
+        let (x, y) = (self.x, self.y);
+        match (self.direction, self.direction_intent) {
+            (Left, Up)    => Some((x.floor(), y - ((tx - x).abs() - (x.floor() - x).abs()))),
+            (Left, Down)  => Some((x.floor(), y + ((tx - x).abs() - (x.floor() - x).abs()))),
+            (Right, Up)   => Some((x.floor(), y - ((tx - x).abs() - (x.floor() - x).abs()))),
+            (Right, Down) => Some((x.floor(), y + ((tx - x).abs() - (x.floor() - x).abs()))),
+            (Up, Left)    => Some((x - ((ty - y).abs() - (y.floor() - y).abs()), y.floor())),
+            (Up, Right)   => Some((x + ((ty - y).abs() - (y.floor() - y).abs()), y.floor())),
+            (Down, Left)  => Some((x - ((ty - y).abs() - (y.floor() - y).abs()), y.floor())),
+            (Down, Right) => Some((x + ((ty - y).abs() - (y.floor() - y).abs()), y.floor())),
+            _ => None,
+        }
+    }
+
+    fn can_turn(&self, dt: f64) -> Option<(f64, f64)> {
+        let (tx, ty) = self.curved_target_pos(dt)?;
+        match self.map.get(tx.round() as u32, ty.round() as u32) {
+            None | Some(Tile::Wall) => None,
+            _ => Some((tx, ty)),
         }
     }
 

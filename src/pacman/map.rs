@@ -37,8 +37,14 @@ impl Map {
         self.tiles[MAP_WIDTH * y + x] = tile;
     }
 
-    pub fn consume(&mut self, x: u32, y: u32) {
-        self.set(x, y, Tile::NotWall(PU::Empty))
+    pub fn consume(&mut self, x: u32, y: u32) -> i32 {
+        let score = match self.get(x, y) {
+            Some(Tile::NotWall(PU::Dot)) => 10,
+            Some(Tile::NotWall(PU::PowerUp)) => 100,
+            _ => 0,
+        };
+        self.set(x, y, Tile::NotWall(PU::Empty));
+        score
     }
 
     pub fn scan_lines(&self) -> ScanLine {
