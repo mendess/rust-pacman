@@ -6,7 +6,7 @@ pub struct Ghost {
     pub ttr: f64,
 }
 
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Eq, PartialEq)]
 pub enum GhostMode {
     Chase,
     Scatter,

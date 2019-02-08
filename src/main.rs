@@ -17,7 +17,7 @@ use crate::controler::Controler;
 fn main() {
     let opengl = OpenGL::V3_2;
 
-    let mut window: Window = WindowSettings::new("pacman-game", [1000, 1000])
+    let mut window: Window = WindowSettings::new("pacman-game", [750, 750])
         .opengl(opengl)
         .exit_on_esc(true)
         .build()

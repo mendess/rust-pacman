@@ -27,7 +27,7 @@ impl View {
             clyde_color: [1.0, 0.7216, 0.3176, 1.0],
             frightened_color: [0.0039, 0.0902, 1.0, 1.0],
             dot_color: [1.0, 1.0, 1.0, 1.0],
-            tile_size: 25.0,
+            tile_size: 20.0,
         }
     }
 
@@ -86,10 +86,10 @@ impl View {
 
         let (x, y, d) = controler.get_player();
         let pacman = [
-            5.0 + (x as f64) * 25.0,
-            5.0 + (y as f64) * 25.0,
-            16.0,
-            16.0
+            5.0 + (x as f64) * self.tile_size,
+            5.0 + (y as f64) * self.tile_size,
+            self.tile_size / 2.0,
+            self.tile_size / 2.0,
         ];
         const DOWN_RIGHT: f64 = 3.14 / 4.0;
         const DOWN_LEFT: f64  = ((3.0 * 3.14) / 4.0);
@@ -101,8 +101,10 @@ impl View {
             Direction::Left  => (UP_LEFT,    DOWN_LEFT),
             Direction::Right => (DOWN_RIGHT, UP_RIGHT),
         };
-        CircleArc::new([1.0, 1.0, 0.0, 1.0], 9.0, start, end)
+        CircleArc::new([1.0, 1.0, 0.0, 1.0], self.tile_size / 4.0, start, end)
             .draw(pacman, &c.draw_state, c.transform, g);
+
+        let pick_color = |c| if controler.frightened() { self.frightened_color } else { c };
 
         let ghosts = controler.get_ghosts();
         let blinky = [
@@ -111,7 +113,7 @@ impl View {
             self.tile_size,
             self.tile_size
         ];
-        Rectangle::new(self.blinky_color)
+        Rectangle::new(pick_color(self.blinky_color))
             .draw(blinky, &c.draw_state, c.transform, g);
 
         let pinky = [
@@ -120,7 +122,7 @@ impl View {
             self.tile_size,
             self.tile_size
         ];
-        Rectangle::new(self.pinky_color)
+        Rectangle::new(pick_color(self.pinky_color))
             .draw(pinky, &c.draw_state, c.transform, g);
 
         let inky = [
@@ -129,7 +131,7 @@ impl View {
             self.tile_size,
             self.tile_size
         ];
-        Rectangle::new(self.inky_color)
+        Rectangle::new(pick_color(self.inky_color))
             .draw(inky, &c.draw_state, c.transform, g);
 
         let clyde = [
@@ -138,7 +140,7 @@ impl View {
             self.tile_size,
             self.tile_size
         ];
-        Rectangle::new(self.clyde_color)
+        Rectangle::new(pick_color(self.clyde_color))
             .draw(clyde, &c.draw_state, c.transform, g);
     }
 }

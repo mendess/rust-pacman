@@ -1,16 +1,15 @@
-use crate::pacman::{ Pacman, Direction, ghost::Ghost, map::Map };
+use crate::pacman::{ Pacman, Direction, ghost::Ghost, map::Map, ghost::GhostMode };
 use piston::input::Event;
 use piston::input::{ PressEvent, UpdateEvent };
 use piston::input::Button;
 
 pub struct Controler {
     game: Pacman,
-    delta: f64,
 }
 
 impl Controler {
     pub fn new(game :Pacman) -> Self {
-        Controler { game, delta: 0.0 }
+        Controler { game }
     }
 
     pub fn event(&mut self, event :&Event) -> bool {
@@ -37,18 +36,6 @@ impl Controler {
         false
     }
 
-    // pub fn get_player(&self) -> (f64, f64, Direction) {
-    //     let (x, y, d) = self.game.player();
-    //     let delta = self.delta * 10.0;
-    //     match d {
-    //         Direction::Up =>    (x.into()        , y as f64 - delta, self.game.direction_intent()),
-    //         Direction::Down =>  (x.into()        , y as f64 + delta, self.game.direction_intent()),
-    //         Direction::Left =>  (x as f64 - delta, y.into()        , self.game.direction_intent()),
-    //         Direction::Right => (x as f64 + delta, y.into()        , self.game.direction_intent()),
-    //         Direction::Still => (x.into(), y.into(), self.game.direction_intent()),
-    //     }
-    // }
-
     pub fn get_player(&self) -> (f64, f64, Direction) {
         self.game.player()
     }
@@ -59,5 +46,9 @@ impl Controler {
 
     pub fn get_ghosts(&self) -> &[Ghost] {
         self.game.ghosts()
+    }
+
+    pub fn frightened(&self) -> bool {
+        self.game.ghost_mode() == GhostMode::Frightened
     }
 }
