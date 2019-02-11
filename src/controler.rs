@@ -5,11 +5,12 @@ use piston::input::Button;
 
 pub struct Controler {
     game: Pacman,
+    delta: f64,
 }
 
 impl Controler {
     pub fn new(game :Pacman) -> Self {
-        Controler { game }
+        Controler { game, delta: 0.0 }
     }
 
     pub fn event(&mut self, event :&Event) -> bool {
@@ -30,7 +31,11 @@ impl Controler {
         }
 
         if let Some(u) = event.update_args() {
-            self.game.tick(u.dt);
+            self.delta += u.dt;
+            if self.delta > 0.25 {
+                self.delta -= 0.25;
+                self.game.tick();
+            }
         }
 
         false

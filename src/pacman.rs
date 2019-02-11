@@ -23,7 +23,6 @@ pub struct Pacman {
     ghost_mode: GhostMode,
     ghost_mode_timer: u16,
     ticks: u32,
-    delta: f64,
 }
 
 #[derive(Copy, Clone, Debug)]
@@ -51,17 +50,13 @@ impl Pacman {
         }
     }
 
-    pub fn tick(&mut self, dt: f64) {
+    pub fn tick(&mut self) {
         self.ticks += 1;
-        self.delta += dt;
-        if self.delta > 0.25 {
-            self.delta -= 0.25;
-            self.move_pacman();
-            self.move_timers();
-            if self.player_ghost_overlap() {
-                self.x = START_POS.0;
-                self.y = START_POS.1;
-            }
+        self.move_pacman();
+        self.move_timers();
+        if self.player_ghost_overlap() {
+            self.x = START_POS.0;
+            self.y = START_POS.1;
         }
     }
 
@@ -174,7 +169,6 @@ impl Default for Pacman {
             ghost_mode: GhostMode::Scatter,
             ghost_mode_timer: 0,
             ticks: 0,
-            delta: 0.0,
         }
     }
 }
