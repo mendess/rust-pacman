@@ -23,12 +23,13 @@ impl Map {
         Map::default()
     }
 
-    pub fn get(&self, x: u32, y: u32) -> Option<Tile> {
-        let (x, y) = (x as usize, y as usize);
-        if x * y < MAP_WIDTH * MAP_HEIGHT {
-            Some(self.tiles[MAP_WIDTH * y + x])
-        } else {
+    pub fn get(&self, x: i32, y: i32) -> Option<Tile> {
+        if x < 0 || x >= MAP_WIDTH as i32 {
             None
+        } else if y < 0 || y >= MAP_HEIGHT as i32 {
+            None
+        } else {
+            Some(self.tiles[MAP_WIDTH * y as usize + x as usize])
         }
     }
 
@@ -37,13 +38,13 @@ impl Map {
         self.tiles[MAP_WIDTH * y + x] = tile;
     }
 
-    pub fn consume(&mut self, x: u32, y: u32) -> i32 {
+    pub fn consume(&mut self, x: i32, y: i32) -> i32 {
         let score = match self.get(x, y) {
             Some(Tile::NotWall(PU::Dot)) => 10,
             Some(Tile::NotWall(PU::PowerUp)) => 100,
             _ => 0,
         };
-        self.set(x, y, Tile::NotWall(PU::Empty));
+        self.set(x as u32, y as u32, Tile::NotWall(PU::Empty));
         score
     }
 
@@ -52,6 +53,10 @@ impl Map {
             map: &self,
             line: 0,
         }
+    }
+
+    pub const fn map_width() -> usize {
+        MAP_WIDTH
     }
 }
 
@@ -72,7 +77,7 @@ impl Default for Map {
             "######.##          ##.######",
             "######.## ###  ### ##.######",
             "######.## #      # ##.######",
-            "#     .   #      #   .     #",
+            "      .   #      #   .      ",
             "######.## #      # ##.######",
             "######.## ######## ##.######",
             "######.##          ##.######",

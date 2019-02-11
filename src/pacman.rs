@@ -7,7 +7,7 @@ use self::map::PU;
 
 use self::ghost::{Ghost, GhostMode};
 
-const START_POS :(u32, u32) = (14, 23);
+const START_POS :(i32, i32) = (14, 23);
 const FRIGHTNED_TIMER :u16 = 30;
 
 pub struct Pacman {
@@ -15,8 +15,8 @@ pub struct Pacman {
     // lives: u8,
     score: u32,
     // level: u32,
-    x: u32,
-    y: u32,
+    x: i32,
+    y: i32,
     direction: Direction,
     direction_intent: Direction,
     ghosts: [Ghost; 4],
@@ -70,13 +70,17 @@ impl Pacman {
             self.direction = self.direction_intent;
         }
         let (x, y) = match self.direction {
-            Direction::Up => (self.x, self.y - 1),
-            Direction::Down => (self.x, self.y + 1),
-            Direction::Left => (self.x - 1, self.y),
+            Direction::Up    => (self.x, self.y - 1),
+            Direction::Down  => (self.x, self.y + 1),
+            Direction::Left  => (self.x - 1, self.y),
             Direction::Right => (self.x + 1, self.y),
         };
         match self.map.get(x, y) {
-            None => (),
+            None => if x == -1 {
+                self.x = Map::map_width() as i32 - 1;
+            } else if x == Map::map_width() as i32 {
+                self.x = 0;
+            },
             Some(Tile::Wall) => (),
             Some(Tile::NotWall(pu)) => {
                 self.x = x;
@@ -137,7 +141,8 @@ impl Pacman {
 
     pub fn player_ghost_overlap(&self) -> bool {
         self.ghost_mode != GhostMode::Frightened
-            && self.ghosts.iter().any(|g| g.x == self.x && g.y == self.y)
+            && self.ghosts.iter()
+            .any(|g| g.x as i32 == self.x && g.y as i32 == self.y)
     }
 
     // pub fn stats(&self) -> Stats {
