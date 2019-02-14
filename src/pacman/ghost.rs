@@ -1,10 +1,10 @@
 use super::map::{self, Map};
 use super::Direction;
 
-const BLINKY_HOME :(i32, i32) = (-2, map::MAP_WIDTH as i32 - 2);
-const PINKY_HOME  :(i32, i32) = (-2 , 2);
-const INKY_HOME   :(i32, i32) = (map::MAP_HEIGHT as i32, map::MAP_WIDTH as i32 - 1);
-const CLYDE_HOME  :(i32, i32) = (map::MAP_HEIGHT as i32, 0);
+const BLINKY_HOME :(i32, i32) = (map::MAP_WIDTH as i32 - 3, -2);
+const PINKY_HOME  :(i32, i32) = (2 , -2);
+const INKY_HOME   :(i32, i32) = (map::MAP_WIDTH as i32 - 1 ,map::MAP_HEIGHT as i32);
+const CLYDE_HOME  :(i32, i32) = (0, map::MAP_HEIGHT as i32);
 const FRIGHTNED_TIMER :u16 = 30;
 const GHOST_MODE_TIMER :u16 = 7 * 4;
 
@@ -254,27 +254,27 @@ fn calc_clyde_targe(clyde :(i32, i32), plr :(i32, i32)) -> (i32, i32) {
 }
 
 // DEBUG VIEWS
-impl Ghosts {
-    pub fn targets(&self, plr: (i32, i32, Direction)) -> [(i32, i32); 4] {
-        match self.ghost_mode {
-            GhostMode::Chase => [
-                (plr.0, plr.1),
-                calc_pinky_target(plr),
-                calc_inky_target(self.ghosts[0].pos, plr),
-                calc_clyde_targe(self.ghosts[3].pos, (plr.0, plr.1)),
-            ],
-            GhostMode::Scatter => [
-                BLINKY_HOME,
-                PINKY_HOME,
-                INKY_HOME,
-                CLYDE_HOME,
-            ],
-            GhostMode::Frightened => [
-                (300, 300),
-                (300, 300),
-                (300, 300),
-                (300, 300),
-            ],
-        }
-    }
-}
+// impl Ghosts {
+//     pub fn targets(&self, plr: (i32, i32, Direction)) -> [(i32, i32); 4] {
+//         match self.ghost_mode {
+//             GhostMode::Chase => [
+//                 (plr.0, plr.1),
+//                 calc_pinky_target(plr),
+//                 calc_inky_target(self.ghosts[0].pos, plr),
+//                 calc_clyde_targe(self.ghosts[3].pos, (plr.0, plr.1)),
+//             ],
+//             GhostMode::Scatter => [
+//                 BLINKY_HOME,
+//                 PINKY_HOME,
+//                 INKY_HOME,
+//                 CLYDE_HOME,
+//             ],
+//             GhostMode::Frightened => [
+//                 (300, 300),
+//                 (300, 300),
+//                 (300, 300),
+//                 (300, 300),
+//             ],
+//         }
+//     }
+// }

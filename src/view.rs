@@ -28,7 +28,7 @@ impl View {
             frightened_color: [0.0039, 0.0902, 1.0, 1.0],
             dot_color: [1.0, 1.0, 1.0, 1.0],
             tile_size: 20.0,
-            offset: 30.0,
+            offset: 0.0,
         }
     }
 
@@ -108,11 +108,11 @@ impl View {
         }
 
         // DEBUG
-        for (i, sqr) in controler.ghost_targets().iter().enumerate() {
-            let g_square = self.ghost_square(sqr.0, sqr.1);
-            Rectangle::new_border(self.ghost_colors[i], 1.0)
-                .draw(g_square, &c.draw_state, c.transform, g);
-        }
+        // for (i, sqr) in controler.ghost_targets().iter().enumerate() {
+        //     let g_square = self.ghost_square(sqr.0, sqr.1);
+        //     Rectangle::new_border(self.ghost_colors[i], 1.0)
+        //         .draw(g_square, &c.draw_state, c.transform, g);
+        // }
     }
 
     fn ghost_square(&self, x: i32, y: i32) -> [f64; 4] {
