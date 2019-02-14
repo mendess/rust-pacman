@@ -32,7 +32,7 @@ impl Direction {
         match self {
             Direction::Up    => (0, -1),
             Direction::Down  => (0,  1),
-            Direction::Left  => (0, -1),
+            Direction::Left  => (-1, 0),
             Direction::Right => ( 1, 0),
         }
     }

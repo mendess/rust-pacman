@@ -111,7 +111,6 @@ impl Ghosts {
             let mut killed = 0;
             for g in self.ghosts.iter_mut() {
                 if g.pos == plr || g.last_pos == plr {
-                    println!("Killed! {:?}", g);
                     *g = Ghost::new(g.name);
                     killed += 1;
                 }
@@ -130,29 +129,6 @@ impl Ghosts {
         }
     }
 
-    // DEBUG VIEWS
-    pub fn targets(&self, plr: (i32, i32, Direction)) -> [(i32, i32); 4] {
-        match self.ghost_mode {
-            GhostMode::Chase => [
-                (plr.0, plr.1),
-                calc_pinky_target(plr),
-                calc_inky_target(self.ghosts[0].pos, plr),
-                calc_clyde_targe(self.ghosts[3].pos, (plr.0, plr.1)),
-            ],
-            GhostMode::Scatter => [
-                BLINKY_HOME,
-                PINKY_HOME,
-                INKY_HOME,
-                CLYDE_HOME,
-            ],
-            GhostMode::Frightened => [
-                (300, 300),
-                (300, 300),
-                (300, 300),
-                (300, 300),
-            ],
-        }
-    }
 }
 
 #[derive(Debug)]
@@ -265,7 +241,7 @@ fn calc_inky_target(blinky: (i32, i32), player: (i32, i32, Direction)) -> (i32, 
         let v = player.2.to_vector();
         (plr.0 + v.0 * 2, plr.1 + v.1 * 2)
     };
-    let tgt_vec = ((blinky.0 - mid_tgt.0) * 2, (blinky.1 - mid_tgt.1) * 2);
+    let tgt_vec = ((mid_tgt.0 - blinky.0) * 2, (mid_tgt.1 - blinky.1) * 2);
     (blinky.0 + tgt_vec.0, blinky.1 + tgt_vec.1)
 }
 
@@ -274,5 +250,31 @@ fn calc_clyde_targe(clyde :(i32, i32), plr :(i32, i32)) -> (i32, i32) {
         CLYDE_HOME
     } else {
         plr
+    }
+}
+
+// DEBUG VIEWS
+impl Ghosts {
+    pub fn targets(&self, plr: (i32, i32, Direction)) -> [(i32, i32); 4] {
+        match self.ghost_mode {
+            GhostMode::Chase => [
+                (plr.0, plr.1),
+                calc_pinky_target(plr),
+                calc_inky_target(self.ghosts[0].pos, plr),
+                calc_clyde_targe(self.ghosts[3].pos, (plr.0, plr.1)),
+            ],
+            GhostMode::Scatter => [
+                BLINKY_HOME,
+                PINKY_HOME,
+                INKY_HOME,
+                CLYDE_HOME,
+            ],
+            GhostMode::Frightened => [
+                (300, 300),
+                (300, 300),
+                (300, 300),
+                (300, 300),
+            ],
+        }
     }
 }
