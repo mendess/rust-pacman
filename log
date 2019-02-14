@@ -1,0 +1,2673 @@
+Start tick: 0
+[(16, 15), (14, 15), (15, 16), (15, 14)]
+(15, 14), Ghost { name: Blinky, pos: (15, 15), last_pos: (-2147483648, -2147483648), house_timer: 2 }
+[(16, 14), (14, 14), (15, 15), (15, 13)]
+(15, 13), Ghost { name: Pinky, pos: (15, 14), last_pos: (-2147483648, -2147483648), house_timer: 10 }
+[(15, 15), (13, 15), (14, 16), (14, 14)]
+(13, 15), Ghost { name: Inky, pos: (14, 15), last_pos: (-2147483648, -2147483648), house_timer: 20 }
+[(15, 14), (13, 14), (14, 15), (14, 13)]
+(15, 14), Ghost { name: Clyde, pos: (14, 14), last_pos: (-2147483648, -2147483648), house_timer: 30 }
+End tick
+Start tick: 1
+[(16, 14), (14, 14), (15, 15), (15, 13)]
+(15, 13), Ghost { name: Blinky, pos: (15, 14), last_pos: (15, 15), house_timer: 1 }
+[(16, 13), (14, 13), (15, 14), (15, 12)]
+(16, 13), Ghost { name: Pinky, pos: (15, 13), last_pos: (15, 14), house_timer: 9 }
+[(14, 15), (12, 15), (13, 16), (13, 14)]
+(12, 15), Ghost { name: Inky, pos: (13, 15), last_pos: (14, 15), house_timer: 19 }
+[(16, 14), (14, 14), (15, 15), (15, 13)]
+(15, 13), Ghost { name: Clyde, pos: (15, 14), last_pos: (14, 14), house_timer: 29 }
+End tick
+Start tick: 2
+[(16, 13), (14, 13), (15, 14), (15, 12)]
+(14, 13), Ghost { name: Blinky, pos: (15, 13), last_pos: (15, 14), house_timer: 0 }
+[(17, 13), (15, 13), (16, 14), (16, 12)]
+(16, 14), Ghost { name: Pinky, pos: (16, 13), last_pos: (15, 13), house_timer: 8 }
+[(13, 15), (11, 15), (12, 16), (12, 14)]
+(11, 15), Ghost { name: Inky, pos: (12, 15), last_pos: (13, 15), house_timer: 18 }
+[(16, 13), (14, 13), (15, 14), (15, 12)]
+(16, 13), Ghost { name: Clyde, pos: (15, 13), last_pos: (15, 14), house_timer: 28 }
+End tick
+Start tick: 3
+[(15, 13), (13, 13), (14, 14), (14, 12)]
+(14, 12), Ghost { name: Blinky, pos: (14, 13), last_pos: (15, 13), house_timer: 0 }
+[(17, 14), (15, 14), (16, 15), (16, 13)]
+(16, 15), Ghost { name: Pinky, pos: (16, 14), last_pos: (16, 13), house_timer: 7 }
+[(12, 15), (10, 15), (11, 16), (11, 14)]
+(11, 14), Ghost { name: Inky, pos: (11, 15), last_pos: (12, 15), house_timer: 17 }
+[(17, 13), (15, 13), (16, 14), (16, 12)]
+(16, 14), Ghost { name: Clyde, pos: (16, 13), last_pos: (15, 13), house_timer: 27 }
+End tick
+Start tick: 4
+[(15, 12), (13, 12), (14, 13), (14, 11)]
+(13, 12), Ghost { name: Blinky, pos: (14, 12), last_pos: (14, 13), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+(15, 15), Ghost { name: Pinky, pos: (16, 15), last_pos: (16, 14), house_timer: 6 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+(11, 13), Ghost { name: Inky, pos: (11, 14), last_pos: (11, 15), house_timer: 16 }
+[(17, 14), (15, 14), (16, 15), (16, 13)]
+(15, 14), Ghost { name: Clyde, pos: (16, 14), last_pos: (16, 13), house_timer: 26 }
+End tick
+Start tick: 5
+[(14, 12), (12, 12), (13, 13), (13, 11)]
+(13, 11), Ghost { name: Blinky, pos: (13, 12), last_pos: (14, 12), house_timer: 0 }
+[(16, 15), (14, 15), (15, 16), (15, 14)]
+(15, 14), Ghost { name: Pinky, pos: (15, 15), last_pos: (16, 15), house_timer: 5 }
+[(12, 13), (10, 13), (11, 14), (11, 12)]
+(12, 13), Ghost { name: Inky, pos: (11, 13), last_pos: (11, 14), house_timer: 15 }
+[(16, 14), (14, 14), (15, 15), (15, 13)]
+(15, 13), Ghost { name: Clyde, pos: (15, 14), last_pos: (16, 14), house_timer: 25 }
+End tick
+Start tick: 6
+[(14, 11), (12, 11), (13, 12), (13, 10)]
+(12, 11), Ghost { name: Blinky, pos: (13, 11), last_pos: (13, 12), house_timer: 0 }
+[(16, 14), (14, 14), (15, 15), (15, 13)]
+(14, 14), Ghost { name: Pinky, pos: (15, 14), last_pos: (15, 15), house_timer: 4 }
+[(13, 13), (11, 13), (12, 14), (12, 12)]
+(12, 14), Ghost { name: Inky, pos: (12, 13), last_pos: (11, 13), house_timer: 14 }
+[(16, 13), (14, 13), (15, 14), (15, 12)]
+(16, 13), Ghost { name: Clyde, pos: (15, 13), last_pos: (15, 14), house_timer: 24 }
+End tick
+Start tick: 7
+[(13, 11), (11, 11), (12, 12), (12, 10)]
+(11, 11), Ghost { name: Blinky, pos: (12, 11), last_pos: (13, 11), house_timer: 0 }
+[(15, 14), (13, 14), (14, 15), (14, 13)]
+(13, 14), Ghost { name: Pinky, pos: (14, 14), last_pos: (15, 14), house_timer: 3 }
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+(11, 14), Ghost { name: Inky, pos: (12, 14), last_pos: (12, 13), house_timer: 13 }
+[(17, 13), (15, 13), (16, 14), (16, 12)]
+(16, 14), Ghost { name: Clyde, pos: (16, 13), last_pos: (15, 13), house_timer: 23 }
+End tick
+Start tick: 8
+[(12, 11), (10, 11), (11, 12), (11, 10)]
+(10, 11), Ghost { name: Blinky, pos: (11, 11), last_pos: (12, 11), house_timer: 0 }
+[(14, 14), (12, 14), (13, 15), (13, 13)]
+(13, 15), Ghost { name: Pinky, pos: (13, 14), last_pos: (14, 14), house_timer: 2 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+(11, 13), Ghost { name: Inky, pos: (11, 14), last_pos: (12, 14), house_timer: 12 }
+[(17, 14), (15, 14), (16, 15), (16, 13)]
+(15, 14), Ghost { name: Clyde, pos: (16, 14), last_pos: (16, 13), house_timer: 22 }
+End tick
+Start tick: 9
+[(11, 11), (9, 11), (10, 12), (10, 10)]
+(9, 11), Ghost { name: Blinky, pos: (10, 11), last_pos: (11, 11), house_timer: 0 }
+[(14, 15), (12, 15), (13, 16), (13, 14)]
+(14, 15), Ghost { name: Pinky, pos: (13, 15), last_pos: (13, 14), house_timer: 1 }
+[(12, 13), (10, 13), (11, 14), (11, 12)]
+(12, 13), Ghost { name: Inky, pos: (11, 13), last_pos: (11, 14), house_timer: 11 }
+[(16, 14), (14, 14), (15, 15), (15, 13)]
+(15, 15), Ghost { name: Clyde, pos: (15, 14), last_pos: (16, 14), house_timer: 21 }
+End tick
+Start tick: 10
+[(10, 11), (8, 11), (9, 12), (9, 10)]
+(9, 12), Ghost { name: Blinky, pos: (9, 11), last_pos: (10, 11), house_timer: 0 }
+[(15, 15), (13, 15), (14, 16), (14, 14)]
+(14, 14), Ghost { name: Pinky, pos: (14, 15), last_pos: (13, 15), house_timer: 0 }
+[(13, 13), (11, 13), (12, 14), (12, 12)]
+(12, 14), Ghost { name: Inky, pos: (12, 13), last_pos: (11, 13), house_timer: 10 }
+[(16, 15), (14, 15), (15, 16), (15, 14)]
+(16, 15), Ghost { name: Clyde, pos: (15, 15), last_pos: (15, 14), house_timer: 20 }
+End tick
+Start tick: 11
+[(10, 12), (8, 12), (9, 13), (9, 11)]
+(9, 13), Ghost { name: Blinky, pos: (9, 12), last_pos: (9, 11), house_timer: 0 }
+[(15, 14), (13, 14), (14, 15), (14, 13)]
+(14, 13), Ghost { name: Pinky, pos: (14, 14), last_pos: (14, 15), house_timer: 0 }
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+(13, 14), Ghost { name: Inky, pos: (12, 14), last_pos: (12, 13), house_timer: 9 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+(16, 14), Ghost { name: Clyde, pos: (16, 15), last_pos: (15, 15), house_timer: 19 }
+End tick
+Start tick: 12
+[(10, 13), (8, 13), (9, 14), (9, 12)]
+(9, 14), Ghost { name: Blinky, pos: (9, 13), last_pos: (9, 12), house_timer: 0 }
+[(15, 13), (13, 13), (14, 14), (14, 12)]
+(14, 12), Ghost { name: Pinky, pos: (14, 13), last_pos: (14, 14), house_timer: 0 }
+[(14, 14), (12, 14), (13, 15), (13, 13)]
+(14, 14), Ghost { name: Inky, pos: (13, 14), last_pos: (12, 14), house_timer: 8 }
+[(17, 14), (15, 14), (16, 15), (16, 13)]
+(16, 13), Ghost { name: Clyde, pos: (16, 14), last_pos: (16, 15), house_timer: 18 }
+End tick
+Start tick: 13
+[(10, 14), (8, 14), (9, 15), (9, 13)]
+(9, 15), Ghost { name: Blinky, pos: (9, 14), last_pos: (9, 13), house_timer: 0 }
+[(15, 12), (13, 12), (14, 13), (14, 11)]
+(13, 12), Ghost { name: Pinky, pos: (14, 12), last_pos: (14, 13), house_timer: 0 }
+[(15, 14), (13, 14), (14, 15), (14, 13)]
+(14, 15), Ghost { name: Inky, pos: (14, 14), last_pos: (13, 14), house_timer: 7 }
+[(17, 13), (15, 13), (16, 14), (16, 12)]
+(15, 13), Ghost { name: Clyde, pos: (16, 13), last_pos: (16, 14), house_timer: 17 }
+End tick
+Start tick: 14
+[(10, 15), (8, 15), (9, 16), (9, 14)]
+(9, 16), Ghost { name: Blinky, pos: (9, 15), last_pos: (9, 14), house_timer: 0 }
+[(14, 12), (12, 12), (13, 13), (13, 11)]
+(13, 11), Ghost { name: Pinky, pos: (13, 12), last_pos: (14, 12), house_timer: 0 }
+[(15, 15), (13, 15), (14, 16), (14, 14)]
+(13, 15), Ghost { name: Inky, pos: (14, 15), last_pos: (14, 14), house_timer: 6 }
+[(16, 13), (14, 13), (15, 14), (15, 12)]
+(14, 13), Ghost { name: Clyde, pos: (15, 13), last_pos: (16, 13), house_timer: 16 }
+End tick
+Start tick: 15
+[(10, 16), (8, 16), (9, 17), (9, 15)]
+(9, 17), Ghost { name: Blinky, pos: (9, 16), last_pos: (9, 15), house_timer: 0 }
+[(14, 11), (12, 11), (13, 12), (13, 10)]
+(12, 11), Ghost { name: Pinky, pos: (13, 11), last_pos: (13, 12), house_timer: 0 }
+[(14, 15), (12, 15), (13, 16), (13, 14)]
+(13, 14), Ghost { name: Inky, pos: (13, 15), last_pos: (14, 15), house_timer: 5 }
+[(15, 13), (13, 13), (14, 14), (14, 12)]
+(13, 13), Ghost { name: Clyde, pos: (14, 13), last_pos: (15, 13), house_timer: 15 }
+End tick
+Start tick: 16
+[(10, 17), (8, 17), (9, 18), (9, 16)]
+(9, 18), Ghost { name: Blinky, pos: (9, 17), last_pos: (9, 16), house_timer: 0 }
+[(13, 11), (11, 11), (12, 12), (12, 10)]
+(11, 11), Ghost { name: Pinky, pos: (12, 11), last_pos: (13, 11), house_timer: 0 }
+[(14, 14), (12, 14), (13, 15), (13, 13)]
+(12, 14), Ghost { name: Inky, pos: (13, 14), last_pos: (13, 15), house_timer: 4 }
+[(14, 13), (12, 13), (13, 14), (13, 12)]
+(13, 12), Ghost { name: Clyde, pos: (13, 13), last_pos: (14, 13), house_timer: 14 }
+End tick
+Start tick: 17
+[(10, 18), (8, 18), (9, 19), (9, 17)]
+(9, 19), Ghost { name: Blinky, pos: (9, 18), last_pos: (9, 17), house_timer: 0 }
+[(12, 11), (10, 11), (11, 12), (11, 10)]
+(10, 11), Ghost { name: Pinky, pos: (11, 11), last_pos: (12, 11), house_timer: 0 }
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+(12, 13), Ghost { name: Inky, pos: (12, 14), last_pos: (13, 14), house_timer: 3 }
+[(14, 12), (12, 12), (13, 13), (13, 11)]
+(14, 12), Ghost { name: Clyde, pos: (13, 12), last_pos: (13, 13), house_timer: 13 }
+End tick
+Start tick: 18
+[(10, 19), (8, 19), (9, 20), (9, 18)]
+(9, 20), Ghost { name: Blinky, pos: (9, 19), last_pos: (9, 18), house_timer: 0 }
+[(11, 11), (9, 11), (10, 12), (10, 10)]
+(9, 11), Ghost { name: Pinky, pos: (10, 11), last_pos: (11, 11), house_timer: 0 }
+[(13, 13), (11, 13), (12, 14), (12, 12)]
+(11, 13), Ghost { name: Inky, pos: (12, 13), last_pos: (12, 14), house_timer: 2 }
+[(15, 12), (13, 12), (14, 13), (14, 11)]
+(14, 13), Ghost { name: Clyde, pos: (14, 12), last_pos: (13, 12), house_timer: 12 }
+End tick
+Start tick: 19
+[(10, 20), (8, 20), (9, 21), (9, 19)]
+(8, 20), Ghost { name: Blinky, pos: (9, 20), last_pos: (9, 19), house_timer: 0 }
+[(10, 11), (8, 11), (9, 12), (9, 10)]
+(9, 12), Ghost { name: Pinky, pos: (9, 11), last_pos: (10, 11), house_timer: 0 }
+[(12, 13), (10, 13), (11, 14), (11, 12)]
+(11, 14), Ghost { name: Inky, pos: (11, 13), last_pos: (12, 13), house_timer: 1 }
+[(15, 13), (13, 13), (14, 14), (14, 12)]
+(13, 13), Ghost { name: Clyde, pos: (14, 13), last_pos: (14, 12), house_timer: 11 }
+End tick
+Start tick: 20
+Spooked!
+[(9, 20), (7, 20), (8, 21), (8, 19)]
+(7, 20), Ghost { name: Blinky, pos: (8, 20), last_pos: (9, 20), house_timer: 0 }
+[(10, 12), (8, 12), (9, 13), (9, 11)]
+(9, 13), Ghost { name: Pinky, pos: (9, 12), last_pos: (9, 11), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(14, 13), (12, 13), (13, 14), (13, 12)]
+(13, 12), Ghost { name: Clyde, pos: (13, 13), last_pos: (14, 13), house_timer: 10 }
+End tick
+Start tick: 21
+[(8, 20), (6, 20), (7, 21), (7, 19)]
+(6, 20), Ghost { name: Blinky, pos: (7, 20), last_pos: (8, 20), house_timer: 0 }
+[(10, 13), (8, 13), (9, 14), (9, 12)]
+(9, 14), Ghost { name: Pinky, pos: (9, 13), last_pos: (9, 12), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(14, 12), (12, 12), (13, 13), (13, 11)]
+(14, 12), Ghost { name: Clyde, pos: (13, 12), last_pos: (13, 13), house_timer: 9 }
+End tick
+Start tick: 22
+[(7, 20), (5, 20), (6, 21), (6, 19)]
+(6, 21), Ghost { name: Blinky, pos: (6, 20), last_pos: (7, 20), house_timer: 0 }
+[(10, 14), (8, 14), (9, 15), (9, 13)]
+(9, 15), Ghost { name: Pinky, pos: (9, 14), last_pos: (9, 13), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(15, 12), (13, 12), (14, 13), (14, 11)]
+(14, 13), Ghost { name: Clyde, pos: (14, 12), last_pos: (13, 12), house_timer: 8 }
+End tick
+Start tick: 23
+[(7, 21), (5, 21), (6, 22), (6, 20)]
+(6, 22), Ghost { name: Blinky, pos: (6, 21), last_pos: (6, 20), house_timer: 0 }
+[(10, 15), (8, 15), (9, 16), (9, 14)]
+(9, 16), Ghost { name: Pinky, pos: (9, 15), last_pos: (9, 14), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(15, 13), (13, 13), (14, 14), (14, 12)]
+(13, 13), Ghost { name: Clyde, pos: (14, 13), last_pos: (14, 12), house_timer: 7 }
+End tick
+Start tick: 24
+[(7, 22), (5, 22), (6, 23), (6, 21)]
+(6, 23), Ghost { name: Blinky, pos: (6, 22), last_pos: (6, 21), house_timer: 0 }
+[(10, 16), (8, 16), (9, 17), (9, 15)]
+(9, 17), Ghost { name: Pinky, pos: (9, 16), last_pos: (9, 15), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(14, 13), (12, 13), (13, 14), (13, 12)]
+(13, 14), Ghost { name: Clyde, pos: (13, 13), last_pos: (14, 13), house_timer: 6 }
+End tick
+Start tick: 25
+[(7, 23), (5, 23), (6, 24), (6, 22)]
+(6, 24), Ghost { name: Blinky, pos: (6, 23), last_pos: (6, 22), house_timer: 0 }
+[(10, 17), (8, 17), (9, 18), (9, 16)]
+(9, 18), Ghost { name: Pinky, pos: (9, 17), last_pos: (9, 16), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(14, 14), (12, 14), (13, 15), (13, 13)]
+(14, 14), Ghost { name: Clyde, pos: (13, 14), last_pos: (13, 13), house_timer: 5 }
+End tick
+Start tick: 26
+[(7, 24), (5, 24), (6, 25), (6, 23)]
+(6, 25), Ghost { name: Blinky, pos: (6, 24), last_pos: (6, 23), house_timer: 0 }
+[(10, 18), (8, 18), (9, 19), (9, 17)]
+(9, 19), Ghost { name: Pinky, pos: (9, 18), last_pos: (9, 17), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(15, 14), (13, 14), (14, 15), (14, 13)]
+(14, 15), Ghost { name: Clyde, pos: (14, 14), last_pos: (13, 14), house_timer: 4 }
+End tick
+Start tick: 27
+[(7, 25), (5, 25), (6, 26), (6, 24)]
+(6, 26), Ghost { name: Blinky, pos: (6, 25), last_pos: (6, 24), house_timer: 0 }
+[(10, 19), (8, 19), (9, 20), (9, 18)]
+(9, 20), Ghost { name: Pinky, pos: (9, 19), last_pos: (9, 18), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(15, 15), (13, 15), (14, 16), (14, 14)]
+(13, 15), Ghost { name: Clyde, pos: (14, 15), last_pos: (14, 14), house_timer: 3 }
+End tick
+Start tick: 28
+[(7, 26), (5, 26), (6, 27), (6, 25)]
+(5, 26), Ghost { name: Blinky, pos: (6, 26), last_pos: (6, 25), house_timer: 0 }
+[(10, 20), (8, 20), (9, 21), (9, 19)]
+(10, 20), Ghost { name: Pinky, pos: (9, 20), last_pos: (9, 19), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(14, 15), (12, 15), (13, 16), (13, 14)]
+(13, 14), Ghost { name: Clyde, pos: (13, 15), last_pos: (14, 15), house_timer: 2 }
+End tick
+Start tick: 29
+[(6, 26), (4, 26), (5, 27), (5, 25)]
+(4, 26), Ghost { name: Blinky, pos: (5, 26), last_pos: (6, 26), house_timer: 0 }
+[(11, 20), (9, 20), (10, 21), (10, 19)]
+(11, 20), Ghost { name: Pinky, pos: (10, 20), last_pos: (9, 20), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(14, 14), (12, 14), (13, 15), (13, 13)]
+(12, 14), Ghost { name: Clyde, pos: (13, 14), last_pos: (13, 15), house_timer: 1 }
+End tick
+Start tick: 30
+[(5, 26), (3, 26), (4, 27), (4, 25)]
+(3, 26), Ghost { name: Blinky, pos: (4, 26), last_pos: (5, 26), house_timer: 0 }
+[(12, 20), (10, 20), (11, 21), (11, 19)]
+(12, 20), Ghost { name: Pinky, pos: (11, 20), last_pos: (10, 20), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 31
+[(4, 26), (2, 26), (3, 27), (3, 25)]
+(3, 25), Ghost { name: Blinky, pos: (3, 26), last_pos: (4, 26), house_timer: 0 }
+[(13, 20), (11, 20), (12, 21), (12, 19)]
+(12, 21), Ghost { name: Pinky, pos: (12, 20), last_pos: (11, 20), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 32
+[(4, 25), (2, 25), (3, 26), (3, 24)]
+(3, 24), Ghost { name: Blinky, pos: (3, 25), last_pos: (3, 26), house_timer: 0 }
+[(13, 21), (11, 21), (12, 22), (12, 20)]
+(12, 22), Ghost { name: Pinky, pos: (12, 21), last_pos: (12, 20), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 33
+[(4, 24), (2, 24), (3, 25), (3, 23)]
+(3, 23), Ghost { name: Blinky, pos: (3, 24), last_pos: (3, 25), house_timer: 0 }
+[(13, 22), (11, 22), (12, 23), (12, 21)]
+(12, 23), Ghost { name: Pinky, pos: (12, 22), last_pos: (12, 21), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 34
+[(4, 23), (2, 23), (3, 24), (3, 22)]
+(2, 23), Ghost { name: Blinky, pos: (3, 23), last_pos: (3, 24), house_timer: 0 }
+[(13, 23), (11, 23), (12, 24), (12, 22)]
+(13, 23), Ghost { name: Pinky, pos: (12, 23), last_pos: (12, 22), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 35
+[(3, 23), (1, 23), (2, 24), (2, 22)]
+(1, 23), Ghost { name: Blinky, pos: (2, 23), last_pos: (3, 23), house_timer: 0 }
+[(14, 23), (12, 23), (13, 24), (13, 22)]
+(14, 23), Ghost { name: Pinky, pos: (13, 23), last_pos: (12, 23), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 36
+[(2, 23), (0, 23), (1, 24), (1, 22)]
+(1, 22), Ghost { name: Blinky, pos: (1, 23), last_pos: (2, 23), house_timer: 0 }
+[(15, 23), (13, 23), (14, 24), (14, 22)]
+(15, 23), Ghost { name: Pinky, pos: (14, 23), last_pos: (13, 23), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 37
+[(2, 22), (0, 22), (1, 23), (1, 21)]
+(1, 21), Ghost { name: Blinky, pos: (1, 22), last_pos: (1, 23), house_timer: 0 }
+[(16, 23), (14, 23), (15, 24), (15, 22)]
+(16, 23), Ghost { name: Pinky, pos: (15, 23), last_pos: (14, 23), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 38
+[(2, 21), (0, 21), (1, 22), (1, 20)]
+(1, 20), Ghost { name: Blinky, pos: (1, 21), last_pos: (1, 22), house_timer: 0 }
+[(17, 23), (15, 23), (16, 24), (16, 22)]
+(17, 23), Ghost { name: Pinky, pos: (16, 23), last_pos: (15, 23), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 39
+[(2, 20), (0, 20), (1, 21), (1, 19)]
+(2, 20), Ghost { name: Blinky, pos: (1, 20), last_pos: (1, 21), house_timer: 0 }
+[(18, 23), (16, 23), (17, 24), (17, 22)]
+(18, 23), Ghost { name: Pinky, pos: (17, 23), last_pos: (16, 23), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 40
+[(3, 20), (1, 20), (2, 21), (2, 19)]
+(3, 20), Ghost { name: Blinky, pos: (2, 20), last_pos: (1, 20), house_timer: 0 }
+[(19, 23), (17, 23), (18, 24), (18, 22)]
+(19, 23), Ghost { name: Pinky, pos: (18, 23), last_pos: (17, 23), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 41
+[(4, 20), (2, 20), (3, 21), (3, 19)]
+(4, 20), Ghost { name: Blinky, pos: (3, 20), last_pos: (2, 20), house_timer: 0 }
+[(20, 23), (18, 23), (19, 24), (19, 22)]
+(20, 23), Ghost { name: Pinky, pos: (19, 23), last_pos: (18, 23), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 42
+[(5, 20), (3, 20), (4, 21), (4, 19)]
+(5, 20), Ghost { name: Blinky, pos: (4, 20), last_pos: (3, 20), house_timer: 0 }
+[(21, 23), (19, 23), (20, 24), (20, 22)]
+(21, 23), Ghost { name: Pinky, pos: (20, 23), last_pos: (19, 23), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+Killed! Ghost { name: Blinky, pos: (5, 20), last_pos: (4, 20), house_timer: 0 }
+End tick
+Start tick: 43
+[(16, 15), (14, 15), (15, 16), (15, 14)]
+(14, 15), Ghost { name: Blinky, pos: (15, 15), last_pos: (-2147483648, -2147483648), house_timer: 2 }
+[(22, 23), (20, 23), (21, 24), (21, 22)]
+(21, 22), Ghost { name: Pinky, pos: (21, 23), last_pos: (20, 23), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 44
+[(15, 15), (13, 15), (14, 16), (14, 14)]
+(13, 15), Ghost { name: Blinky, pos: (14, 15), last_pos: (15, 15), house_timer: 1 }
+[(22, 22), (20, 22), (21, 23), (21, 21)]
+(21, 21), Ghost { name: Pinky, pos: (21, 22), last_pos: (21, 23), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 45
+[(14, 15), (12, 15), (13, 16), (13, 14)]
+[(22, 21), (20, 21), (21, 22), (21, 20)]
+(21, 20), Ghost { name: Pinky, pos: (21, 21), last_pos: (21, 22), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 46
+[(14, 15), (12, 15), (13, 16), (13, 14)]
+[(22, 20), (20, 20), (21, 21), (21, 19)]
+(20, 20), Ghost { name: Pinky, pos: (21, 20), last_pos: (21, 21), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 47
+[(14, 15), (12, 15), (13, 16), (13, 14)]
+[(21, 20), (19, 20), (20, 21), (20, 19)]
+(19, 20), Ghost { name: Pinky, pos: (20, 20), last_pos: (21, 20), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 48
+[(14, 15), (12, 15), (13, 16), (13, 14)]
+[(20, 20), (18, 20), (19, 21), (19, 19)]
+(18, 20), Ghost { name: Pinky, pos: (19, 20), last_pos: (20, 20), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 49
+[(14, 15), (12, 15), (13, 16), (13, 14)]
+[(19, 20), (17, 20), (18, 21), (18, 19)]
+(18, 19), Ghost { name: Pinky, pos: (18, 20), last_pos: (19, 20), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+End tick
+Start tick: 50
+[(14, 15), (12, 15), (13, 16), (13, 14)]
+(13, 14), Ghost { name: Blinky, pos: (13, 15), last_pos: (14, 15), house_timer: 0 }
+[(19, 19), (17, 19), (18, 20), (18, 18)]
+(18, 18), Ghost { name: Pinky, pos: (18, 19), last_pos: (18, 20), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+(12, 14), Ghost { name: Inky, pos: (11, 14), last_pos: (11, 13), house_timer: 0 }
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+(12, 13), Ghost { name: Clyde, pos: (12, 14), last_pos: (13, 14), house_timer: 0 }
+End tick
+Start tick: 51
+[(14, 14), (12, 14), (13, 15), (13, 13)]
+(13, 13), Ghost { name: Blinky, pos: (13, 14), last_pos: (13, 15), house_timer: 0 }
+[(19, 18), (17, 18), (18, 19), (18, 17)]
+(18, 17), Ghost { name: Pinky, pos: (18, 18), last_pos: (18, 19), house_timer: 0 }
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+(12, 13), Ghost { name: Inky, pos: (12, 14), last_pos: (11, 14), house_timer: 0 }
+[(13, 13), (11, 13), (12, 14), (12, 12)]
+(13, 13), Ghost { name: Clyde, pos: (12, 13), last_pos: (12, 14), house_timer: 0 }
+End tick
+Start tick: 52
+[(14, 13), (12, 13), (13, 14), (13, 12)]
+(13, 12), Ghost { name: Blinky, pos: (13, 13), last_pos: (13, 14), house_timer: 0 }
+[(19, 17), (17, 17), (18, 18), (18, 16)]
+(17, 17), Ghost { name: Pinky, pos: (18, 17), last_pos: (18, 18), house_timer: 0 }
+[(13, 13), (11, 13), (12, 14), (12, 12)]
+(13, 13), Ghost { name: Inky, pos: (12, 13), last_pos: (12, 14), house_timer: 0 }
+[(14, 13), (12, 13), (13, 14), (13, 12)]
+(13, 12), Ghost { name: Clyde, pos: (13, 13), last_pos: (12, 13), house_timer: 0 }
+End tick
+Start tick: 53
+[(14, 12), (12, 12), (13, 13), (13, 11)]
+(13, 11), Ghost { name: Blinky, pos: (13, 12), last_pos: (13, 13), house_timer: 0 }
+[(18, 17), (16, 17), (17, 18), (17, 16)]
+(16, 17), Ghost { name: Pinky, pos: (17, 17), last_pos: (18, 17), house_timer: 0 }
+[(14, 13), (12, 13), (13, 14), (13, 12)]
+(13, 12), Ghost { name: Inky, pos: (13, 13), last_pos: (12, 13), house_timer: 0 }
+[(14, 12), (12, 12), (13, 13), (13, 11)]
+(13, 11), Ghost { name: Clyde, pos: (13, 12), last_pos: (13, 13), house_timer: 0 }
+End tick
+Start tick: 54
+[(14, 11), (12, 11), (13, 12), (13, 10)]
+(12, 11), Ghost { name: Blinky, pos: (13, 11), last_pos: (13, 12), house_timer: 0 }
+[(17, 17), (15, 17), (16, 18), (16, 16)]
+(15, 17), Ghost { name: Pinky, pos: (16, 17), last_pos: (17, 17), house_timer: 0 }
+[(14, 12), (12, 12), (13, 13), (13, 11)]
+(13, 11), Ghost { name: Inky, pos: (13, 12), last_pos: (13, 13), house_timer: 0 }
+[(14, 11), (12, 11), (13, 12), (13, 10)]
+(14, 11), Ghost { name: Clyde, pos: (13, 11), last_pos: (13, 12), house_timer: 0 }
+End tick
+Start tick: 55
+[(13, 11), (11, 11), (12, 12), (12, 10)]
+(11, 11), Ghost { name: Blinky, pos: (12, 11), last_pos: (13, 11), house_timer: 0 }
+[(16, 17), (14, 17), (15, 18), (15, 16)]
+(14, 17), Ghost { name: Pinky, pos: (15, 17), last_pos: (16, 17), house_timer: 0 }
+[(14, 11), (12, 11), (13, 12), (13, 10)]
+(14, 11), Ghost { name: Inky, pos: (13, 11), last_pos: (13, 12), house_timer: 0 }
+[(15, 11), (13, 11), (14, 12), (14, 10)]
+(15, 11), Ghost { name: Clyde, pos: (14, 11), last_pos: (13, 11), house_timer: 0 }
+End tick
+Start tick: 56
+[(12, 11), (10, 11), (11, 12), (11, 10)]
+(10, 11), Ghost { name: Blinky, pos: (11, 11), last_pos: (12, 11), house_timer: 0 }
+[(15, 17), (13, 17), (14, 18), (14, 16)]
+(13, 17), Ghost { name: Pinky, pos: (14, 17), last_pos: (15, 17), house_timer: 0 }
+[(15, 11), (13, 11), (14, 12), (14, 10)]
+(15, 11), Ghost { name: Inky, pos: (14, 11), last_pos: (13, 11), house_timer: 0 }
+[(16, 11), (14, 11), (15, 12), (15, 10)]
+(16, 11), Ghost { name: Clyde, pos: (15, 11), last_pos: (14, 11), house_timer: 0 }
+End tick
+Start tick: 57
+[(11, 11), (9, 11), (10, 12), (10, 10)]
+(9, 11), Ghost { name: Blinky, pos: (10, 11), last_pos: (11, 11), house_timer: 0 }
+[(14, 17), (12, 17), (13, 18), (13, 16)]
+(12, 17), Ghost { name: Pinky, pos: (13, 17), last_pos: (14, 17), house_timer: 0 }
+[(16, 11), (14, 11), (15, 12), (15, 10)]
+(15, 10), Ghost { name: Inky, pos: (15, 11), last_pos: (14, 11), house_timer: 0 }
+[(17, 11), (15, 11), (16, 12), (16, 10)]
+(17, 11), Ghost { name: Clyde, pos: (16, 11), last_pos: (15, 11), house_timer: 0 }
+End tick
+Start tick: 58
+[(10, 11), (8, 11), (9, 12), (9, 10)]
+(9, 12), Ghost { name: Blinky, pos: (9, 11), last_pos: (10, 11), house_timer: 0 }
+[(13, 17), (11, 17), (12, 18), (12, 16)]
+(11, 17), Ghost { name: Pinky, pos: (12, 17), last_pos: (13, 17), house_timer: 0 }
+[(16, 10), (14, 10), (15, 11), (15, 9)]
+(15, 9), Ghost { name: Inky, pos: (15, 10), last_pos: (15, 11), house_timer: 0 }
+[(18, 11), (16, 11), (17, 12), (17, 10)]
+(18, 11), Ghost { name: Clyde, pos: (17, 11), last_pos: (16, 11), house_timer: 0 }
+End tick
+Start tick: 59
+[(10, 12), (8, 12), (9, 13), (9, 11)]
+(9, 13), Ghost { name: Blinky, pos: (9, 12), last_pos: (9, 11), house_timer: 0 }
+[(12, 17), (10, 17), (11, 18), (11, 16)]
+(10, 17), Ghost { name: Pinky, pos: (11, 17), last_pos: (12, 17), house_timer: 0 }
+[(16, 9), (14, 9), (15, 10), (15, 8)]
+(15, 8), Ghost { name: Inky, pos: (15, 9), last_pos: (15, 10), house_timer: 0 }
+[(19, 11), (17, 11), (18, 12), (18, 10)]
+(18, 12), Ghost { name: Clyde, pos: (18, 11), last_pos: (17, 11), house_timer: 0 }
+End tick
+Start tick: 60
+[(10, 13), (8, 13), (9, 14), (9, 12)]
+(9, 14), Ghost { name: Blinky, pos: (9, 13), last_pos: (9, 12), house_timer: 0 }
+[(11, 17), (9, 17), (10, 18), (10, 16)]
+(9, 17), Ghost { name: Pinky, pos: (10, 17), last_pos: (11, 17), house_timer: 0 }
+[(16, 8), (14, 8), (15, 9), (15, 7)]
+(16, 8), Ghost { name: Inky, pos: (15, 8), last_pos: (15, 9), house_timer: 0 }
+[(19, 12), (17, 12), (18, 13), (18, 11)]
+(18, 13), Ghost { name: Clyde, pos: (18, 12), last_pos: (18, 11), house_timer: 0 }
+End tick
+Start tick: 61
+[(10, 14), (8, 14), (9, 15), (9, 13)]
+(9, 15), Ghost { name: Blinky, pos: (9, 14), last_pos: (9, 13), house_timer: 0 }
+[(10, 17), (8, 17), (9, 18), (9, 16)]
+(9, 16), Ghost { name: Pinky, pos: (9, 17), last_pos: (10, 17), house_timer: 0 }
+[(17, 8), (15, 8), (16, 9), (16, 7)]
+(17, 8), Ghost { name: Inky, pos: (16, 8), last_pos: (15, 8), house_timer: 0 }
+[(19, 13), (17, 13), (18, 14), (18, 12)]
+(18, 14), Ghost { name: Clyde, pos: (18, 13), last_pos: (18, 12), house_timer: 0 }
+End tick
+Start tick: 62
+[(10, 15), (8, 15), (9, 16), (9, 14)]
+(9, 16), Ghost { name: Blinky, pos: (9, 15), last_pos: (9, 14), house_timer: 0 }
+[(10, 16), (8, 16), (9, 17), (9, 15)]
+(9, 15), Ghost { name: Pinky, pos: (9, 16), last_pos: (9, 17), house_timer: 0 }
+[(18, 8), (16, 8), (17, 9), (17, 7)]
+(18, 8), Ghost { name: Inky, pos: (17, 8), last_pos: (16, 8), house_timer: 0 }
+[(19, 14), (17, 14), (18, 15), (18, 13)]
+(19, 14), Ghost { name: Clyde, pos: (18, 14), last_pos: (18, 13), house_timer: 0 }
+End tick
+Start tick: 63
+[(10, 16), (8, 16), (9, 17), (9, 15)]
+(9, 17), Ghost { name: Blinky, pos: (9, 16), last_pos: (9, 15), house_timer: 0 }
+[(10, 15), (8, 15), (9, 16), (9, 14)]
+(9, 14), Ghost { name: Pinky, pos: (9, 15), last_pos: (9, 16), house_timer: 0 }
+[(19, 8), (17, 8), (18, 9), (18, 7)]
+(18, 7), Ghost { name: Inky, pos: (18, 8), last_pos: (17, 8), house_timer: 0 }
+[(20, 14), (18, 14), (19, 15), (19, 13)]
+(20, 14), Ghost { name: Clyde, pos: (19, 14), last_pos: (18, 14), house_timer: 0 }
+End tick
+Start tick: 64
+[(10, 17), (8, 17), (9, 18), (9, 16)]
+(9, 18), Ghost { name: Blinky, pos: (9, 17), last_pos: (9, 16), house_timer: 0 }
+[(10, 14), (8, 14), (9, 15), (9, 13)]
+(9, 13), Ghost { name: Pinky, pos: (9, 14), last_pos: (9, 15), house_timer: 0 }
+[(19, 7), (17, 7), (18, 8), (18, 6)]
+(18, 6), Ghost { name: Inky, pos: (18, 7), last_pos: (18, 8), house_timer: 0 }
+[(21, 14), (19, 14), (20, 15), (20, 13)]
+(21, 14), Ghost { name: Clyde, pos: (20, 14), last_pos: (19, 14), house_timer: 0 }
+End tick
+Start tick: 65
+[(10, 18), (8, 18), (9, 19), (9, 17)]
+(9, 19), Ghost { name: Blinky, pos: (9, 18), last_pos: (9, 17), house_timer: 0 }
+[(10, 13), (8, 13), (9, 14), (9, 12)]
+(9, 12), Ghost { name: Pinky, pos: (9, 13), last_pos: (9, 14), house_timer: 0 }
+[(19, 6), (17, 6), (18, 7), (18, 5)]
+(18, 5), Ghost { name: Inky, pos: (18, 6), last_pos: (18, 7), house_timer: 0 }
+[(22, 14), (20, 14), (21, 15), (21, 13)]
+(21, 13), Ghost { name: Clyde, pos: (21, 14), last_pos: (20, 14), house_timer: 0 }
+End tick
+Start tick: 66
+[(10, 19), (8, 19), (9, 20), (9, 18)]
+(9, 20), Ghost { name: Blinky, pos: (9, 19), last_pos: (9, 18), house_timer: 0 }
+[(10, 12), (8, 12), (9, 13), (9, 11)]
+(9, 11), Ghost { name: Pinky, pos: (9, 12), last_pos: (9, 13), house_timer: 0 }
+[(19, 5), (17, 5), (18, 6), (18, 4)]
+(19, 5), Ghost { name: Inky, pos: (18, 5), last_pos: (18, 6), house_timer: 0 }
+[(22, 13), (20, 13), (21, 14), (21, 12)]
+(21, 12), Ghost { name: Clyde, pos: (21, 13), last_pos: (21, 14), house_timer: 0 }
+End tick
+Start tick: 67
+[(10, 20), (8, 20), (9, 21), (9, 19)]
+(8, 20), Ghost { name: Blinky, pos: (9, 20), last_pos: (9, 19), house_timer: 0 }
+[(10, 11), (8, 11), (9, 12), (9, 10)]
+(10, 11), Ghost { name: Pinky, pos: (9, 11), last_pos: (9, 12), house_timer: 0 }
+[(20, 5), (18, 5), (19, 6), (19, 4)]
+(20, 5), Ghost { name: Inky, pos: (19, 5), last_pos: (18, 5), house_timer: 0 }
+[(22, 12), (20, 12), (21, 13), (21, 11)]
+(21, 11), Ghost { name: Clyde, pos: (21, 12), last_pos: (21, 13), house_timer: 0 }
+End tick
+Start tick: 68
+[(9, 20), (7, 20), (8, 21), (8, 19)]
+(7, 20), Ghost { name: Blinky, pos: (8, 20), last_pos: (9, 20), house_timer: 0 }
+[(11, 11), (9, 11), (10, 12), (10, 10)]
+(11, 11), Ghost { name: Pinky, pos: (10, 11), last_pos: (9, 11), house_timer: 0 }
+[(21, 5), (19, 5), (20, 6), (20, 4)]
+(21, 5), Ghost { name: Inky, pos: (20, 5), last_pos: (19, 5), house_timer: 0 }
+[(22, 11), (20, 11), (21, 12), (21, 10)]
+(21, 10), Ghost { name: Clyde, pos: (21, 11), last_pos: (21, 12), house_timer: 0 }
+End tick
+Start tick: 69
+[(8, 20), (6, 20), (7, 21), (7, 19)]
+(6, 20), Ghost { name: Blinky, pos: (7, 20), last_pos: (8, 20), house_timer: 0 }
+[(12, 11), (10, 11), (11, 12), (11, 10)]
+(12, 11), Ghost { name: Pinky, pos: (11, 11), last_pos: (10, 11), house_timer: 0 }
+[(22, 5), (20, 5), (21, 6), (21, 4)]
+(21, 6), Ghost { name: Inky, pos: (21, 5), last_pos: (20, 5), house_timer: 0 }
+[(22, 10), (20, 10), (21, 11), (21, 9)]
+(21, 9), Ghost { name: Clyde, pos: (21, 10), last_pos: (21, 11), house_timer: 0 }
+End tick
+Start tick: 70
+[(7, 20), (5, 20), (6, 21), (6, 19)]
+(5, 20), Ghost { name: Blinky, pos: (6, 20), last_pos: (7, 20), house_timer: 0 }
+[(13, 11), (11, 11), (12, 12), (12, 10)]
+(12, 10), Ghost { name: Pinky, pos: (12, 11), last_pos: (11, 11), house_timer: 0 }
+[(22, 6), (20, 6), (21, 7), (21, 5)]
+(21, 7), Ghost { name: Inky, pos: (21, 6), last_pos: (21, 5), house_timer: 0 }
+[(22, 9), (20, 9), (21, 10), (21, 8)]
+(21, 8), Ghost { name: Clyde, pos: (21, 9), last_pos: (21, 10), house_timer: 0 }
+End tick
+Start tick: 71
+[(6, 20), (4, 20), (5, 21), (5, 19)]
+(4, 20), Ghost { name: Blinky, pos: (5, 20), last_pos: (6, 20), house_timer: 0 }
+[(13, 10), (11, 10), (12, 11), (12, 9)]
+(12, 9), Ghost { name: Pinky, pos: (12, 10), last_pos: (12, 11), house_timer: 0 }
+[(22, 7), (20, 7), (21, 8), (21, 6)]
+(21, 8), Ghost { name: Inky, pos: (21, 7), last_pos: (21, 6), house_timer: 0 }
+[(22, 8), (20, 8), (21, 9), (21, 7)]
+(22, 8), Ghost { name: Clyde, pos: (21, 8), last_pos: (21, 9), house_timer: 0 }
+End tick
+Start tick: 72
+[(5, 20), (3, 20), (4, 21), (4, 19)]
+(3, 20), Ghost { name: Blinky, pos: (4, 20), last_pos: (5, 20), house_timer: 0 }
+[(13, 9), (11, 9), (12, 10), (12, 8)]
+(12, 8), Ghost { name: Pinky, pos: (12, 9), last_pos: (12, 10), house_timer: 0 }
+[(22, 8), (20, 8), (21, 9), (21, 7)]
+(21, 9), Ghost { name: Inky, pos: (21, 8), last_pos: (21, 7), house_timer: 0 }
+[(23, 8), (21, 8), (22, 9), (22, 7)]
+(23, 8), Ghost { name: Clyde, pos: (22, 8), last_pos: (21, 8), house_timer: 0 }
+End tick
+Start tick: 73
+[(4, 20), (2, 20), (3, 21), (3, 19)]
+(2, 20), Ghost { name: Blinky, pos: (3, 20), last_pos: (4, 20), house_timer: 0 }
+[(13, 8), (11, 8), (12, 9), (12, 7)]
+(11, 8), Ghost { name: Pinky, pos: (12, 8), last_pos: (12, 9), house_timer: 0 }
+[(22, 9), (20, 9), (21, 10), (21, 8)]
+(21, 10), Ghost { name: Inky, pos: (21, 9), last_pos: (21, 8), house_timer: 0 }
+[(24, 8), (22, 8), (23, 9), (23, 7)]
+(24, 8), Ghost { name: Clyde, pos: (23, 8), last_pos: (22, 8), house_timer: 0 }
+End tick
+Start tick: 74
+[(3, 20), (1, 20), (2, 21), (2, 19)]
+(1, 20), Ghost { name: Blinky, pos: (2, 20), last_pos: (3, 20), house_timer: 0 }
+[(12, 8), (10, 8), (11, 9), (11, 7)]
+(10, 8), Ghost { name: Pinky, pos: (11, 8), last_pos: (12, 8), house_timer: 0 }
+[(22, 10), (20, 10), (21, 11), (21, 9)]
+(21, 11), Ghost { name: Inky, pos: (21, 10), last_pos: (21, 9), house_timer: 0 }
+[(25, 8), (23, 8), (24, 9), (24, 7)]
+(25, 8), Ghost { name: Clyde, pos: (24, 8), last_pos: (23, 8), house_timer: 0 }
+End tick
+Start tick: 75
+[(2, 20), (0, 20), (1, 21), (1, 19)]
+(1, 21), Ghost { name: Blinky, pos: (1, 20), last_pos: (2, 20), house_timer: 0 }
+[(11, 8), (9, 8), (10, 9), (10, 7)]
+(9, 8), Ghost { name: Pinky, pos: (10, 8), last_pos: (11, 8), house_timer: 0 }
+[(22, 11), (20, 11), (21, 12), (21, 10)]
+(21, 12), Ghost { name: Inky, pos: (21, 11), last_pos: (21, 10), house_timer: 0 }
+[(26, 8), (24, 8), (25, 9), (25, 7)]
+(26, 8), Ghost { name: Clyde, pos: (25, 8), last_pos: (24, 8), house_timer: 0 }
+End tick
+Start tick: 76
+[(2, 21), (0, 21), (1, 22), (1, 20)]
+(1, 22), Ghost { name: Blinky, pos: (1, 21), last_pos: (1, 20), house_timer: 0 }
+[(10, 8), (8, 8), (9, 9), (9, 7)]
+(9, 7), Ghost { name: Pinky, pos: (9, 8), last_pos: (10, 8), house_timer: 0 }
+[(22, 12), (20, 12), (21, 13), (21, 11)]
+(21, 13), Ghost { name: Inky, pos: (21, 12), last_pos: (21, 11), house_timer: 0 }
+[(27, 8), (25, 8), (26, 9), (26, 7)]
+(26, 7), Ghost { name: Clyde, pos: (26, 8), last_pos: (25, 8), house_timer: 0 }
+End tick
+Start tick: 77
+[(2, 22), (0, 22), (1, 23), (1, 21)]
+(1, 23), Ghost { name: Blinky, pos: (1, 22), last_pos: (1, 21), house_timer: 0 }
+[(10, 7), (8, 7), (9, 8), (9, 6)]
+(9, 6), Ghost { name: Pinky, pos: (9, 7), last_pos: (9, 8), house_timer: 0 }
+[(22, 13), (20, 13), (21, 14), (21, 12)]
+(21, 14), Ghost { name: Inky, pos: (21, 13), last_pos: (21, 12), house_timer: 0 }
+[(27, 7), (25, 7), (26, 8), (26, 6)]
+(26, 6), Ghost { name: Clyde, pos: (26, 7), last_pos: (26, 8), house_timer: 0 }
+End tick
+Start tick: 78
+[(2, 23), (0, 23), (1, 24), (1, 22)]
+(2, 23), Ghost { name: Blinky, pos: (1, 23), last_pos: (1, 22), house_timer: 0 }
+[(10, 6), (8, 6), (9, 7), (9, 5)]
+(9, 5), Ghost { name: Pinky, pos: (9, 6), last_pos: (9, 7), house_timer: 0 }
+[(22, 14), (20, 14), (21, 15), (21, 13)]
+(21, 15), Ghost { name: Inky, pos: (21, 14), last_pos: (21, 13), house_timer: 0 }
+[(27, 6), (25, 6), (26, 7), (26, 5)]
+(26, 5), Ghost { name: Clyde, pos: (26, 6), last_pos: (26, 7), house_timer: 0 }
+End tick
+Start tick: 79
+[(3, 23), (1, 23), (2, 24), (2, 22)]
+(3, 23), Ghost { name: Blinky, pos: (2, 23), last_pos: (1, 23), house_timer: 0 }
+[(10, 5), (8, 5), (9, 6), (9, 4)]
+(8, 5), Ghost { name: Pinky, pos: (9, 5), last_pos: (9, 6), house_timer: 0 }
+[(22, 15), (20, 15), (21, 16), (21, 14)]
+(21, 16), Ghost { name: Inky, pos: (21, 15), last_pos: (21, 14), house_timer: 0 }
+[(27, 5), (25, 5), (26, 6), (26, 4)]
+(26, 4), Ghost { name: Clyde, pos: (26, 5), last_pos: (26, 6), house_timer: 0 }
+End tick
+Start tick: 80
+[(4, 23), (2, 23), (3, 24), (3, 22)]
+(3, 24), Ghost { name: Blinky, pos: (3, 23), last_pos: (2, 23), house_timer: 0 }
+[(9, 5), (7, 5), (8, 6), (8, 4)]
+(7, 5), Ghost { name: Pinky, pos: (8, 5), last_pos: (9, 5), house_timer: 0 }
+[(22, 16), (20, 16), (21, 17), (21, 15)]
+(21, 17), Ghost { name: Inky, pos: (21, 16), last_pos: (21, 15), house_timer: 0 }
+[(27, 4), (25, 4), (26, 5), (26, 3)]
+(26, 3), Ghost { name: Clyde, pos: (26, 4), last_pos: (26, 5), house_timer: 0 }
+End tick
+Start tick: 81
+[(4, 24), (2, 24), (3, 25), (3, 23)]
+(3, 25), Ghost { name: Blinky, pos: (3, 24), last_pos: (3, 23), house_timer: 0 }
+[(8, 5), (6, 5), (7, 6), (7, 4)]
+(6, 5), Ghost { name: Pinky, pos: (7, 5), last_pos: (8, 5), house_timer: 0 }
+[(22, 17), (20, 17), (21, 18), (21, 16)]
+(21, 18), Ghost { name: Inky, pos: (21, 17), last_pos: (21, 16), house_timer: 0 }
+[(27, 3), (25, 3), (26, 4), (26, 2)]
+(26, 2), Ghost { name: Clyde, pos: (26, 3), last_pos: (26, 4), house_timer: 0 }
+End tick
+Start tick: 82
+[(4, 25), (2, 25), (3, 26), (3, 24)]
+(3, 26), Ghost { name: Blinky, pos: (3, 25), last_pos: (3, 24), house_timer: 0 }
+[(7, 5), (5, 5), (6, 6), (6, 4)]
+(5, 5), Ghost { name: Pinky, pos: (6, 5), last_pos: (7, 5), house_timer: 0 }
+[(22, 18), (20, 18), (21, 19), (21, 17)]
+(21, 19), Ghost { name: Inky, pos: (21, 18), last_pos: (21, 17), house_timer: 0 }
+[(27, 2), (25, 2), (26, 3), (26, 1)]
+(26, 1), Ghost { name: Clyde, pos: (26, 2), last_pos: (26, 3), house_timer: 0 }
+End tick
+Start tick: 83
+[(4, 26), (2, 26), (3, 27), (3, 25)]
+(2, 26), Ghost { name: Blinky, pos: (3, 26), last_pos: (3, 25), house_timer: 0 }
+[(6, 5), (4, 5), (5, 6), (5, 4)]
+(4, 5), Ghost { name: Pinky, pos: (5, 5), last_pos: (6, 5), house_timer: 0 }
+[(22, 19), (20, 19), (21, 20), (21, 18)]
+(21, 20), Ghost { name: Inky, pos: (21, 19), last_pos: (21, 18), house_timer: 0 }
+[(27, 1), (25, 1), (26, 2), (26, 0)]
+(25, 1), Ghost { name: Clyde, pos: (26, 1), last_pos: (26, 2), house_timer: 0 }
+End tick
+Start tick: 84
+Spooked!
+[(3, 26), (1, 26), (2, 27), (2, 25)]
+(1, 26), Ghost { name: Blinky, pos: (2, 26), last_pos: (3, 26), house_timer: 0 }
+[(5, 5), (3, 5), (4, 6), (4, 4)]
+(3, 5), Ghost { name: Pinky, pos: (4, 5), last_pos: (5, 5), house_timer: 0 }
+[(22, 20), (20, 20), (21, 21), (21, 19)]
+(22, 20), Ghost { name: Inky, pos: (21, 20), last_pos: (21, 19), house_timer: 0 }
+[(26, 1), (24, 1), (25, 2), (25, 0)]
+(24, 1), Ghost { name: Clyde, pos: (25, 1), last_pos: (26, 1), house_timer: 0 }
+End tick
+Start tick: 85
+[(2, 26), (0, 26), (1, 27), (1, 25)]
+(1, 27), Ghost { name: Blinky, pos: (1, 26), last_pos: (2, 26), house_timer: 0 }
+[(4, 5), (2, 5), (3, 6), (3, 4)]
+(2, 5), Ghost { name: Pinky, pos: (3, 5), last_pos: (4, 5), house_timer: 0 }
+[(23, 20), (21, 20), (22, 21), (22, 19)]
+(23, 20), Ghost { name: Inky, pos: (22, 20), last_pos: (21, 20), house_timer: 0 }
+[(25, 1), (23, 1), (24, 2), (24, 0)]
+(23, 1), Ghost { name: Clyde, pos: (24, 1), last_pos: (25, 1), house_timer: 0 }
+End tick
+Start tick: 86
+[(2, 27), (0, 27), (1, 28), (1, 26)]
+(1, 28), Ghost { name: Blinky, pos: (1, 27), last_pos: (1, 26), house_timer: 0 }
+[(3, 5), (1, 5), (2, 6), (2, 4)]
+(1, 5), Ghost { name: Pinky, pos: (2, 5), last_pos: (3, 5), house_timer: 0 }
+[(24, 20), (22, 20), (23, 21), (23, 19)]
+(24, 20), Ghost { name: Inky, pos: (23, 20), last_pos: (22, 20), house_timer: 0 }
+[(24, 1), (22, 1), (23, 2), (23, 0)]
+(22, 1), Ghost { name: Clyde, pos: (23, 1), last_pos: (24, 1), house_timer: 0 }
+Killed! Ghost { name: Pinky, pos: (1, 5), last_pos: (2, 5), house_timer: 0 }
+End tick
+Start tick: 87
+[(2, 28), (0, 28), (1, 29), (1, 27)]
+(1, 29), Ghost { name: Blinky, pos: (1, 28), last_pos: (1, 27), house_timer: 0 }
+[(16, 14), (14, 14), (15, 15), (15, 13)]
+(15, 15), Ghost { name: Pinky, pos: (15, 14), last_pos: (-2147483648, -2147483648), house_timer: 10 }
+[(25, 20), (23, 20), (24, 21), (24, 19)]
+(25, 20), Ghost { name: Inky, pos: (24, 20), last_pos: (23, 20), house_timer: 0 }
+[(23, 1), (21, 1), (22, 2), (22, 0)]
+(21, 1), Ghost { name: Clyde, pos: (22, 1), last_pos: (23, 1), house_timer: 0 }
+End tick
+Start tick: 88
+[(2, 29), (0, 29), (1, 30), (1, 28)]
+(2, 29), Ghost { name: Blinky, pos: (1, 29), last_pos: (1, 28), house_timer: 0 }
+[(16, 15), (14, 15), (15, 16), (15, 14)]
+(14, 15), Ghost { name: Pinky, pos: (15, 15), last_pos: (15, 14), house_timer: 9 }
+[(26, 20), (24, 20), (25, 21), (25, 19)]
+(26, 20), Ghost { name: Inky, pos: (25, 20), last_pos: (24, 20), house_timer: 0 }
+[(22, 1), (20, 1), (21, 2), (21, 0)]
+(20, 1), Ghost { name: Clyde, pos: (21, 1), last_pos: (22, 1), house_timer: 0 }
+End tick
+Start tick: 89
+[(3, 29), (1, 29), (2, 30), (2, 28)]
+(3, 29), Ghost { name: Blinky, pos: (2, 29), last_pos: (1, 29), house_timer: 0 }
+[(15, 15), (13, 15), (14, 16), (14, 14)]
+(13, 15), Ghost { name: Pinky, pos: (14, 15), last_pos: (15, 15), house_timer: 8 }
+[(27, 20), (25, 20), (26, 21), (26, 19)]
+(26, 21), Ghost { name: Inky, pos: (26, 20), last_pos: (25, 20), house_timer: 0 }
+[(21, 1), (19, 1), (20, 2), (20, 0)]
+(19, 1), Ghost { name: Clyde, pos: (20, 1), last_pos: (21, 1), house_timer: 0 }
+End tick
+Start tick: 90
+[(4, 29), (2, 29), (3, 30), (3, 28)]
+(4, 29), Ghost { name: Blinky, pos: (3, 29), last_pos: (2, 29), house_timer: 0 }
+[(14, 15), (12, 15), (13, 16), (13, 14)]
+(13, 14), Ghost { name: Pinky, pos: (13, 15), last_pos: (14, 15), house_timer: 7 }
+[(27, 21), (25, 21), (26, 22), (26, 20)]
+(26, 22), Ghost { name: Inky, pos: (26, 21), last_pos: (26, 20), house_timer: 0 }
+[(20, 1), (18, 1), (19, 2), (19, 0)]
+(18, 1), Ghost { name: Clyde, pos: (19, 1), last_pos: (20, 1), house_timer: 0 }
+End tick
+Start tick: 91
+[(5, 29), (3, 29), (4, 30), (4, 28)]
+(5, 29), Ghost { name: Blinky, pos: (4, 29), last_pos: (3, 29), house_timer: 0 }
+[(14, 14), (12, 14), (13, 15), (13, 13)]
+(14, 14), Ghost { name: Pinky, pos: (13, 14), last_pos: (13, 15), house_timer: 6 }
+[(27, 22), (25, 22), (26, 23), (26, 21)]
+(26, 23), Ghost { name: Inky, pos: (26, 22), last_pos: (26, 21), house_timer: 0 }
+[(19, 1), (17, 1), (18, 2), (18, 0)]
+(17, 1), Ghost { name: Clyde, pos: (18, 1), last_pos: (19, 1), house_timer: 0 }
+End tick
+Start tick: 92
+[(6, 29), (4, 29), (5, 30), (5, 28)]
+(6, 29), Ghost { name: Blinky, pos: (5, 29), last_pos: (4, 29), house_timer: 0 }
+[(15, 14), (13, 14), (14, 15), (14, 13)]
+(14, 15), Ghost { name: Pinky, pos: (14, 14), last_pos: (13, 14), house_timer: 5 }
+[(27, 23), (25, 23), (26, 24), (26, 22)]
+(25, 23), Ghost { name: Inky, pos: (26, 23), last_pos: (26, 22), house_timer: 0 }
+[(18, 1), (16, 1), (17, 2), (17, 0)]
+(16, 1), Ghost { name: Clyde, pos: (17, 1), last_pos: (18, 1), house_timer: 0 }
+End tick
+Start tick: 93
+[(7, 29), (5, 29), (6, 30), (6, 28)]
+(7, 29), Ghost { name: Blinky, pos: (6, 29), last_pos: (5, 29), house_timer: 0 }
+[(15, 15), (13, 15), (14, 16), (14, 14)]
+(15, 15), Ghost { name: Pinky, pos: (14, 15), last_pos: (14, 14), house_timer: 4 }
+[(26, 23), (24, 23), (25, 24), (25, 22)]
+(24, 23), Ghost { name: Inky, pos: (25, 23), last_pos: (26, 23), house_timer: 0 }
+[(17, 1), (15, 1), (16, 2), (16, 0)]
+(15, 1), Ghost { name: Clyde, pos: (16, 1), last_pos: (17, 1), house_timer: 0 }
+End tick
+Start tick: 94
+[(8, 29), (6, 29), (7, 30), (7, 28)]
+(8, 29), Ghost { name: Blinky, pos: (7, 29), last_pos: (6, 29), house_timer: 0 }
+[(16, 15), (14, 15), (15, 16), (15, 14)]
+(15, 14), Ghost { name: Pinky, pos: (15, 15), last_pos: (14, 15), house_timer: 3 }
+[(25, 23), (23, 23), (24, 24), (24, 22)]
+(24, 24), Ghost { name: Inky, pos: (24, 23), last_pos: (25, 23), house_timer: 0 }
+[(16, 1), (14, 1), (15, 2), (15, 0)]
+(15, 2), Ghost { name: Clyde, pos: (15, 1), last_pos: (16, 1), house_timer: 0 }
+End tick
+Start tick: 95
+[(9, 29), (7, 29), (8, 30), (8, 28)]
+(9, 29), Ghost { name: Blinky, pos: (8, 29), last_pos: (7, 29), house_timer: 0 }
+[(16, 14), (14, 14), (15, 15), (15, 13)]
+(16, 14), Ghost { name: Pinky, pos: (15, 14), last_pos: (15, 15), house_timer: 2 }
+[(25, 24), (23, 24), (24, 25), (24, 23)]
+(24, 25), Ghost { name: Inky, pos: (24, 24), last_pos: (24, 23), house_timer: 0 }
+[(16, 2), (14, 2), (15, 3), (15, 1)]
+(15, 3), Ghost { name: Clyde, pos: (15, 2), last_pos: (15, 1), house_timer: 0 }
+End tick
+Start tick: 96
+[(10, 29), (8, 29), (9, 30), (9, 28)]
+(10, 29), Ghost { name: Blinky, pos: (9, 29), last_pos: (8, 29), house_timer: 0 }
+[(17, 14), (15, 14), (16, 15), (16, 13)]
+(16, 15), Ghost { name: Pinky, pos: (16, 14), last_pos: (15, 14), house_timer: 1 }
+[(25, 25), (23, 25), (24, 26), (24, 24)]
+(24, 26), Ghost { name: Inky, pos: (24, 25), last_pos: (24, 24), house_timer: 0 }
+[(16, 3), (14, 3), (15, 4), (15, 2)]
+(15, 4), Ghost { name: Clyde, pos: (15, 3), last_pos: (15, 2), house_timer: 0 }
+End tick
+Start tick: 97
+[(11, 29), (9, 29), (10, 30), (10, 28)]
+(11, 29), Ghost { name: Blinky, pos: (10, 29), last_pos: (9, 29), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(25, 26), (23, 26), (24, 27), (24, 25)]
+(25, 26), Ghost { name: Inky, pos: (24, 26), last_pos: (24, 25), house_timer: 0 }
+[(16, 4), (14, 4), (15, 5), (15, 3)]
+(15, 5), Ghost { name: Clyde, pos: (15, 4), last_pos: (15, 3), house_timer: 0 }
+End tick
+Start tick: 98
+[(12, 29), (10, 29), (11, 30), (11, 28)]
+(12, 29), Ghost { name: Blinky, pos: (11, 29), last_pos: (10, 29), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(26, 26), (24, 26), (25, 27), (25, 25)]
+(26, 26), Ghost { name: Inky, pos: (25, 26), last_pos: (24, 26), house_timer: 0 }
+[(16, 5), (14, 5), (15, 6), (15, 4)]
+(14, 5), Ghost { name: Clyde, pos: (15, 5), last_pos: (15, 4), house_timer: 0 }
+End tick
+Start tick: 99
+[(13, 29), (11, 29), (12, 30), (12, 28)]
+(12, 28), Ghost { name: Blinky, pos: (12, 29), last_pos: (11, 29), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(27, 26), (25, 26), (26, 27), (26, 25)]
+(26, 27), Ghost { name: Inky, pos: (26, 26), last_pos: (25, 26), house_timer: 0 }
+[(15, 5), (13, 5), (14, 6), (14, 4)]
+(13, 5), Ghost { name: Clyde, pos: (14, 5), last_pos: (15, 5), house_timer: 0 }
+Killed! Ghost { name: Clyde, pos: (13, 5), last_pos: (14, 5), house_timer: 0 }
+End tick
+Start tick: 100
+[(13, 28), (11, 28), (12, 29), (12, 27)]
+(12, 27), Ghost { name: Blinky, pos: (12, 28), last_pos: (12, 29), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(27, 27), (25, 27), (26, 28), (26, 26)]
+(26, 28), Ghost { name: Inky, pos: (26, 27), last_pos: (26, 26), house_timer: 0 }
+[(15, 14), (13, 14), (14, 15), (14, 13)]
+(15, 14), Ghost { name: Clyde, pos: (14, 14), last_pos: (-2147483648, -2147483648), house_timer: 30 }
+End tick
+Start tick: 101
+[(13, 27), (11, 27), (12, 28), (12, 26)]
+(12, 26), Ghost { name: Blinky, pos: (12, 27), last_pos: (12, 28), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(27, 28), (25, 28), (26, 29), (26, 27)]
+(26, 29), Ghost { name: Inky, pos: (26, 28), last_pos: (26, 27), house_timer: 0 }
+[(16, 14), (14, 14), (15, 15), (15, 13)]
+(15, 13), Ghost { name: Clyde, pos: (15, 14), last_pos: (14, 14), house_timer: 29 }
+End tick
+Start tick: 102
+[(13, 26), (11, 26), (12, 27), (12, 25)]
+(11, 26), Ghost { name: Blinky, pos: (12, 26), last_pos: (12, 27), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(27, 29), (25, 29), (26, 30), (26, 28)]
+(25, 29), Ghost { name: Inky, pos: (26, 29), last_pos: (26, 28), house_timer: 0 }
+[(16, 13), (14, 13), (15, 14), (15, 12)]
+(16, 13), Ghost { name: Clyde, pos: (15, 13), last_pos: (15, 14), house_timer: 28 }
+End tick
+Start tick: 103
+[(12, 26), (10, 26), (11, 27), (11, 25)]
+(10, 26), Ghost { name: Blinky, pos: (11, 26), last_pos: (12, 26), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(26, 29), (24, 29), (25, 30), (25, 28)]
+(24, 29), Ghost { name: Inky, pos: (25, 29), last_pos: (26, 29), house_timer: 0 }
+[(17, 13), (15, 13), (16, 14), (16, 12)]
+(16, 14), Ghost { name: Clyde, pos: (16, 13), last_pos: (15, 13), house_timer: 27 }
+End tick
+Start tick: 104
+[(11, 26), (9, 26), (10, 27), (10, 25)]
+(9, 26), Ghost { name: Blinky, pos: (10, 26), last_pos: (11, 26), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(25, 29), (23, 29), (24, 30), (24, 28)]
+(23, 29), Ghost { name: Inky, pos: (24, 29), last_pos: (25, 29), house_timer: 0 }
+[(17, 14), (15, 14), (16, 15), (16, 13)]
+(16, 15), Ghost { name: Clyde, pos: (16, 14), last_pos: (16, 13), house_timer: 26 }
+End tick
+Start tick: 105
+[(10, 26), (8, 26), (9, 27), (9, 25)]
+(9, 25), Ghost { name: Blinky, pos: (9, 26), last_pos: (10, 26), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(24, 29), (22, 29), (23, 30), (23, 28)]
+(22, 29), Ghost { name: Inky, pos: (23, 29), last_pos: (24, 29), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+(15, 15), Ghost { name: Clyde, pos: (16, 15), last_pos: (16, 14), house_timer: 25 }
+End tick
+Start tick: 106
+[(10, 25), (8, 25), (9, 26), (9, 24)]
+(9, 24), Ghost { name: Blinky, pos: (9, 25), last_pos: (9, 26), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(23, 29), (21, 29), (22, 30), (22, 28)]
+(21, 29), Ghost { name: Inky, pos: (22, 29), last_pos: (23, 29), house_timer: 0 }
+[(16, 15), (14, 15), (15, 16), (15, 14)]
+(14, 15), Ghost { name: Clyde, pos: (15, 15), last_pos: (16, 15), house_timer: 24 }
+End tick
+Start tick: 107
+[(10, 24), (8, 24), (9, 25), (9, 23)]
+(9, 23), Ghost { name: Blinky, pos: (9, 24), last_pos: (9, 25), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(22, 29), (20, 29), (21, 30), (21, 28)]
+(20, 29), Ghost { name: Inky, pos: (21, 29), last_pos: (22, 29), house_timer: 0 }
+[(15, 15), (13, 15), (14, 16), (14, 14)]
+(13, 15), Ghost { name: Clyde, pos: (14, 15), last_pos: (15, 15), house_timer: 23 }
+End tick
+Start tick: 108
+[(10, 23), (8, 23), (9, 24), (9, 22)]
+(8, 23), Ghost { name: Blinky, pos: (9, 23), last_pos: (9, 24), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(21, 29), (19, 29), (20, 30), (20, 28)]
+(19, 29), Ghost { name: Inky, pos: (20, 29), last_pos: (21, 29), house_timer: 0 }
+[(14, 15), (12, 15), (13, 16), (13, 14)]
+(13, 14), Ghost { name: Clyde, pos: (13, 15), last_pos: (14, 15), house_timer: 22 }
+End tick
+Start tick: 109
+[(9, 23), (7, 23), (8, 24), (8, 22)]
+(7, 23), Ghost { name: Blinky, pos: (8, 23), last_pos: (9, 23), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(20, 29), (18, 29), (19, 30), (19, 28)]
+(18, 29), Ghost { name: Inky, pos: (19, 29), last_pos: (20, 29), house_timer: 0 }
+[(14, 14), (12, 14), (13, 15), (13, 13)]
+(12, 14), Ghost { name: Clyde, pos: (13, 14), last_pos: (13, 15), house_timer: 21 }
+End tick
+Start tick: 110
+[(8, 23), (6, 23), (7, 24), (7, 22)]
+(6, 23), Ghost { name: Blinky, pos: (7, 23), last_pos: (8, 23), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(19, 29), (17, 29), (18, 30), (18, 28)]
+(17, 29), Ghost { name: Inky, pos: (18, 29), last_pos: (19, 29), house_timer: 0 }
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+(11, 14), Ghost { name: Clyde, pos: (12, 14), last_pos: (13, 14), house_timer: 20 }
+End tick
+Start tick: 111
+[(7, 23), (5, 23), (6, 24), (6, 22)]
+(6, 22), Ghost { name: Blinky, pos: (6, 23), last_pos: (7, 23), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(18, 29), (16, 29), (17, 30), (17, 28)]
+(16, 29), Ghost { name: Inky, pos: (17, 29), last_pos: (18, 29), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+(11, 13), Ghost { name: Clyde, pos: (11, 14), last_pos: (12, 14), house_timer: 19 }
+End tick
+Start tick: 112
+[(7, 22), (5, 22), (6, 23), (6, 21)]
+(6, 21), Ghost { name: Blinky, pos: (6, 22), last_pos: (6, 23), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(17, 29), (15, 29), (16, 30), (16, 28)]
+(15, 29), Ghost { name: Inky, pos: (16, 29), last_pos: (17, 29), house_timer: 0 }
+[(12, 13), (10, 13), (11, 14), (11, 12)]
+(12, 13), Ghost { name: Clyde, pos: (11, 13), last_pos: (11, 14), house_timer: 18 }
+End tick
+Start tick: 113
+[(7, 21), (5, 21), (6, 22), (6, 20)]
+(6, 20), Ghost { name: Blinky, pos: (6, 21), last_pos: (6, 22), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+[(16, 29), (14, 29), (15, 30), (15, 28)]
+(14, 29), Ghost { name: Inky, pos: (15, 29), last_pos: (16, 29), house_timer: 0 }
+[(13, 13), (11, 13), (12, 14), (12, 12)]
+(13, 13), Ghost { name: Clyde, pos: (12, 13), last_pos: (11, 13), house_timer: 17 }
+End tick
+Start tick: 114
+[(7, 20), (5, 20), (6, 21), (6, 19)]
+(7, 20), Ghost { name: Blinky, pos: (6, 20), last_pos: (6, 21), house_timer: 0 }
+[(17, 15), (15, 15), (16, 16), (16, 14)]
+(15, 15), Ghost { name: Pinky, pos: (16, 15), last_pos: (16, 14), house_timer: 0 }
+[(15, 29), (13, 29), (14, 30), (14, 28)]
+(13, 29), Ghost { name: Inky, pos: (14, 29), last_pos: (15, 29), house_timer: 0 }
+[(14, 13), (12, 13), (13, 14), (13, 12)]
+(13, 12), Ghost { name: Clyde, pos: (13, 13), last_pos: (12, 13), house_timer: 16 }
+End tick
+Start tick: 115
+[(8, 20), (6, 20), (7, 21), (7, 19)]
+(8, 20), Ghost { name: Blinky, pos: (7, 20), last_pos: (6, 20), house_timer: 0 }
+[(16, 15), (14, 15), (15, 16), (15, 14)]
+(15, 14), Ghost { name: Pinky, pos: (15, 15), last_pos: (16, 15), house_timer: 0 }
+[(14, 29), (12, 29), (13, 30), (13, 28)]
+(12, 29), Ghost { name: Inky, pos: (13, 29), last_pos: (14, 29), house_timer: 0 }
+[(14, 12), (12, 12), (13, 13), (13, 11)]
+(14, 12), Ghost { name: Clyde, pos: (13, 12), last_pos: (13, 13), house_timer: 15 }
+End tick
+Start tick: 116
+[(9, 20), (7, 20), (8, 21), (8, 19)]
+(9, 20), Ghost { name: Blinky, pos: (8, 20), last_pos: (7, 20), house_timer: 0 }
+[(16, 14), (14, 14), (15, 15), (15, 13)]
+(15, 13), Ghost { name: Pinky, pos: (15, 14), last_pos: (15, 15), house_timer: 0 }
+[(13, 29), (11, 29), (12, 30), (12, 28)]
+(11, 29), Ghost { name: Inky, pos: (12, 29), last_pos: (13, 29), house_timer: 0 }
+[(15, 12), (13, 12), (14, 13), (14, 11)]
+(14, 13), Ghost { name: Clyde, pos: (14, 12), last_pos: (13, 12), house_timer: 14 }
+End tick
+Start tick: 117
+[(10, 20), (8, 20), (9, 21), (9, 19)]
+(9, 19), Ghost { name: Blinky, pos: (9, 20), last_pos: (8, 20), house_timer: 0 }
+[(16, 13), (14, 13), (15, 14), (15, 12)]
+(14, 13), Ghost { name: Pinky, pos: (15, 13), last_pos: (15, 14), house_timer: 0 }
+[(12, 29), (10, 29), (11, 30), (11, 28)]
+(10, 29), Ghost { name: Inky, pos: (11, 29), last_pos: (12, 29), house_timer: 0 }
+[(15, 13), (13, 13), (14, 14), (14, 12)]
+(15, 13), Ghost { name: Clyde, pos: (14, 13), last_pos: (14, 12), house_timer: 13 }
+End tick
+Start tick: 118
+[(10, 19), (8, 19), (9, 20), (9, 18)]
+(9, 18), Ghost { name: Blinky, pos: (9, 19), last_pos: (9, 20), house_timer: 0 }
+[(15, 13), (13, 13), (14, 14), (14, 12)]
+(14, 12), Ghost { name: Pinky, pos: (14, 13), last_pos: (15, 13), house_timer: 0 }
+[(11, 29), (9, 29), (10, 30), (10, 28)]
+(9, 29), Ghost { name: Inky, pos: (10, 29), last_pos: (11, 29), house_timer: 0 }
+[(16, 13), (14, 13), (15, 14), (15, 12)]
+(15, 14), Ghost { name: Clyde, pos: (15, 13), last_pos: (14, 13), house_timer: 12 }
+End tick
+Start tick: 119
+[(10, 18), (8, 18), (9, 19), (9, 17)]
+(9, 17), Ghost { name: Blinky, pos: (9, 18), last_pos: (9, 19), house_timer: 0 }
+[(15, 12), (13, 12), (14, 13), (14, 11)]
+(13, 12), Ghost { name: Pinky, pos: (14, 12), last_pos: (14, 13), house_timer: 0 }
+[(10, 29), (8, 29), (9, 30), (9, 28)]
+(8, 29), Ghost { name: Inky, pos: (9, 29), last_pos: (10, 29), house_timer: 0 }
+[(16, 14), (14, 14), (15, 15), (15, 13)]
+(14, 14), Ghost { name: Clyde, pos: (15, 14), last_pos: (15, 13), house_timer: 11 }
+End tick
+Start tick: 120
+[(10, 17), (8, 17), (9, 18), (9, 16)]
+(9, 16), Ghost { name: Blinky, pos: (9, 17), last_pos: (9, 18), house_timer: 0 }
+[(14, 12), (12, 12), (13, 13), (13, 11)]
+(13, 11), Ghost { name: Pinky, pos: (13, 12), last_pos: (14, 12), house_timer: 0 }
+[(9, 29), (7, 29), (8, 30), (8, 28)]
+(7, 29), Ghost { name: Inky, pos: (8, 29), last_pos: (9, 29), house_timer: 0 }
+[(15, 14), (13, 14), (14, 15), (14, 13)]
+(14, 13), Ghost { name: Clyde, pos: (14, 14), last_pos: (15, 14), house_timer: 10 }
+End tick
+Start tick: 121
+[(10, 16), (8, 16), (9, 17), (9, 15)]
+(9, 15), Ghost { name: Blinky, pos: (9, 16), last_pos: (9, 17), house_timer: 0 }
+[(14, 11), (12, 11), (13, 12), (13, 10)]
+(12, 11), Ghost { name: Pinky, pos: (13, 11), last_pos: (13, 12), house_timer: 0 }
+[(8, 29), (6, 29), (7, 30), (7, 28)]
+(6, 29), Ghost { name: Inky, pos: (7, 29), last_pos: (8, 29), house_timer: 0 }
+[(15, 13), (13, 13), (14, 14), (14, 12)]
+(14, 12), Ghost { name: Clyde, pos: (14, 13), last_pos: (14, 14), house_timer: 9 }
+End tick
+Start tick: 122
+[(10, 15), (8, 15), (9, 16), (9, 14)]
+(9, 14), Ghost { name: Blinky, pos: (9, 15), last_pos: (9, 16), house_timer: 0 }
+[(13, 11), (11, 11), (12, 12), (12, 10)]
+(11, 11), Ghost { name: Pinky, pos: (12, 11), last_pos: (13, 11), house_timer: 0 }
+[(7, 29), (5, 29), (6, 30), (6, 28)]
+(5, 29), Ghost { name: Inky, pos: (6, 29), last_pos: (7, 29), house_timer: 0 }
+[(15, 12), (13, 12), (14, 13), (14, 11)]
+(13, 12), Ghost { name: Clyde, pos: (14, 12), last_pos: (14, 13), house_timer: 8 }
+End tick
+Start tick: 123
+[(10, 14), (8, 14), (9, 15), (9, 13)]
+(8, 14), Ghost { name: Blinky, pos: (9, 14), last_pos: (9, 15), house_timer: 0 }
+[(12, 11), (10, 11), (11, 12), (11, 10)]
+(10, 11), Ghost { name: Pinky, pos: (11, 11), last_pos: (12, 11), house_timer: 0 }
+[(6, 29), (4, 29), (5, 30), (5, 28)]
+(4, 29), Ghost { name: Inky, pos: (5, 29), last_pos: (6, 29), house_timer: 0 }
+[(14, 12), (12, 12), (13, 13), (13, 11)]
+(13, 13), Ghost { name: Clyde, pos: (13, 12), last_pos: (14, 12), house_timer: 7 }
+End tick
+Start tick: 124
+[(9, 14), (7, 14), (8, 15), (8, 13)]
+(7, 14), Ghost { name: Blinky, pos: (8, 14), last_pos: (9, 14), house_timer: 0 }
+[(11, 11), (9, 11), (10, 12), (10, 10)]
+(9, 11), Ghost { name: Pinky, pos: (10, 11), last_pos: (11, 11), house_timer: 0 }
+[(5, 29), (3, 29), (4, 30), (4, 28)]
+(3, 29), Ghost { name: Inky, pos: (4, 29), last_pos: (5, 29), house_timer: 0 }
+[(14, 13), (12, 13), (13, 14), (13, 12)]
+(12, 13), Ghost { name: Clyde, pos: (13, 13), last_pos: (13, 12), house_timer: 6 }
+End tick
+Start tick: 125
+[(8, 14), (6, 14), (7, 15), (7, 13)]
+(6, 14), Ghost { name: Blinky, pos: (7, 14), last_pos: (8, 14), house_timer: 0 }
+[(10, 11), (8, 11), (9, 12), (9, 10)]
+(9, 12), Ghost { name: Pinky, pos: (9, 11), last_pos: (10, 11), house_timer: 0 }
+[(4, 29), (2, 29), (3, 30), (3, 28)]
+(2, 29), Ghost { name: Inky, pos: (3, 29), last_pos: (4, 29), house_timer: 0 }
+[(13, 13), (11, 13), (12, 14), (12, 12)]
+(12, 14), Ghost { name: Clyde, pos: (12, 13), last_pos: (13, 13), house_timer: 5 }
+End tick
+Start tick: 126
+[(7, 14), (5, 14), (6, 15), (6, 13)]
+(6, 15), Ghost { name: Blinky, pos: (6, 14), last_pos: (7, 14), house_timer: 0 }
+[(10, 12), (8, 12), (9, 13), (9, 11)]
+(9, 13), Ghost { name: Pinky, pos: (9, 12), last_pos: (9, 11), house_timer: 0 }
+[(3, 29), (1, 29), (2, 30), (2, 28)]
+(1, 29), Ghost { name: Inky, pos: (2, 29), last_pos: (3, 29), house_timer: 0 }
+[(13, 14), (11, 14), (12, 15), (12, 13)]
+(11, 14), Ghost { name: Clyde, pos: (12, 14), last_pos: (12, 13), house_timer: 4 }
+End tick
+Start tick: 127
+[(7, 15), (5, 15), (6, 16), (6, 14)]
+(6, 16), Ghost { name: Blinky, pos: (6, 15), last_pos: (6, 14), house_timer: 0 }
+[(10, 13), (8, 13), (9, 14), (9, 12)]
+(9, 14), Ghost { name: Pinky, pos: (9, 13), last_pos: (9, 12), house_timer: 0 }
+[(2, 29), (0, 29), (1, 30), (1, 28)]
+(1, 28), Ghost { name: Inky, pos: (1, 29), last_pos: (2, 29), house_timer: 0 }
+[(12, 14), (10, 14), (11, 15), (11, 13)]
+(11, 13), Ghost { name: Clyde, pos: (11, 14), last_pos: (12, 14), house_timer: 3 }
+End tick
+Start tick: 128
+[(7, 16), (5, 16), (6, 17), (6, 15)]
+(6, 17), Ghost { name: Blinky, pos: (6, 16), last_pos: (6, 15), house_timer: 0 }
+[(10, 14), (8, 14), (9, 15), (9, 13)]
+(8, 14), Ghost { name: Pinky, pos: (9, 14), last_pos: (9, 13), house_timer: 0 }
+[(2, 28), (0, 28), (1, 29), (1, 27)]
+(1, 27), Ghost { name: Inky, pos: (1, 28), last_pos: (1, 29), house_timer: 0 }
+[(12, 13), (10, 13), (11, 14), (11, 12)]
+(12, 13), Ghost { name: Clyde, pos: (11, 13), last_pos: (11, 14), house_timer: 2 }
+End tick
+Start tick: 129
+[(7, 17), (5, 17), (6, 18), (6, 16)]
+(6, 18), Ghost { name: Blinky, pos: (6, 17), last_pos: (6, 16), house_timer: 0 }
+[(9, 14), (7, 14), (8, 15), (8, 13)]
+(7, 14), Ghost { name: Pinky, pos: (8, 14), last_pos: (9, 14), house_timer: 0 }
+[(2, 27), (0, 27), (1, 28), (1, 26)]
+(1, 26), Ghost { name: Inky, pos: (1, 27), last_pos: (1, 28), house_timer: 0 }
+[(13, 13), (11, 13), (12, 14), (12, 12)]
+(13, 13), Ghost { name: Clyde, pos: (12, 13), last_pos: (11, 13), house_timer: 1 }
+End tick
+Start tick: 130
+[(7, 18), (5, 18), (6, 19), (6, 17)]
+(6, 19), Ghost { name: Blinky, pos: (6, 18), last_pos: (6, 17), house_timer: 0 }
+[(8, 14), (6, 14), (7, 15), (7, 13)]
+(6, 14), Ghost { name: Pinky, pos: (7, 14), last_pos: (8, 14), house_timer: 0 }
+[(2, 26), (0, 26), (1, 27), (1, 25)]
+(2, 26), Ghost { name: Inky, pos: (1, 26), last_pos: (1, 27), house_timer: 0 }
+[(14, 13), (12, 13), (13, 14), (13, 12)]
+(13, 12), Ghost { name: Clyde, pos: (13, 13), last_pos: (12, 13), house_timer: 0 }
+End tick
+Start tick: 131
+[(7, 19), (5, 19), (6, 20), (6, 18)]
+(6, 20), Ghost { name: Blinky, pos: (6, 19), last_pos: (6, 18), house_timer: 0 }
+[(7, 14), (5, 14), (6, 15), (6, 13)]
+(6, 13), Ghost { name: Pinky, pos: (6, 14), last_pos: (7, 14), house_timer: 0 }
+[(3, 26), (1, 26), (2, 27), (2, 25)]
+(3, 26), Ghost { name: Inky, pos: (2, 26), last_pos: (1, 26), house_timer: 0 }
+[(14, 12), (12, 12), (13, 13), (13, 11)]
+(13, 11), Ghost { name: Clyde, pos: (13, 12), last_pos: (13, 13), house_timer: 0 }
+End tick
+Start tick: 132
+[(7, 20), (5, 20), (6, 21), (6, 19)]
+(5, 20), Ghost { name: Blinky, pos: (6, 20), last_pos: (6, 19), house_timer: 0 }
+[(7, 13), (5, 13), (6, 14), (6, 12)]
+(6, 12), Ghost { name: Pinky, pos: (6, 13), last_pos: (6, 14), house_timer: 0 }
+[(4, 26), (2, 26), (3, 27), (3, 25)]
+(4, 26), Ghost { name: Inky, pos: (3, 26), last_pos: (2, 26), house_timer: 0 }
+[(14, 11), (12, 11), (13, 12), (13, 10)]
+(14, 11), Ghost { name: Clyde, pos: (13, 11), last_pos: (13, 12), house_timer: 0 }
+End tick
+Start tick: 133
+[(6, 20), (4, 20), (5, 21), (5, 19)]
+(4, 20), Ghost { name: Blinky, pos: (5, 20), last_pos: (6, 20), house_timer: 0 }
+[(7, 12), (5, 12), (6, 13), (6, 11)]
+(6, 11), Ghost { name: Pinky, pos: (6, 12), last_pos: (6, 13), house_timer: 0 }
+[(5, 26), (3, 26), (4, 27), (4, 25)]
+(5, 26), Ghost { name: Inky, pos: (4, 26), last_pos: (3, 26), house_timer: 0 }
+[(15, 11), (13, 11), (14, 12), (14, 10)]
+(15, 11), Ghost { name: Clyde, pos: (14, 11), last_pos: (13, 11), house_timer: 0 }
+End tick
+Start tick: 134
+[(5, 20), (3, 20), (4, 21), (4, 19)]
+(3, 20), Ghost { name: Blinky, pos: (4, 20), last_pos: (5, 20), house_timer: 0 }
+[(7, 11), (5, 11), (6, 12), (6, 10)]
+(6, 10), Ghost { name: Pinky, pos: (6, 11), last_pos: (6, 12), house_timer: 0 }
+[(6, 26), (4, 26), (5, 27), (5, 25)]
+(6, 26), Ghost { name: Inky, pos: (5, 26), last_pos: (4, 26), house_timer: 0 }
+[(16, 11), (14, 11), (15, 12), (15, 10)]
+(16, 11), Ghost { name: Clyde, pos: (15, 11), last_pos: (14, 11), house_timer: 0 }
+End tick
+Start tick: 135
+[(4, 20), (2, 20), (3, 21), (3, 19)]
+(2, 20), Ghost { name: Blinky, pos: (3, 20), last_pos: (4, 20), house_timer: 0 }
+[(7, 10), (5, 10), (6, 11), (6, 9)]
+(6, 9), Ghost { name: Pinky, pos: (6, 10), last_pos: (6, 11), house_timer: 0 }
+[(7, 26), (5, 26), (6, 27), (6, 25)]
+(6, 25), Ghost { name: Inky, pos: (6, 26), last_pos: (5, 26), house_timer: 0 }
+[(17, 11), (15, 11), (16, 12), (16, 10)]
+(17, 11), Ghost { name: Clyde, pos: (16, 11), last_pos: (15, 11), house_timer: 0 }
+End tick
+Start tick: 136
+[(3, 20), (1, 20), (2, 21), (2, 19)]
+(1, 20), Ghost { name: Blinky, pos: (2, 20), last_pos: (3, 20), house_timer: 0 }
+[(7, 9), (5, 9), (6, 10), (6, 8)]
+(6, 8), Ghost { name: Pinky, pos: (6, 9), last_pos: (6, 10), house_timer: 0 }
+[(7, 25), (5, 25), (6, 26), (6, 24)]
+(6, 24), Ghost { name: Inky, pos: (6, 25), last_pos: (6, 26), house_timer: 0 }
+[(18, 11), (16, 11), (17, 12), (17, 10)]
+(18, 11), Ghost { name: Clyde, pos: (17, 11), last_pos: (16, 11), house_timer: 0 }
+End tick
+Start tick: 137
+[(2, 20), (0, 20), (1, 21), (1, 19)]
+(1, 21), Ghost { name: Blinky, pos: (1, 20), last_pos: (2, 20), house_timer: 0 }
+[(7, 8), (5, 8), (6, 9), (6, 7)]
+(5, 8), Ghost { name: Pinky, pos: (6, 8), last_pos: (6, 9), house_timer: 0 }
+[(7, 24), (5, 24), (6, 25), (6, 23)]
+(6, 23), Ghost { name: Inky, pos: (6, 24), last_pos: (6, 25), house_timer: 0 }
+[(19, 11), (17, 11), (18, 12), (18, 10)]
+(18, 12), Ghost { name: Clyde, pos: (18, 11), last_pos: (17, 11), house_timer: 0 }
+End tick
+Start tick: 138
+[(2, 21), (0, 21), (1, 22), (1, 20)]
+(1, 22), Ghost { name: Blinky, pos: (1, 21), last_pos: (1, 20), house_timer: 0 }
+[(6, 8), (4, 8), (5, 9), (5, 7)]
+(4, 8), Ghost { name: Pinky, pos: (5, 8), last_pos: (6, 8), house_timer: 0 }
+[(7, 23), (5, 23), (6, 24), (6, 22)]
+(7, 23), Ghost { name: Inky, pos: (6, 23), last_pos: (6, 24), house_timer: 0 }
+[(19, 12), (17, 12), (18, 13), (18, 11)]
+(18, 13), Ghost { name: Clyde, pos: (18, 12), last_pos: (18, 11), house_timer: 0 }
+End tick
+Start tick: 139
+[(2, 22), (0, 22), (1, 23), (1, 21)]
+(1, 23), Ghost { name: Blinky, pos: (1, 22), last_pos: (1, 21), house_timer: 0 }
+[(5, 8), (3, 8), (4, 9), (4, 7)]
+(3, 8), Ghost { name: Pinky, pos: (4, 8), last_pos: (5, 8), house_timer: 0 }
+[(8, 23), (6, 23), (7, 24), (7, 22)]
+(8, 23), Ghost { name: Inky, pos: (7, 23), last_pos: (6, 23), house_timer: 0 }
+[(19, 13), (17, 13), (18, 14), (18, 12)]
+(18, 14), Ghost { name: Clyde, pos: (18, 13), last_pos: (18, 12), house_timer: 0 }
+End tick
+Start tick: 140
+[(2, 23), (0, 23), (1, 24), (1, 22)]
+(2, 23), Ghost { name: Blinky, pos: (1, 23), last_pos: (1, 22), house_timer: 0 }
+[(4, 8), (2, 8), (3, 9), (3, 7)]
+(2, 8), Ghost { name: Pinky, pos: (3, 8), last_pos: (4, 8), house_timer: 0 }
+[(9, 23), (7, 23), (8, 24), (8, 22)]
+(9, 23), Ghost { name: Inky, pos: (8, 23), last_pos: (7, 23), house_timer: 0 }
+[(19, 14), (17, 14), (18, 15), (18, 13)]
+(19, 14), Ghost { name: Clyde, pos: (18, 14), last_pos: (18, 13), house_timer: 0 }
+End tick
+Start tick: 141
+[(3, 23), (1, 23), (2, 24), (2, 22)]
+(3, 23), Ghost { name: Blinky, pos: (2, 23), last_pos: (1, 23), house_timer: 0 }
+[(3, 8), (1, 8), (2, 9), (2, 7)]
+(1, 8), Ghost { name: Pinky, pos: (2, 8), last_pos: (3, 8), house_timer: 0 }
+[(10, 23), (8, 23), (9, 24), (9, 22)]
+(10, 23), Ghost { name: Inky, pos: (9, 23), last_pos: (8, 23), house_timer: 0 }
+[(20, 14), (18, 14), (19, 15), (19, 13)]
+(20, 14), Ghost { name: Clyde, pos: (19, 14), last_pos: (18, 14), house_timer: 0 }
+End tick
+Start tick: 142
+[(4, 23), (2, 23), (3, 24), (3, 22)]
+(3, 24), Ghost { name: Blinky, pos: (3, 23), last_pos: (2, 23), house_timer: 0 }
+[(2, 8), (0, 8), (1, 9), (1, 7)]
+(1, 7), Ghost { name: Pinky, pos: (1, 8), last_pos: (2, 8), house_timer: 0 }
+[(11, 23), (9, 23), (10, 24), (10, 22)]
+(11, 23), Ghost { name: Inky, pos: (10, 23), last_pos: (9, 23), house_timer: 0 }
+[(21, 14), (19, 14), (20, 15), (20, 13)]
+(21, 14), Ghost { name: Clyde, pos: (20, 14), last_pos: (19, 14), house_timer: 0 }
+End tick
+Start tick: 143
+[(4, 24), (2, 24), (3, 25), (3, 23)]
+(3, 25), Ghost { name: Blinky, pos: (3, 24), last_pos: (3, 23), house_timer: 0 }
+[(2, 7), (0, 7), (1, 8), (1, 6)]
+(1, 6), Ghost { name: Pinky, pos: (1, 7), last_pos: (1, 8), house_timer: 0 }
+[(12, 23), (10, 23), (11, 24), (11, 22)]
+(12, 23), Ghost { name: Inky, pos: (11, 23), last_pos: (10, 23), house_timer: 0 }
+[(22, 14), (20, 14), (21, 15), (21, 13)]
+(21, 13), Ghost { name: Clyde, pos: (21, 14), last_pos: (20, 14), house_timer: 0 }
+End tick
+Start tick: 144
+[(4, 25), (2, 25), (3, 26), (3, 24)]
+(3, 26), Ghost { name: Blinky, pos: (3, 25), last_pos: (3, 24), house_timer: 0 }
+[(2, 6), (0, 6), (1, 7), (1, 5)]
+(1, 5), Ghost { name: Pinky, pos: (1, 6), last_pos: (1, 7), house_timer: 0 }
+[(13, 23), (11, 23), (12, 24), (12, 22)]
+(13, 23), Ghost { name: Inky, pos: (12, 23), last_pos: (11, 23), house_timer: 0 }
+[(22, 13), (20, 13), (21, 14), (21, 12)]
+(21, 12), Ghost { name: Clyde, pos: (21, 13), last_pos: (21, 14), house_timer: 0 }
+End tick
+Start tick: 145
+[(4, 26), (2, 26), (3, 27), (3, 25)]
+(4, 26), Ghost { name: Blinky, pos: (3, 26), last_pos: (3, 25), house_timer: 0 }
+[(2, 5), (0, 5), (1, 6), (1, 4)]
+(2, 5), Ghost { name: Pinky, pos: (1, 5), last_pos: (1, 6), house_timer: 0 }
+[(14, 23), (12, 23), (13, 24), (13, 22)]
+(14, 23), Ghost { name: Inky, pos: (13, 23), last_pos: (12, 23), house_timer: 0 }
+[(22, 12), (20, 12), (21, 13), (21, 11)]
+(21, 11), Ghost { name: Clyde, pos: (21, 12), last_pos: (21, 13), house_timer: 0 }
+End tick
+Start tick: 146
+[(5, 26), (3, 26), (4, 27), (4, 25)]
+(5, 26), Ghost { name: Blinky, pos: (4, 26), last_pos: (3, 26), house_timer: 0 }
+[(3, 5), (1, 5), (2, 6), (2, 4)]
+(3, 5), Ghost { name: Pinky, pos: (2, 5), last_pos: (1, 5), house_timer: 0 }
+[(15, 23), (13, 23), (14, 24), (14, 22)]
+(15, 23), Ghost { name: Inky, pos: (14, 23), last_pos: (13, 23), house_timer: 0 }
+[(22, 11), (20, 11), (21, 12), (21, 10)]
+(21, 10), Ghost { name: Clyde, pos: (21, 11), last_pos: (21, 12), house_timer: 0 }
+End tick
+Start tick: 147
+[(6, 26), (4, 26), (5, 27), (5, 25)]
+(6, 26), Ghost { name: Blinky, pos: (5, 26), last_pos: (4, 26), house_timer: 0 }
+[(4, 5), (2, 5), (3, 6), (3, 4)]
+(4, 5), Ghost { name: Pinky, pos: (3, 5), last_pos: (2, 5), house_timer: 0 }
+[(16, 23), (14, 23), (15, 24), (15, 22)]
+(16, 23), Ghost { name: Inky, pos: (15, 23), last_pos: (14, 23), house_timer: 0 }
+[(22, 10), (20, 10), (21, 11), (21, 9)]
+(21, 9), Ghost { name: Clyde, pos: (21, 10), last_pos: (21, 11), house_timer: 0 }
+End tick
+Start tick: 148
+[(7, 26), (5, 26), (6, 27), (6, 25)]
+(6, 25), Ghost { name: Blinky, pos: (6, 26), last_pos: (5, 26), house_timer: 0 }
+[(5, 5), (3, 5), (4, 6), (4, 4)]
+(5, 5), Ghost { name: Pinky, pos: (4, 5), last_pos: (3, 5), house_timer: 0 }
+[(17, 23), (15, 23), (16, 24), (16, 22)]
+(17, 23), Ghost { name: Inky, pos: (16, 23), last_pos: (15, 23), house_timer: 0 }
+[(22, 9), (20, 9), (21, 10), (21, 8)]
+(21, 8), Ghost { name: Clyde, pos: (21, 9), last_pos: (21, 10), house_timer: 0 }
+End tick
+Start tick: 149
+[(7, 25), (5, 25), (6, 26), (6, 24)]
+(6, 24), Ghost { name: Blinky, pos: (6, 25), last_pos: (6, 26), house_timer: 0 }
+[(6, 5), (4, 5), (5, 6), (5, 4)]
+(6, 5), Ghost { name: Pinky, pos: (5, 5), last_pos: (4, 5), house_timer: 0 }
+[(18, 23), (16, 23), (17, 24), (17, 22)]
+(18, 23), Ghost { name: Inky, pos: (17, 23), last_pos: (16, 23), house_timer: 0 }
+[(22, 8), (20, 8), (21, 9), (21, 7)]
+(21, 7), Ghost { name: Clyde, pos: (21, 8), last_pos: (21, 9), house_timer: 0 }
+End tick
+Start tick: 150
+[(7, 24), (5, 24), (6, 25), (6, 23)]
+(6, 23), Ghost { name: Blinky, pos: (6, 24), last_pos: (6, 25), house_timer: 0 }
+[(7, 5), (5, 5), (6, 6), (6, 4)]
+(6, 6), Ghost { name: Pinky, pos: (6, 5), last_pos: (5, 5), house_timer: 0 }
+[(19, 23), (17, 23), (18, 24), (18, 22)]
+(18, 24), Ghost { name: Inky, pos: (18, 23), last_pos: (17, 23), house_timer: 0 }
+[(22, 7), (20, 7), (21, 8), (21, 6)]
+(21, 6), Ghost { name: Clyde, pos: (21, 7), last_pos: (21, 8), house_timer: 0 }
+End tick
+Start tick: 151
+[(7, 23), (5, 23), (6, 24), (6, 22)]
+(6, 22), Ghost { name: Blinky, pos: (6, 23), last_pos: (6, 24), house_timer: 0 }
+[(7, 6), (5, 6), (6, 7), (6, 5)]
+(6, 7), Ghost { name: Pinky, pos: (6, 6), last_pos: (6, 5), house_timer: 0 }
+[(19, 24), (17, 24), (18, 25), (18, 23)]
+(18, 25), Ghost { name: Inky, pos: (18, 24), last_pos: (18, 23), house_timer: 0 }
+[(22, 6), (20, 6), (21, 7), (21, 5)]
+(21, 5), Ghost { name: Clyde, pos: (21, 6), last_pos: (21, 7), house_timer: 0 }
+End tick
+Start tick: 152
+[(7, 22), (5, 22), (6, 23), (6, 21)]
+(6, 21), Ghost { name: Blinky, pos: (6, 22), last_pos: (6, 23), house_timer: 0 }
+[(7, 7), (5, 7), (6, 8), (6, 6)]
+(6, 8), Ghost { name: Pinky, pos: (6, 7), last_pos: (6, 6), house_timer: 0 }
+[(19, 25), (17, 25), (18, 26), (18, 24)]
+(18, 26), Ghost { name: Inky, pos: (18, 25), last_pos: (18, 24), house_timer: 0 }
+[(22, 5), (20, 5), (21, 6), (21, 4)]
+(20, 5), Ghost { name: Clyde, pos: (21, 5), last_pos: (21, 6), house_timer: 0 }
+End tick
+Start tick: 153
+[(7, 21), (5, 21), (6, 22), (6, 20)]
+(6, 20), Ghost { name: Blinky, pos: (6, 21), last_pos: (6, 22), house_timer: 0 }
+[(7, 8), (5, 8), (6, 9), (6, 7)]
+(6, 9), Ghost { name: Pinky, pos: (6, 8), last_pos: (6, 7), house_timer: 0 }
+[(19, 26), (17, 26), (18, 27), (18, 25)]
+(17, 26), Ghost { name: Inky, pos: (18, 26), last_pos: (18, 25), house_timer: 0 }
+[(21, 5), (19, 5), (20, 6), (20, 4)]
+(19, 5), Ghost { name: Clyde, pos: (20, 5), last_pos: (21, 5), house_timer: 0 }
+End tick
+Start tick: 154
+[(7, 20), (5, 20), (6, 21), (6, 19)]
+(6, 19), Ghost { name: Blinky, pos: (6, 20), last_pos: (6, 21), house_timer: 0 }
+[(7, 9), (5, 9), (6, 10), (6, 8)]
+(6, 10), Ghost { name: Pinky, pos: (6, 9), last_pos: (6, 8), house_timer: 0 }
+[(18, 26), (16, 26), (17, 27), (17, 25)]
+(16, 26), Ghost { name: Inky, pos: (17, 26), last_pos: (18, 26), house_timer: 0 }
+[(20, 5), (18, 5), (19, 6), (19, 4)]
+(18, 5), Ghost { name: Clyde, pos: (19, 5), last_pos: (20, 5), house_timer: 0 }
+End tick
+Start tick: 155
+[(7, 19), (5, 19), (6, 20), (6, 18)]
+(6, 18), Ghost { name: Blinky, pos: (6, 19), last_pos: (6, 20), house_timer: 0 }
+[(7, 10), (5, 10), (6, 11), (6, 9)]
+(6, 11), Ghost { name: Pinky, pos: (6, 10), last_pos: (6, 9), house_timer: 0 }
+[(17, 26), (15, 26), (16, 27), (16, 25)]
+(15, 26), Ghost { name: Inky, pos: (16, 26), last_pos: (17, 26), house_timer: 0 }
+[(19, 5), (17, 5), (18, 6), (18, 4)]
+(17, 5), Ghost { name: Clyde, pos: (18, 5), last_pos: (19, 5), house_timer: 0 }
+End tick
+Start tick: 156
+[(7, 18), (5, 18), (6, 19), (6, 17)]
+(6, 17), Ghost { name: Blinky, pos: (6, 18), last_pos: (6, 19), house_timer: 0 }
+[(7, 11), (5, 11), (6, 12), (6, 10)]
+(6, 12), Ghost { name: Pinky, pos: (6, 11), last_pos: (6, 10), house_timer: 0 }
+[(16, 26), (14, 26), (15, 27), (15, 25)]
+(15, 27), Ghost { name: Inky, pos: (15, 26), last_pos: (16, 26), house_timer: 0 }
+[(18, 5), (16, 5), (17, 6), (17, 4)]
+(16, 5), Ghost { name: Clyde, pos: (17, 5), last_pos: (18, 5), house_timer: 0 }
+End tick
+Start tick: 157
+[(7, 17), (5, 17), (6, 18), (6, 16)]
+(6, 16), Ghost { name: Blinky, pos: (6, 17), last_pos: (6, 18), house_timer: 0 }
+[(7, 12), (5, 12), (6, 13), (6, 11)]
+(6, 13), Ghost { name: Pinky, pos: (6, 12), last_pos: (6, 11), house_timer: 0 }
+[(16, 27), (14, 27), (15, 28), (15, 26)]
+(15, 28), Ghost { name: Inky, pos: (15, 27), last_pos: (15, 26), house_timer: 0 }
+[(17, 5), (15, 5), (16, 6), (16, 4)]
+(15, 5), Ghost { name: Clyde, pos: (16, 5), last_pos: (17, 5), house_timer: 0 }
+End tick
+Start tick: 158
+[(7, 16), (5, 16), (6, 17), (6, 15)]
+(6, 15), Ghost { name: Blinky, pos: (6, 16), last_pos: (6, 17), house_timer: 0 }
+[(7, 13), (5, 13), (6, 14), (6, 12)]
+(6, 14), Ghost { name: Pinky, pos: (6, 13), last_pos: (6, 12), house_timer: 0 }
+[(16, 28), (14, 28), (15, 29), (15, 27)]
+(15, 29), Ghost { name: Inky, pos: (15, 28), last_pos: (15, 27), house_timer: 0 }
+[(16, 5), (14, 5), (15, 6), (15, 4)]
+(14, 5), Ghost { name: Clyde, pos: (15, 5), last_pos: (16, 5), house_timer: 0 }
+End tick
+Start tick: 159
+[(7, 15), (5, 15), (6, 16), (6, 14)]
+(6, 14), Ghost { name: Blinky, pos: (6, 15), last_pos: (6, 16), house_timer: 0 }
+[(7, 14), (5, 14), (6, 15), (6, 13)]
+(6, 15), Ghost { name: Pinky, pos: (6, 14), last_pos: (6, 13), house_timer: 0 }
+[(16, 29), (14, 29), (15, 30), (15, 28)]
+(14, 29), Ghost { name: Inky, pos: (15, 29), last_pos: (15, 28), house_timer: 0 }
+[(15, 5), (13, 5), (14, 6), (14, 4)]
+(13, 5), Ghost { name: Clyde, pos: (14, 5), last_pos: (15, 5), house_timer: 0 }
+End tick
+Start tick: 160
+[(7, 14), (5, 14), (6, 15), (6, 13)]
+(7, 14), Ghost { name: Blinky, pos: (6, 14), last_pos: (6, 15), house_timer: 0 }
+[(7, 15), (5, 15), (6, 16), (6, 14)]
+(6, 16), Ghost { name: Pinky, pos: (6, 15), last_pos: (6, 14), house_timer: 0 }
+[(15, 29), (13, 29), (14, 30), (14, 28)]
+(13, 29), Ghost { name: Inky, pos: (14, 29), last_pos: (15, 29), house_timer: 0 }
+[(14, 5), (12, 5), (13, 6), (13, 4)]
+(12, 5), Ghost { name: Clyde, pos: (13, 5), last_pos: (14, 5), house_timer: 0 }
+End tick
+Start tick: 161
+[(8, 14), (6, 14), (7, 15), (7, 13)]
+(8, 14), Ghost { name: Blinky, pos: (7, 14), last_pos: (6, 14), house_timer: 0 }
+[(7, 16), (5, 16), (6, 17), (6, 15)]
+(6, 17), Ghost { name: Pinky, pos: (6, 16), last_pos: (6, 15), house_timer: 0 }
+[(14, 29), (12, 29), (13, 30), (13, 28)]
+(12, 29), Ghost { name: Inky, pos: (13, 29), last_pos: (14, 29), house_timer: 0 }
+[(13, 5), (11, 5), (12, 6), (12, 4)]
+(11, 5), Ghost { name: Clyde, pos: (12, 5), last_pos: (13, 5), house_timer: 0 }
+End tick
+Start tick: 162
+[(9, 14), (7, 14), (8, 15), (8, 13)]
+(9, 14), Ghost { name: Blinky, pos: (8, 14), last_pos: (7, 14), house_timer: 0 }
+[(7, 17), (5, 17), (6, 18), (6, 16)]
+(6, 18), Ghost { name: Pinky, pos: (6, 17), last_pos: (6, 16), house_timer: 0 }
+[(13, 29), (11, 29), (12, 30), (12, 28)]
+(12, 28), Ghost { name: Inky, pos: (12, 29), last_pos: (13, 29), house_timer: 0 }
+[(12, 5), (10, 5), (11, 6), (11, 4)]
+(10, 5), Ghost { name: Clyde, pos: (11, 5), last_pos: (12, 5), house_timer: 0 }
+End tick
+Start tick: 163
+[(10, 14), (8, 14), (9, 15), (9, 13)]
+(9, 15), Ghost { name: Blinky, pos: (9, 14), last_pos: (8, 14), house_timer: 0 }
+[(7, 18), (5, 18), (6, 19), (6, 17)]
+(6, 19), Ghost { name: Pinky, pos: (6, 18), last_pos: (6, 17), house_timer: 0 }
+[(13, 28), (11, 28), (12, 29), (12, 27)]
+(12, 27), Ghost { name: Inky, pos: (12, 28), last_pos: (12, 29), house_timer: 0 }
+[(11, 5), (9, 5), (10, 6), (10, 4)]
+(9, 5), Ghost { name: Clyde, pos: (10, 5), last_pos: (11, 5), house_timer: 0 }
+End tick
+Start tick: 164
+[(10, 15), (8, 15), (9, 16), (9, 14)]
+(9, 16), Ghost { name: Blinky, pos: (9, 15), last_pos: (9, 14), house_timer: 0 }
+[(7, 19), (5, 19), (6, 20), (6, 18)]
+(6, 20), Ghost { name: Pinky, pos: (6, 19), last_pos: (6, 18), house_timer: 0 }
+[(13, 27), (11, 27), (12, 28), (12, 26)]
+(12, 26), Ghost { name: Inky, pos: (12, 27), last_pos: (12, 28), house_timer: 0 }
+[(10, 5), (8, 5), (9, 6), (9, 4)]
+(9, 6), Ghost { name: Clyde, pos: (9, 5), last_pos: (10, 5), house_timer: 0 }
+End tick
+Start tick: 165
+[(10, 16), (8, 16), (9, 17), (9, 15)]
+(9, 17), Ghost { name: Blinky, pos: (9, 16), last_pos: (9, 15), house_timer: 0 }
+[(7, 20), (5, 20), (6, 21), (6, 19)]
+(7, 20), Ghost { name: Pinky, pos: (6, 20), last_pos: (6, 19), house_timer: 0 }
+[(13, 26), (11, 26), (12, 27), (12, 25)]
+(11, 26), Ghost { name: Inky, pos: (12, 26), last_pos: (12, 27), house_timer: 0 }
+[(10, 6), (8, 6), (9, 7), (9, 5)]
+(9, 7), Ghost { name: Clyde, pos: (9, 6), last_pos: (9, 5), house_timer: 0 }
+End tick
+Start tick: 166
+[(10, 17), (8, 17), (9, 18), (9, 16)]
+(10, 17), Ghost { name: Blinky, pos: (9, 17), last_pos: (9, 16), house_timer: 0 }
+[(8, 20), (6, 20), (7, 21), (7, 19)]
+(8, 20), Ghost { name: Pinky, pos: (7, 20), last_pos: (6, 20), house_timer: 0 }
+[(12, 26), (10, 26), (11, 27), (11, 25)]
+(10, 26), Ghost { name: Inky, pos: (11, 26), last_pos: (12, 26), house_timer: 0 }
+[(10, 7), (8, 7), (9, 8), (9, 6)]
+(9, 8), Ghost { name: Clyde, pos: (9, 7), last_pos: (9, 6), house_timer: 0 }
+End tick
+Start tick: 167
+[(11, 17), (9, 17), (10, 18), (10, 16)]
+(11, 17), Ghost { name: Blinky, pos: (10, 17), last_pos: (9, 17), house_timer: 0 }
+[(9, 20), (7, 20), (8, 21), (8, 19)]
+(9, 20), Ghost { name: Pinky, pos: (8, 20), last_pos: (7, 20), house_timer: 0 }
+[(11, 26), (9, 26), (10, 27), (10, 25)]
+(9, 26), Ghost { name: Inky, pos: (10, 26), last_pos: (11, 26), house_timer: 0 }
+[(10, 8), (8, 8), (9, 9), (9, 7)]
+(10, 8), Ghost { name: Clyde, pos: (9, 8), last_pos: (9, 7), house_timer: 0 }
+End tick
+Start tick: 168
+[(12, 17), (10, 17), (11, 18), (11, 16)]
+(12, 17), Ghost { name: Blinky, pos: (11, 17), last_pos: (10, 17), house_timer: 0 }
+[(10, 20), (8, 20), (9, 21), (9, 19)]
+(10, 20), Ghost { name: Pinky, pos: (9, 20), last_pos: (8, 20), house_timer: 0 }
+[(10, 26), (8, 26), (9, 27), (9, 25)]
+(9, 25), Ghost { name: Inky, pos: (9, 26), last_pos: (10, 26), house_timer: 0 }
+[(11, 8), (9, 8), (10, 9), (10, 7)]
+(11, 8), Ghost { name: Clyde, pos: (10, 8), last_pos: (9, 8), house_timer: 0 }
+End tick
+Start tick: 169
+[(13, 17), (11, 17), (12, 18), (12, 16)]
+(13, 17), Ghost { name: Blinky, pos: (12, 17), last_pos: (11, 17), house_timer: 0 }
+[(11, 20), (9, 20), (10, 21), (10, 19)]
+(11, 20), Ghost { name: Pinky, pos: (10, 20), last_pos: (9, 20), house_timer: 0 }
+[(10, 25), (8, 25), (9, 26), (9, 24)]
+(9, 24), Ghost { name: Inky, pos: (9, 25), last_pos: (9, 26), house_timer: 0 }
+[(12, 8), (10, 8), (11, 9), (11, 7)]
+(12, 8), Ghost { name: Clyde, pos: (11, 8), last_pos: (10, 8), house_timer: 0 }
+End tick
+Start tick: 170
+[(14, 17), (12, 17), (13, 18), (13, 16)]
+(14, 17), Ghost { name: Blinky, pos: (13, 17), last_pos: (12, 17), house_timer: 0 }
+[(12, 20), (10, 20), (11, 21), (11, 19)]
+(12, 20), Ghost { name: Pinky, pos: (11, 20), last_pos: (10, 20), house_timer: 0 }
+[(10, 24), (8, 24), (9, 25), (9, 23)]
+(9, 23), Ghost { name: Inky, pos: (9, 24), last_pos: (9, 25), house_timer: 0 }
+[(13, 8), (11, 8), (12, 9), (12, 7)]
+(12, 9), Ghost { name: Clyde, pos: (12, 8), last_pos: (11, 8), house_timer: 0 }
+End tick
+Start tick: 171
+[(15, 17), (13, 17), (14, 18), (14, 16)]
+(15, 17), Ghost { name: Blinky, pos: (14, 17), last_pos: (13, 17), house_timer: 0 }
+[(13, 20), (11, 20), (12, 21), (12, 19)]
+(12, 21), Ghost { name: Pinky, pos: (12, 20), last_pos: (11, 20), house_timer: 0 }
+[(10, 23), (8, 23), (9, 24), (9, 22)]
+(8, 23), Ghost { name: Inky, pos: (9, 23), last_pos: (9, 24), house_timer: 0 }
+[(13, 9), (11, 9), (12, 10), (12, 8)]
+(12, 10), Ghost { name: Clyde, pos: (12, 9), last_pos: (12, 8), house_timer: 0 }
+End tick
+Start tick: 172
+[(16, 17), (14, 17), (15, 18), (15, 16)]
+(16, 17), Ghost { name: Blinky, pos: (15, 17), last_pos: (14, 17), house_timer: 0 }
+[(13, 21), (11, 21), (12, 22), (12, 20)]
+(12, 22), Ghost { name: Pinky, pos: (12, 21), last_pos: (12, 20), house_timer: 0 }
+[(9, 23), (7, 23), (8, 24), (8, 22)]
+(7, 23), Ghost { name: Inky, pos: (8, 23), last_pos: (9, 23), house_timer: 0 }
+[(13, 10), (11, 10), (12, 11), (12, 9)]
+(12, 11), Ghost { name: Clyde, pos: (12, 10), last_pos: (12, 9), house_timer: 0 }
+End tick
+Start tick: 173
+[(17, 17), (15, 17), (16, 18), (16, 16)]
+(17, 17), Ghost { name: Blinky, pos: (16, 17), last_pos: (15, 17), house_timer: 0 }
+[(13, 22), (11, 22), (12, 23), (12, 21)]
+(12, 23), Ghost { name: Pinky, pos: (12, 22), last_pos: (12, 21), house_timer: 0 }
+[(8, 23), (6, 23), (7, 24), (7, 22)]
+(6, 23), Ghost { name: Inky, pos: (7, 23), last_pos: (8, 23), house_timer: 0 }
+[(13, 11), (11, 11), (12, 12), (12, 10)]
+(13, 11), Ghost { name: Clyde, pos: (12, 11), last_pos: (12, 10), house_timer: 0 }
+End tick
+Start tick: 174
+[(18, 17), (16, 17), (17, 18), (17, 16)]
+(18, 17), Ghost { name: Blinky, pos: (17, 17), last_pos: (16, 17), house_timer: 0 }
+[(13, 23), (11, 23), (12, 24), (12, 22)]
+(11, 23), Ghost { name: Pinky, pos: (12, 23), last_pos: (12, 22), house_timer: 0 }
+[(7, 23), (5, 23), (6, 24), (6, 22)]
+(6, 24), Ghost { name: Inky, pos: (6, 23), last_pos: (7, 23), house_timer: 0 }
+[(14, 11), (12, 11), (13, 12), (13, 10)]
+(14, 11), Ghost { name: Clyde, pos: (13, 11), last_pos: (12, 11), house_timer: 0 }
+End tick
+Start tick: 175
+[(19, 17), (17, 17), (18, 18), (18, 16)]
+(18, 18), Ghost { name: Blinky, pos: (18, 17), last_pos: (17, 17), house_timer: 0 }
+[(12, 23), (10, 23), (11, 24), (11, 22)]
+(10, 23), Ghost { name: Pinky, pos: (11, 23), last_pos: (12, 23), house_timer: 0 }
+[(7, 24), (5, 24), (6, 25), (6, 23)]
+(6, 25), Ghost { name: Inky, pos: (6, 24), last_pos: (6, 23), house_timer: 0 }
+[(15, 11), (13, 11), (14, 12), (14, 10)]
+(15, 11), Ghost { name: Clyde, pos: (14, 11), last_pos: (13, 11), house_timer: 0 }
+End tick
+Start tick: 176
+[(19, 18), (17, 18), (18, 19), (18, 17)]
+(18, 19), Ghost { name: Blinky, pos: (18, 18), last_pos: (18, 17), house_timer: 0 }
+[(11, 23), (9, 23), (10, 24), (10, 22)]
+(9, 23), Ghost { name: Pinky, pos: (10, 23), last_pos: (11, 23), house_timer: 0 }
+[(7, 25), (5, 25), (6, 26), (6, 24)]
+(6, 26), Ghost { name: Inky, pos: (6, 25), last_pos: (6, 24), house_timer: 0 }
+[(16, 11), (14, 11), (15, 12), (15, 10)]
+(16, 11), Ghost { name: Clyde, pos: (15, 11), last_pos: (14, 11), house_timer: 0 }
+End tick
+Start tick: 177
+[(19, 19), (17, 19), (18, 20), (18, 18)]
+(18, 20), Ghost { name: Blinky, pos: (18, 19), last_pos: (18, 18), house_timer: 0 }
+[(10, 23), (8, 23), (9, 24), (9, 22)]
+(8, 23), Ghost { name: Pinky, pos: (9, 23), last_pos: (10, 23), house_timer: 0 }
+[(7, 26), (5, 26), (6, 27), (6, 25)]
+(5, 26), Ghost { name: Inky, pos: (6, 26), last_pos: (6, 25), house_timer: 0 }
+[(17, 11), (15, 11), (16, 12), (16, 10)]
+(17, 11), Ghost { name: Clyde, pos: (16, 11), last_pos: (15, 11), house_timer: 0 }
+End tick
+Start tick: 178
+[(19, 20), (17, 20), (18, 21), (18, 19)]
+(17, 20), Ghost { name: Blinky, pos: (18, 20), last_pos: (18, 19), house_timer: 0 }
+[(9, 23), (7, 23), (8, 24), (8, 22)]
+(7, 23), Ghost { name: Pinky, pos: (8, 23), last_pos: (9, 23), house_timer: 0 }
+[(6, 26), (4, 26), (5, 27), (5, 25)]
+(4, 26), Ghost { name: Inky, pos: (5, 26), last_pos: (6, 26), house_timer: 0 }
+[(18, 11), (16, 11), (17, 12), (17, 10)]
+(18, 11), Ghost { name: Clyde, pos: (17, 11), last_pos: (16, 11), house_timer: 0 }
+End tick
+Start tick: 179
+[(18, 20), (16, 20), (17, 21), (17, 19)]
+(16, 20), Ghost { name: Blinky, pos: (17, 20), last_pos: (18, 20), house_timer: 0 }
+[(8, 23), (6, 23), (7, 24), (7, 22)]
+(6, 23), Ghost { name: Pinky, pos: (7, 23), last_pos: (8, 23), house_timer: 0 }
+[(5, 26), (3, 26), (4, 27), (4, 25)]
+(3, 26), Ghost { name: Inky, pos: (4, 26), last_pos: (5, 26), house_timer: 0 }
+[(19, 11), (17, 11), (18, 12), (18, 10)]
+(18, 12), Ghost { name: Clyde, pos: (18, 11), last_pos: (17, 11), house_timer: 0 }
+End tick
+Start tick: 180
+[(17, 20), (15, 20), (16, 21), (16, 19)]
+(15, 20), Ghost { name: Blinky, pos: (16, 20), last_pos: (17, 20), house_timer: 0 }
+[(7, 23), (5, 23), (6, 24), (6, 22)]
+(6, 22), Ghost { name: Pinky, pos: (6, 23), last_pos: (7, 23), house_timer: 0 }
+[(4, 26), (2, 26), (3, 27), (3, 25)]
+(3, 25), Ghost { name: Inky, pos: (3, 26), last_pos: (4, 26), house_timer: 0 }
+[(19, 12), (17, 12), (18, 13), (18, 11)]
+(18, 13), Ghost { name: Clyde, pos: (18, 12), last_pos: (18, 11), house_timer: 0 }
+End tick
+Start tick: 181
+[(16, 20), (14, 20), (15, 21), (15, 19)]
+(15, 21), Ghost { name: Blinky, pos: (15, 20), last_pos: (16, 20), house_timer: 0 }
+[(7, 22), (5, 22), (6, 23), (6, 21)]
+(6, 21), Ghost { name: Pinky, pos: (6, 22), last_pos: (6, 23), house_timer: 0 }
+[(4, 25), (2, 25), (3, 26), (3, 24)]
+(3, 24), Ghost { name: Inky, pos: (3, 25), last_pos: (3, 26), house_timer: 0 }
+[(19, 13), (17, 13), (18, 14), (18, 12)]
+(18, 14), Ghost { name: Clyde, pos: (18, 13), last_pos: (18, 12), house_timer: 0 }
+End tick
+Start tick: 182
+[(16, 21), (14, 21), (15, 22), (15, 20)]
+(15, 22), Ghost { name: Blinky, pos: (15, 21), last_pos: (15, 20), house_timer: 0 }
+[(7, 21), (5, 21), (6, 22), (6, 20)]
+(6, 20), Ghost { name: Pinky, pos: (6, 21), last_pos: (6, 22), house_timer: 0 }
+[(4, 24), (2, 24), (3, 25), (3, 23)]
+(3, 23), Ghost { name: Inky, pos: (3, 24), last_pos: (3, 25), house_timer: 0 }
+[(19, 14), (17, 14), (18, 15), (18, 13)]
+(19, 14), Ghost { name: Clyde, pos: (18, 14), last_pos: (18, 13), house_timer: 0 }
+End tick
+Start tick: 183
+[(16, 22), (14, 22), (15, 23), (15, 21)]
+(15, 23), Ghost { name: Blinky, pos: (15, 22), last_pos: (15, 21), house_timer: 0 }
+[(7, 20), (5, 20), (6, 21), (6, 19)]
+(6, 19), Ghost { name: Pinky, pos: (6, 20), last_pos: (6, 21), house_timer: 0 }
+[(4, 23), (2, 23), (3, 24), (3, 22)]
+(2, 23), Ghost { name: Inky, pos: (3, 23), last_pos: (3, 24), house_timer: 0 }
+[(20, 14), (18, 14), (19, 15), (19, 13)]
+(20, 14), Ghost { name: Clyde, pos: (19, 14), last_pos: (18, 14), house_timer: 0 }
+End tick
+Start tick: 184
+[(16, 23), (14, 23), (15, 24), (15, 22)]
+(14, 23), Ghost { name: Blinky, pos: (15, 23), last_pos: (15, 22), house_timer: 0 }
+[(7, 19), (5, 19), (6, 20), (6, 18)]
+(6, 18), Ghost { name: Pinky, pos: (6, 19), last_pos: (6, 20), house_timer: 0 }
+[(3, 23), (1, 23), (2, 24), (2, 22)]
+(1, 23), Ghost { name: Inky, pos: (2, 23), last_pos: (3, 23), house_timer: 0 }
+[(21, 14), (19, 14), (20, 15), (20, 13)]
+(21, 14), Ghost { name: Clyde, pos: (20, 14), last_pos: (19, 14), house_timer: 0 }
+End tick
+Start tick: 185
+[(15, 23), (13, 23), (14, 24), (14, 22)]
+(13, 23), Ghost { name: Blinky, pos: (14, 23), last_pos: (15, 23), house_timer: 0 }
+[(7, 18), (5, 18), (6, 19), (6, 17)]
+(6, 17), Ghost { name: Pinky, pos: (6, 18), last_pos: (6, 19), house_timer: 0 }
+[(2, 23), (0, 23), (1, 24), (1, 22)]
+(1, 22), Ghost { name: Inky, pos: (1, 23), last_pos: (2, 23), house_timer: 0 }
+[(22, 14), (20, 14), (21, 15), (21, 13)]
+(21, 13), Ghost { name: Clyde, pos: (21, 14), last_pos: (20, 14), house_timer: 0 }
+End tick
+Start tick: 186
+[(14, 23), (12, 23), (13, 24), (13, 22)]
+(12, 23), Ghost { name: Blinky, pos: (13, 23), last_pos: (14, 23), house_timer: 0 }
+[(7, 17), (5, 17), (6, 18), (6, 16)]
+(6, 16), Ghost { name: Pinky, pos: (6, 17), last_pos: (6, 18), house_timer: 0 }
+[(2, 22), (0, 22), (1, 23), (1, 21)]
+(1, 21), Ghost { name: Inky, pos: (1, 22), last_pos: (1, 23), house_timer: 0 }
+[(22, 13), (20, 13), (21, 14), (21, 12)]
+(21, 12), Ghost { name: Clyde, pos: (21, 13), last_pos: (21, 14), house_timer: 0 }
+End tick
+Start tick: 187
+[(13, 23), (11, 23), (12, 24), (12, 22)]
+(11, 23), Ghost { name: Blinky, pos: (12, 23), last_pos: (13, 23), house_timer: 0 }
+[(7, 16), (5, 16), (6, 17), (6, 15)]
+(6, 15), Ghost { name: Pinky, pos: (6, 16), last_pos: (6, 17), house_timer: 0 }
+[(2, 21), (0, 21), (1, 22), (1, 20)]
+(1, 20), Ghost { name: Inky, pos: (1, 21), last_pos: (1, 22), house_timer: 0 }
+[(22, 12), (20, 12), (21, 13), (21, 11)]
+(21, 11), Ghost { name: Clyde, pos: (21, 12), last_pos: (21, 13), house_timer: 0 }
+End tick
+Start tick: 188
+[(12, 23), (10, 23), (11, 24), (11, 22)]
+(10, 23), Ghost { name: Blinky, pos: (11, 23), last_pos: (12, 23), house_timer: 0 }
+[(7, 15), (5, 15), (6, 16), (6, 14)]
+(6, 14), Ghost { name: Pinky, pos: (6, 15), last_pos: (6, 16), house_timer: 0 }
+[(2, 20), (0, 20), (1, 21), (1, 19)]
+(2, 20), Ghost { name: Inky, pos: (1, 20), last_pos: (1, 21), house_timer: 0 }
+[(22, 11), (20, 11), (21, 12), (21, 10)]
+(21, 10), Ghost { name: Clyde, pos: (21, 11), last_pos: (21, 12), house_timer: 0 }
+End tick
+Start tick: 189
+[(11, 23), (9, 23), (10, 24), (10, 22)]
+(9, 23), Ghost { name: Blinky, pos: (10, 23), last_pos: (11, 23), house_timer: 0 }
+[(7, 14), (5, 14), (6, 15), (6, 13)]
+(6, 13), Ghost { name: Pinky, pos: (6, 14), last_pos: (6, 15), house_timer: 0 }
+[(3, 20), (1, 20), (2, 21), (2, 19)]
+(3, 20), Ghost { name: Inky, pos: (2, 20), last_pos: (1, 20), house_timer: 0 }
+[(22, 10), (20, 10), (21, 11), (21, 9)]
+(21, 9), Ghost { name: Clyde, pos: (21, 10), last_pos: (21, 11), house_timer: 0 }
+End tick
+Start tick: 190
+[(10, 23), (8, 23), (9, 24), (9, 22)]
+(8, 23), Ghost { name: Blinky, pos: (9, 23), last_pos: (10, 23), house_timer: 0 }
+[(7, 13), (5, 13), (6, 14), (6, 12)]
+(6, 12), Ghost { name: Pinky, pos: (6, 13), last_pos: (6, 14), house_timer: 0 }
+[(4, 20), (2, 20), (3, 21), (3, 19)]
+(4, 20), Ghost { name: Inky, pos: (3, 20), last_pos: (2, 20), house_timer: 0 }
+[(22, 9), (20, 9), (21, 10), (21, 8)]
+(21, 8), Ghost { name: Clyde, pos: (21, 9), last_pos: (21, 10), house_timer: 0 }
+End tick
+Start tick: 191
+[(9, 23), (7, 23), (8, 24), (8, 22)]
+(7, 23), Ghost { name: Blinky, pos: (8, 23), last_pos: (9, 23), house_timer: 0 }
+[(7, 12), (5, 12), (6, 13), (6, 11)]
+(6, 11), Ghost { name: Pinky, pos: (6, 12), last_pos: (6, 13), house_timer: 0 }
+[(5, 20), (3, 20), (4, 21), (4, 19)]
+(5, 20), Ghost { name: Inky, pos: (4, 20), last_pos: (3, 20), house_timer: 0 }
+[(22, 8), (20, 8), (21, 9), (21, 7)]
+(22, 8), Ghost { name: Clyde, pos: (21, 8), last_pos: (21, 9), house_timer: 0 }
+End tick
+Start tick: 192
+[(8, 23), (6, 23), (7, 24), (7, 22)]
+(6, 23), Ghost { name: Blinky, pos: (7, 23), last_pos: (8, 23), house_timer: 0 }
+[(7, 11), (5, 11), (6, 12), (6, 10)]
+(6, 10), Ghost { name: Pinky, pos: (6, 11), last_pos: (6, 12), house_timer: 0 }
+[(6, 20), (4, 20), (5, 21), (5, 19)]
+(6, 20), Ghost { name: Inky, pos: (5, 20), last_pos: (4, 20), house_timer: 0 }
+[(23, 8), (21, 8), (22, 9), (22, 7)]
+(23, 8), Ghost { name: Clyde, pos: (22, 8), last_pos: (21, 8), house_timer: 0 }
+End tick
+Start tick: 193
+[(7, 23), (5, 23), (6, 24), (6, 22)]
+(6, 24), Ghost { name: Blinky, pos: (6, 23), last_pos: (7, 23), house_timer: 0 }
+[(7, 10), (5, 10), (6, 11), (6, 9)]
+(6, 9), Ghost { name: Pinky, pos: (6, 10), last_pos: (6, 11), house_timer: 0 }
+[(7, 20), (5, 20), (6, 21), (6, 19)]
+(7, 20), Ghost { name: Inky, pos: (6, 20), last_pos: (5, 20), house_timer: 0 }
+[(24, 8), (22, 8), (23, 9), (23, 7)]
+(24, 8), Ghost { name: Clyde, pos: (23, 8), last_pos: (22, 8), house_timer: 0 }
+End tick
+Start tick: 194
+[(7, 24), (5, 24), (6, 25), (6, 23)]
+(6, 25), Ghost { name: Blinky, pos: (6, 24), last_pos: (6, 23), house_timer: 0 }
+[(7, 9), (5, 9), (6, 10), (6, 8)]
+(6, 8), Ghost { name: Pinky, pos: (6, 9), last_pos: (6, 10), house_timer: 0 }
+[(8, 20), (6, 20), (7, 21), (7, 19)]
+(8, 20), Ghost { name: Inky, pos: (7, 20), last_pos: (6, 20), house_timer: 0 }
+[(25, 8), (23, 8), (24, 9), (24, 7)]
+(25, 8), Ghost { name: Clyde, pos: (24, 8), last_pos: (23, 8), house_timer: 0 }
+End tick
+Start tick: 195
+[(7, 25), (5, 25), (6, 26), (6, 24)]
+(6, 26), Ghost { name: Blinky, pos: (6, 25), last_pos: (6, 24), house_timer: 0 }
+[(7, 8), (5, 8), (6, 9), (6, 7)]
+(5, 8), Ghost { name: Pinky, pos: (6, 8), last_pos: (6, 9), house_timer: 0 }
+[(9, 20), (7, 20), (8, 21), (8, 19)]
+(9, 20), Ghost { name: Inky, pos: (8, 20), last_pos: (7, 20), house_timer: 0 }
+[(26, 8), (24, 8), (25, 9), (25, 7)]
+(26, 8), Ghost { name: Clyde, pos: (25, 8), last_pos: (24, 8), house_timer: 0 }
+End tick
+Start tick: 196
+Spooked!
+[(7, 26), (5, 26), (6, 27), (6, 25)]
+(5, 26), Ghost { name: Blinky, pos: (6, 26), last_pos: (6, 25), house_timer: 0 }
+[(6, 8), (4, 8), (5, 9), (5, 7)]
+(4, 8), Ghost { name: Pinky, pos: (5, 8), last_pos: (6, 8), house_timer: 0 }
+[(10, 20), (8, 20), (9, 21), (9, 19)]
+(9, 19), Ghost { name: Inky, pos: (9, 20), last_pos: (8, 20), house_timer: 0 }
+[(27, 8), (25, 8), (26, 9), (26, 7)]
+(26, 7), Ghost { name: Clyde, pos: (26, 8), last_pos: (25, 8), house_timer: 0 }
+End tick
+Start tick: 197
+[(6, 26), (4, 26), (5, 27), (5, 25)]
+(4, 26), Ghost { name: Blinky, pos: (5, 26), last_pos: (6, 26), house_timer: 0 }
+[(5, 8), (3, 8), (4, 9), (4, 7)]
+(3, 8), Ghost { name: Pinky, pos: (4, 8), last_pos: (5, 8), house_timer: 0 }
+[(10, 19), (8, 19), (9, 20), (9, 18)]
+(9, 18), Ghost { name: Inky, pos: (9, 19), last_pos: (9, 20), house_timer: 0 }
+[(27, 7), (25, 7), (26, 8), (26, 6)]
+(26, 6), Ghost { name: Clyde, pos: (26, 7), last_pos: (26, 8), house_timer: 0 }
+End tick
+Start tick: 198
+[(5, 26), (3, 26), (4, 27), (4, 25)]
+(3, 26), Ghost { name: Blinky, pos: (4, 26), last_pos: (5, 26), house_timer: 0 }
+[(4, 8), (2, 8), (3, 9), (3, 7)]
+(2, 8), Ghost { name: Pinky, pos: (3, 8), last_pos: (4, 8), house_timer: 0 }
+[(10, 18), (8, 18), (9, 19), (9, 17)]
+(9, 17), Ghost { name: Inky, pos: (9, 18), last_pos: (9, 19), house_timer: 0 }
+[(27, 6), (25, 6), (26, 7), (26, 5)]
+(26, 5), Ghost { name: Clyde, pos: (26, 6), last_pos: (26, 7), house_timer: 0 }
+End tick
+Start tick: 199
+[(4, 26), (2, 26), (3, 27), (3, 25)]
+(3, 25), Ghost { name: Blinky, pos: (3, 26), last_pos: (4, 26), house_timer: 0 }
+[(3, 8), (1, 8), (2, 9), (2, 7)]
+(1, 8), Ghost { name: Pinky, pos: (2, 8), last_pos: (3, 8), house_timer: 0 }
+[(10, 17), (8, 17), (9, 18), (9, 16)]
+(10, 17), Ghost { name: Inky, pos: (9, 17), last_pos: (9, 18), house_timer: 0 }
+[(27, 5), (25, 5), (26, 6), (26, 4)]
+(26, 4), Ghost { name: Clyde, pos: (26, 5), last_pos: (26, 6), house_timer: 0 }
+End tick
+Start tick: 200
+[(4, 25), (2, 25), (3, 26), (3, 24)]
+(3, 24), Ghost { name: Blinky, pos: (3, 25), last_pos: (3, 26), house_timer: 0 }
+[(2, 8), (0, 8), (1, 9), (1, 7)]
+(1, 7), Ghost { name: Pinky, pos: (1, 8), last_pos: (2, 8), house_timer: 0 }
+[(11, 17), (9, 17), (10, 18), (10, 16)]
+(11, 17), Ghost { name: Inky, pos: (10, 17), last_pos: (9, 17), house_timer: 0 }
+[(27, 4), (25, 4), (26, 5), (26, 3)]
+(26, 3), Ghost { name: Clyde, pos: (26, 4), last_pos: (26, 5), house_timer: 0 }
+End tick
+Start tick: 201
+[(4, 24), (2, 24), (3, 25), (3, 23)]
+(3, 23), Ghost { name: Blinky, pos: (3, 24), last_pos: (3, 25), house_timer: 0 }
+[(2, 7), (0, 7), (1, 8), (1, 6)]
+(1, 6), Ghost { name: Pinky, pos: (1, 7), last_pos: (1, 8), house_timer: 0 }
+[(12, 17), (10, 17), (11, 18), (11, 16)]
+(12, 17), Ghost { name: Inky, pos: (11, 17), last_pos: (10, 17), house_timer: 0 }
+[(27, 3), (25, 3), (26, 4), (26, 2)]
+(26, 2), Ghost { name: Clyde, pos: (26, 3), last_pos: (26, 4), house_timer: 0 }
+End tick
+Start tick: 202
+[(4, 23), (2, 23), (3, 24), (3, 22)]
+(2, 23), Ghost { name: Blinky, pos: (3, 23), last_pos: (3, 24), house_timer: 0 }
+[(2, 6), (0, 6), (1, 7), (1, 5)]
+(1, 5), Ghost { name: Pinky, pos: (1, 6), last_pos: (1, 7), house_timer: 0 }
+[(13, 17), (11, 17), (12, 18), (12, 16)]
+(13, 17), Ghost { name: Inky, pos: (12, 17), last_pos: (11, 17), house_timer: 0 }
+[(27, 2), (25, 2), (26, 3), (26, 1)]
+(26, 1), Ghost { name: Clyde, pos: (26, 2), last_pos: (26, 3), house_timer: 0 }
+End tick
+Start tick: 203
+[(3, 23), (1, 23), (2, 24), (2, 22)]
+(1, 23), Ghost { name: Blinky, pos: (2, 23), last_pos: (3, 23), house_timer: 0 }
+[(2, 5), (0, 5), (1, 6), (1, 4)]
+(2, 5), Ghost { name: Pinky, pos: (1, 5), last_pos: (1, 6), house_timer: 0 }
+[(14, 17), (12, 17), (13, 18), (13, 16)]
+(14, 17), Ghost { name: Inky, pos: (13, 17), last_pos: (12, 17), house_timer: 0 }
+[(27, 1), (25, 1), (26, 2), (26, 0)]
+(25, 1), Ghost { name: Clyde, pos: (26, 1), last_pos: (26, 2), house_timer: 0 }
+End tick
+Start tick: 204
+[(2, 23), (0, 23), (1, 24), (1, 22)]
+(1, 22), Ghost { name: Blinky, pos: (1, 23), last_pos: (2, 23), house_timer: 0 }
+[(3, 5), (1, 5), (2, 6), (2, 4)]
+(3, 5), Ghost { name: Pinky, pos: (2, 5), last_pos: (1, 5), house_timer: 0 }
+[(15, 17), (13, 17), (14, 18), (14, 16)]
+(15, 17), Ghost { name: Inky, pos: (14, 17), last_pos: (13, 17), house_timer: 0 }
+[(26, 1), (24, 1), (25, 2), (25, 0)]
+(24, 1), Ghost { name: Clyde, pos: (25, 1), last_pos: (26, 1), house_timer: 0 }
+End tick
+Start tick: 205
+[(2, 22), (0, 22), (1, 23), (1, 21)]
+(1, 21), Ghost { name: Blinky, pos: (1, 22), last_pos: (1, 23), house_timer: 0 }
+[(4, 5), (2, 5), (3, 6), (3, 4)]
+(4, 5), Ghost { name: Pinky, pos: (3, 5), last_pos: (2, 5), house_timer: 0 }
+[(16, 17), (14, 17), (15, 18), (15, 16)]
+(16, 17), Ghost { name: Inky, pos: (15, 17), last_pos: (14, 17), house_timer: 0 }
+[(25, 1), (23, 1), (24, 2), (24, 0)]
+(23, 1), Ghost { name: Clyde, pos: (24, 1), last_pos: (25, 1), house_timer: 0 }
+End tick
+Start tick: 206
+[(2, 21), (0, 21), (1, 22), (1, 20)]
+(1, 20), Ghost { name: Blinky, pos: (1, 21), last_pos: (1, 22), house_timer: 0 }
+[(5, 5), (3, 5), (4, 6), (4, 4)]
+(5, 5), Ghost { name: Pinky, pos: (4, 5), last_pos: (3, 5), house_timer: 0 }
+[(17, 17), (15, 17), (16, 18), (16, 16)]
+(17, 17), Ghost { name: Inky, pos: (16, 17), last_pos: (15, 17), house_timer: 0 }
+[(24, 1), (22, 1), (23, 2), (23, 0)]
+(22, 1), Ghost { name: Clyde, pos: (23, 1), last_pos: (24, 1), house_timer: 0 }
+End tick
+Start tick: 207
+[(2, 20), (0, 20), (1, 21), (1, 19)]
+(2, 20), Ghost { name: Blinky, pos: (1, 20), last_pos: (1, 21), house_timer: 0 }
+[(6, 5), (4, 5), (5, 6), (5, 4)]
+(6, 5), Ghost { name: Pinky, pos: (5, 5), last_pos: (4, 5), house_timer: 0 }
+[(18, 17), (16, 17), (17, 18), (17, 16)]
+(18, 17), Ghost { name: Inky, pos: (17, 17), last_pos: (16, 17), house_timer: 0 }
+[(23, 1), (21, 1), (22, 2), (22, 0)]
+(21, 1), Ghost { name: Clyde, pos: (22, 1), last_pos: (23, 1), house_timer: 0 }
+End tick
+Start tick: 208
+[(3, 20), (1, 20), (2, 21), (2, 19)]
+(3, 20), Ghost { name: Blinky, pos: (2, 20), last_pos: (1, 20), house_timer: 0 }
+[(7, 5), (5, 5), (6, 6), (6, 4)]
+(7, 5), Ghost { name: Pinky, pos: (6, 5), last_pos: (5, 5), house_timer: 0 }
+[(19, 17), (17, 17), (18, 18), (18, 16)]
+(18, 18), Ghost { name: Inky, pos: (18, 17), last_pos: (17, 17), house_timer: 0 }
+[(22, 1), (20, 1), (21, 2), (21, 0)]
+(21, 2), Ghost { name: Clyde, pos: (21, 1), last_pos: (22, 1), house_timer: 0 }
+End tick
+Start tick: 209
+[(4, 20), (2, 20), (3, 21), (3, 19)]
+(4, 20), Ghost { name: Blinky, pos: (3, 20), last_pos: (2, 20), house_timer: 0 }
+[(8, 5), (6, 5), (7, 6), (7, 4)]
+(8, 5), Ghost { name: Pinky, pos: (7, 5), last_pos: (6, 5), house_timer: 0 }
+[(19, 18), (17, 18), (18, 19), (18, 17)]
+(18, 19), Ghost { name: Inky, pos: (18, 18), last_pos: (18, 17), house_timer: 0 }
+[(22, 2), (20, 2), (21, 3), (21, 1)]
+(21, 3), Ghost { name: Clyde, pos: (21, 2), last_pos: (21, 1), house_timer: 0 }
+End tick
+Start tick: 210
+[(5, 20), (3, 20), (4, 21), (4, 19)]
+(5, 20), Ghost { name: Blinky, pos: (4, 20), last_pos: (3, 20), house_timer: 0 }
+[(9, 5), (7, 5), (8, 6), (8, 4)]
+(9, 5), Ghost { name: Pinky, pos: (8, 5), last_pos: (7, 5), house_timer: 0 }
+[(19, 19), (17, 19), (18, 20), (18, 18)]
+(18, 20), Ghost { name: Inky, pos: (18, 19), last_pos: (18, 18), house_timer: 0 }
+[(22, 3), (20, 3), (21, 4), (21, 2)]
+(21, 4), Ghost { name: Clyde, pos: (21, 3), last_pos: (21, 2), house_timer: 0 }
+End tick
+Start tick: 211
+[(6, 20), (4, 20), (5, 21), (5, 19)]
+(6, 20), Ghost { name: Blinky, pos: (5, 20), last_pos: (4, 20), house_timer: 0 }
+[(10, 5), (8, 5), (9, 6), (9, 4)]
+(10, 5), Ghost { name: Pinky, pos: (9, 5), last_pos: (8, 5), house_timer: 0 }
+[(19, 20), (17, 20), (18, 21), (18, 19)]
+(17, 20), Ghost { name: Inky, pos: (18, 20), last_pos: (18, 19), house_timer: 0 }
+[(22, 4), (20, 4), (21, 5), (21, 3)]
+(21, 5), Ghost { name: Clyde, pos: (21, 4), last_pos: (21, 3), house_timer: 0 }
+End tick
+Start tick: 212
+[(7, 20), (5, 20), (6, 21), (6, 19)]
+(7, 20), Ghost { name: Blinky, pos: (6, 20), last_pos: (5, 20), house_timer: 0 }
+[(11, 5), (9, 5), (10, 6), (10, 4)]
+(11, 5), Ghost { name: Pinky, pos: (10, 5), last_pos: (9, 5), house_timer: 0 }
+[(18, 20), (16, 20), (17, 21), (17, 19)]
+(16, 20), Ghost { name: Inky, pos: (17, 20), last_pos: (18, 20), house_timer: 0 }
+[(22, 5), (20, 5), (21, 6), (21, 4)]
+(22, 5), Ghost { name: Clyde, pos: (21, 5), last_pos: (21, 4), house_timer: 0 }
+End tick
+Start tick: 213
+[(8, 20), (6, 20), (7, 21), (7, 19)]
+(8, 20), Ghost { name: Blinky, pos: (7, 20), last_pos: (6, 20), house_timer: 0 }
+[(12, 5), (10, 5), (11, 6), (11, 4)]
+(12, 5), Ghost { name: Pinky, pos: (11, 5), last_pos: (10, 5), house_timer: 0 }
+[(17, 20), (15, 20), (16, 21), (16, 19)]
+(15, 20), Ghost { name: Inky, pos: (16, 20), last_pos: (17, 20), house_timer: 0 }
+[(23, 5), (21, 5), (22, 6), (22, 4)]
+(23, 5), Ghost { name: Clyde, pos: (22, 5), last_pos: (21, 5), house_timer: 0 }
+End tick
+Start tick: 214
+[(9, 20), (7, 20), (8, 21), (8, 19)]
+(9, 20), Ghost { name: Blinky, pos: (8, 20), last_pos: (7, 20), house_timer: 0 }
+[(13, 5), (11, 5), (12, 6), (12, 4)]
+(13, 5), Ghost { name: Pinky, pos: (12, 5), last_pos: (11, 5), house_timer: 0 }
+[(16, 20), (14, 20), (15, 21), (15, 19)]
+(15, 21), Ghost { name: Inky, pos: (15, 20), last_pos: (16, 20), house_timer: 0 }
+[(24, 5), (22, 5), (23, 6), (23, 4)]
+(24, 5), Ghost { name: Clyde, pos: (23, 5), last_pos: (22, 5), house_timer: 0 }
+End tick
+Start tick: 215
+[(10, 20), (8, 20), (9, 21), (9, 19)]
+(10, 20), Ghost { name: Blinky, pos: (9, 20), last_pos: (8, 20), house_timer: 0 }
+[(14, 5), (12, 5), (13, 6), (13, 4)]
+(14, 5), Ghost { name: Pinky, pos: (13, 5), last_pos: (12, 5), house_timer: 0 }
+[(16, 21), (14, 21), (15, 22), (15, 20)]
+(15, 22), Ghost { name: Inky, pos: (15, 21), last_pos: (15, 20), house_timer: 0 }
+[(25, 5), (23, 5), (24, 6), (24, 4)]
+(25, 5), Ghost { name: Clyde, pos: (24, 5), last_pos: (23, 5), house_timer: 0 }
+End tick
+Start tick: 216
+[(11, 20), (9, 20), (10, 21), (10, 19)]
+(11, 20), Ghost { name: Blinky, pos: (10, 20), last_pos: (9, 20), house_timer: 0 }
+[(15, 5), (13, 5), (14, 6), (14, 4)]
+(15, 5), Ghost { name: Pinky, pos: (14, 5), last_pos: (13, 5), house_timer: 0 }
+[(16, 22), (14, 22), (15, 23), (15, 21)]
+(15, 23), Ghost { name: Inky, pos: (15, 22), last_pos: (15, 21), house_timer: 0 }
+[(26, 5), (24, 5), (25, 6), (25, 4)]
+(26, 5), Ghost { name: Clyde, pos: (25, 5), last_pos: (24, 5), house_timer: 0 }
+End tick
+Start tick: 217
+[(12, 20), (10, 20), (11, 21), (11, 19)]
+(12, 20), Ghost { name: Blinky, pos: (11, 20), last_pos: (10, 20), house_timer: 0 }
+[(16, 5), (14, 5), (15, 6), (15, 4)]
+(15, 4), Ghost { name: Pinky, pos: (15, 5), last_pos: (14, 5), house_timer: 0 }
+[(16, 23), (14, 23), (15, 24), (15, 22)]
+(16, 23), Ghost { name: Inky, pos: (15, 23), last_pos: (15, 22), house_timer: 0 }
+[(27, 5), (25, 5), (26, 6), (26, 4)]
+(26, 6), Ghost { name: Clyde, pos: (26, 5), last_pos: (25, 5), house_timer: 0 }
+End tick
+Start tick: 218
+[(13, 20), (11, 20), (12, 21), (12, 19)]
+(12, 21), Ghost { name: Blinky, pos: (12, 20), last_pos: (11, 20), house_timer: 0 }
+[(16, 4), (14, 4), (15, 5), (15, 3)]
+(15, 3), Ghost { name: Pinky, pos: (15, 4), last_pos: (15, 5), house_timer: 0 }
+[(17, 23), (15, 23), (16, 24), (16, 22)]
+(17, 23), Ghost { name: Inky, pos: (16, 23), last_pos: (15, 23), house_timer: 0 }
+[(27, 6), (25, 6), (26, 7), (26, 5)]
+(26, 7), Ghost { name: Clyde, pos: (26, 6), last_pos: (26, 5), house_timer: 0 }
+End tick
+Start tick: 219
+[(13, 21), (11, 21), (12, 22), (12, 20)]
+(12, 22), Ghost { name: Blinky, pos: (12, 21), last_pos: (12, 20), house_timer: 0 }
+[(16, 3), (14, 3), (15, 4), (15, 2)]
+(15, 2), Ghost { name: Pinky, pos: (15, 3), last_pos: (15, 4), house_timer: 0 }
+[(18, 23), (16, 23), (17, 24), (17, 22)]
+(18, 23), Ghost { name: Inky, pos: (17, 23), last_pos: (16, 23), house_timer: 0 }
+[(27, 7), (25, 7), (26, 8), (26, 6)]
+(26, 8), Ghost { name: Clyde, pos: (26, 7), last_pos: (26, 6), house_timer: 0 }
+End tick
+Start tick: 220
+[(13, 22), (11, 22), (12, 23), (12, 21)]
+(12, 23), Ghost { name: Blinky, pos: (12, 22), last_pos: (12, 21), house_timer: 0 }
+[(16, 2), (14, 2), (15, 3), (15, 1)]
+(15, 1), Ghost { name: Pinky, pos: (15, 2), last_pos: (15, 3), house_timer: 0 }
+[(19, 23), (17, 23), (18, 24), (18, 22)]
+(18, 24), Ghost { name: Inky, pos: (18, 23), last_pos: (17, 23), house_timer: 0 }
+[(27, 8), (25, 8), (26, 9), (26, 7)]
+(25, 8), Ghost { name: Clyde, pos: (26, 8), last_pos: (26, 7), house_timer: 0 }
+End tick
+Start tick: 221
+[(13, 23), (11, 23), (12, 24), (12, 22)]
+(13, 23), Ghost { name: Blinky, pos: (12, 23), last_pos: (12, 22), house_timer: 0 }
+[(16, 1), (14, 1), (15, 2), (15, 0)]
+(16, 1), Ghost { name: Pinky, pos: (15, 1), last_pos: (15, 2), house_timer: 0 }
+[(19, 24), (17, 24), (18, 25), (18, 23)]
+(18, 25), Ghost { name: Inky, pos: (18, 24), last_pos: (18, 23), house_timer: 0 }
+[(26, 8), (24, 8), (25, 9), (25, 7)]
+(24, 8), Ghost { name: Clyde, pos: (25, 8), last_pos: (26, 8), house_timer: 0 }
+End tick
+Start tick: 222
+[(14, 23), (12, 23), (13, 24), (13, 22)]
+(14, 23), Ghost { name: Blinky, pos: (13, 23), last_pos: (12, 23), house_timer: 0 }
+[(17, 1), (15, 1), (16, 2), (16, 0)]
+(17, 1), Ghost { name: Pinky, pos: (16, 1), last_pos: (15, 1), house_timer: 0 }
+[(19, 25), (17, 25), (18, 26), (18, 24)]
+(18, 26), Ghost { name: Inky, pos: (18, 25), last_pos: (18, 24), house_timer: 0 }
+[(25, 8), (23, 8), (24, 9), (24, 7)]
+(23, 8), Ghost { name: Clyde, pos: (24, 8), last_pos: (25, 8), house_timer: 0 }
+End tick
+Start tick: 223
+[(15, 23), (13, 23), (14, 24), (14, 22)]
+(15, 23), Ghost { name: Blinky, pos: (14, 23), last_pos: (13, 23), house_timer: 0 }
+[(18, 1), (16, 1), (17, 2), (17, 0)]
+(18, 1), Ghost { name: Pinky, pos: (17, 1), last_pos: (16, 1), house_timer: 0 }
+[(19, 26), (17, 26), (18, 27), (18, 25)]
+(17, 26), Ghost { name: Inky, pos: (18, 26), last_pos: (18, 25), house_timer: 0 }
+[(24, 8), (22, 8), (23, 9), (23, 7)]
+(22, 8), Ghost { name: Clyde, pos: (23, 8), last_pos: (24, 8), house_timer: 0 }
+End tick
+Start tick: 224
+[(16, 23), (14, 23), (15, 24), (15, 22)]
+(16, 23), Ghost { name: Blinky, pos: (15, 23), last_pos: (14, 23), house_timer: 0 }
+[(19, 1), (17, 1), (18, 2), (18, 0)]
+(19, 1), Ghost { name: Pinky, pos: (18, 1), last_pos: (17, 1), house_timer: 0 }
+[(18, 26), (16, 26), (17, 27), (17, 25)]
+(16, 26), Ghost { name: Inky, pos: (17, 26), last_pos: (18, 26), house_timer: 0 }
+[(23, 8), (21, 8), (22, 9), (22, 7)]
+(21, 8), Ghost { name: Clyde, pos: (22, 8), last_pos: (23, 8), house_timer: 0 }
+End tick
+Start tick: 225
+[(17, 23), (15, 23), (16, 24), (16, 22)]
+(17, 23), Ghost { name: Blinky, pos: (16, 23), last_pos: (15, 23), house_timer: 0 }
+[(20, 1), (18, 1), (19, 2), (19, 0)]
+(20, 1), Ghost { name: Pinky, pos: (19, 1), last_pos: (18, 1), house_timer: 0 }
+[(17, 26), (15, 26), (16, 27), (16, 25)]
+(15, 26), Ghost { name: Inky, pos: (16, 26), last_pos: (17, 26), house_timer: 0 }
+[(22, 8), (20, 8), (21, 9), (21, 7)]
+(21, 9), Ghost { name: Clyde, pos: (21, 8), last_pos: (22, 8), house_timer: 0 }
+End tick
+Start tick: 226
+[(18, 23), (16, 23), (17, 24), (17, 22)]
+(18, 23), Ghost { name: Blinky, pos: (17, 23), last_pos: (16, 23), house_timer: 0 }
+[(21, 1), (19, 1), (20, 2), (20, 0)]
+(21, 1), Ghost { name: Pinky, pos: (20, 1), last_pos: (19, 1), house_timer: 0 }
+[(16, 26), (14, 26), (15, 27), (15, 25)]
+(15, 27), Ghost { name: Inky, pos: (15, 26), last_pos: (16, 26), house_timer: 0 }
+[(22, 9), (20, 9), (21, 10), (21, 8)]
+(21, 10), Ghost { name: Clyde, pos: (21, 9), last_pos: (21, 8), house_timer: 0 }
+End tick
+Start tick: 227
+[(19, 23), (17, 23), (18, 24), (18, 22)]
+(18, 24), Ghost { name: Blinky, pos: (18, 23), last_pos: (17, 23), house_timer: 0 }
+[(22, 1), (20, 1), (21, 2), (21, 0)]
+(21, 2), Ghost { name: Pinky, pos: (21, 1), last_pos: (20, 1), house_timer: 0 }
+[(16, 27), (14, 27), (15, 28), (15, 26)]
+(15, 28), Ghost { name: Inky, pos: (15, 27), last_pos: (15, 26), house_timer: 0 }
+[(22, 10), (20, 10), (21, 11), (21, 9)]
+(21, 11), Ghost { name: Clyde, pos: (21, 10), last_pos: (21, 9), house_timer: 0 }
+End tick
+Start tick: 228
+[(19, 24), (17, 24), (18, 25), (18, 23)]
+(18, 25), Ghost { name: Blinky, pos: (18, 24), last_pos: (18, 23), house_timer: 0 }
+[(22, 2), (20, 2), (21, 3), (21, 1)]
+(21, 3), Ghost { name: Pinky, pos: (21, 2), last_pos: (21, 1), house_timer: 0 }
+[(16, 28), (14, 28), (15, 29), (15, 27)]
+(15, 29), Ghost { name: Inky, pos: (15, 28), last_pos: (15, 27), house_timer: 0 }
+[(22, 11), (20, 11), (21, 12), (21, 10)]
+(21, 12), Ghost { name: Clyde, pos: (21, 11), last_pos: (21, 10), house_timer: 0 }
+End tick
+Start tick: 229
+[(19, 25), (17, 25), (18, 26), (18, 24)]
+(18, 26), Ghost { name: Blinky, pos: (18, 25), last_pos: (18, 24), house_timer: 0 }
+[(22, 3), (20, 3), (21, 4), (21, 2)]
+(21, 4), Ghost { name: Pinky, pos: (21, 3), last_pos: (21, 2), house_timer: 0 }
+[(16, 29), (14, 29), (15, 30), (15, 28)]
+(16, 29), Ghost { name: Inky, pos: (15, 29), last_pos: (15, 28), house_timer: 0 }
+[(22, 12), (20, 12), (21, 13), (21, 11)]
+(21, 13), Ghost { name: Clyde, pos: (21, 12), last_pos: (21, 11), house_timer: 0 }
+End tick
+Start tick: 230
+[(19, 26), (17, 26), (18, 27), (18, 25)]
+(17, 26), Ghost { name: Blinky, pos: (18, 26), last_pos: (18, 25), house_timer: 0 }
+[(22, 4), (20, 4), (21, 5), (21, 3)]
+(21, 5), Ghost { name: Pinky, pos: (21, 4), last_pos: (21, 3), house_timer: 0 }
+[(17, 29), (15, 29), (16, 30), (16, 28)]
+(17, 29), Ghost { name: Inky, pos: (16, 29), last_pos: (15, 29), house_timer: 0 }
+[(22, 13), (20, 13), (21, 14), (21, 12)]
+(21, 14), Ghost { name: Clyde, pos: (21, 13), last_pos: (21, 12), house_timer: 0 }
+End tick
+Start tick: 231
+[(18, 26), (16, 26), (17, 27), (17, 25)]
+(16, 26), Ghost { name: Blinky, pos: (17, 26), last_pos: (18, 26), house_timer: 0 }
+[(22, 5), (20, 5), (21, 6), (21, 4)]
+(20, 5), Ghost { name: Pinky, pos: (21, 5), last_pos: (21, 4), house_timer: 0 }
+[(18, 29), (16, 29), (17, 30), (17, 28)]
+(18, 29), Ghost { name: Inky, pos: (17, 29), last_pos: (16, 29), house_timer: 0 }
+[(22, 14), (20, 14), (21, 15), (21, 13)]
+(22, 14), Ghost { name: Clyde, pos: (21, 14), last_pos: (21, 13), house_timer: 0 }
+End tick
+Start tick: 232
+[(17, 26), (15, 26), (16, 27), (16, 25)]
+(15, 26), Ghost { name: Blinky, pos: (16, 26), last_pos: (17, 26), house_timer: 0 }
+[(21, 5), (19, 5), (20, 6), (20, 4)]
+(19, 5), Ghost { name: Pinky, pos: (20, 5), last_pos: (21, 5), house_timer: 0 }
+[(19, 29), (17, 29), (18, 30), (18, 28)]
+(19, 29), Ghost { name: Inky, pos: (18, 29), last_pos: (17, 29), house_timer: 0 }
+[(23, 14), (21, 14), (22, 15), (22, 13)]
+(23, 14), Ghost { name: Clyde, pos: (22, 14), last_pos: (21, 14), house_timer: 0 }
+End tick
+Start tick: 233
+[(16, 26), (14, 26), (15, 27), (15, 25)]
+(15, 27), Ghost { name: Blinky, pos: (15, 26), last_pos: (16, 26), house_timer: 0 }
+[(20, 5), (18, 5), (19, 6), (19, 4)]
+(18, 5), Ghost { name: Pinky, pos: (19, 5), last_pos: (20, 5), house_timer: 0 }
+[(20, 29), (18, 29), (19, 30), (19, 28)]
+(20, 29), Ghost { name: Inky, pos: (19, 29), last_pos: (18, 29), house_timer: 0 }
+[(24, 14), (22, 14), (23, 15), (23, 13)]
+(24, 14), Ghost { name: Clyde, pos: (23, 14), last_pos: (22, 14), house_timer: 0 }
+End tick
+Start tick: 234
+[(16, 27), (14, 27), (15, 28), (15, 26)]
+(15, 28), Ghost { name: Blinky, pos: (15, 27), last_pos: (15, 26), house_timer: 0 }
+[(19, 5), (17, 5), (18, 6), (18, 4)]
+(17, 5), Ghost { name: Pinky, pos: (18, 5), last_pos: (19, 5), house_timer: 0 }
+[(21, 29), (19, 29), (20, 30), (20, 28)]
+(21, 29), Ghost { name: Inky, pos: (20, 29), last_pos: (19, 29), house_timer: 0 }
+[(25, 14), (23, 14), (24, 15), (24, 13)]
+(25, 14), Ghost { name: Clyde, pos: (24, 14), last_pos: (23, 14), house_timer: 0 }
+End tick
+Start tick: 235
+[(16, 28), (14, 28), (15, 29), (15, 27)]
+(15, 29), Ghost { name: Blinky, pos: (15, 28), last_pos: (15, 27), house_timer: 0 }
+[(18, 5), (16, 5), (17, 6), (17, 4)]
+(16, 5), Ghost { name: Pinky, pos: (17, 5), last_pos: (18, 5), house_timer: 0 }
+[(22, 29), (20, 29), (21, 30), (21, 28)]
+(22, 29), Ghost { name: Inky, pos: (21, 29), last_pos: (20, 29), house_timer: 0 }
+[(26, 14), (24, 14), (25, 15), (25, 13)]
+(26, 14), Ghost { name: Clyde, pos: (25, 14), last_pos: (24, 14), house_timer: 0 }
+End tick
+Start tick: 236
+[(16, 29), (14, 29), (15, 30), (15, 28)]
+(14, 29), Ghost { name: Blinky, pos: (15, 29), last_pos: (15, 28), house_timer: 0 }
+[(17, 5), (15, 5), (16, 6), (16, 4)]
+(15, 5), Ghost { name: Pinky, pos: (16, 5), last_pos: (17, 5), house_timer: 0 }
+[(23, 29), (21, 29), (22, 30), (22, 28)]
+(23, 29), Ghost { name: Inky, pos: (22, 29), last_pos: (21, 29), house_timer: 0 }
+[(27, 14), (25, 14), (26, 15), (26, 13)]
+(27, 14), Ghost { name: Clyde, pos: (26, 14), last_pos: (25, 14), house_timer: 0 }
+End tick
+Start tick: 237
+[(15, 29), (13, 29), (14, 30), (14, 28)]
+(13, 29), Ghost { name: Blinky, pos: (14, 29), last_pos: (15, 29), house_timer: 0 }
+[(16, 5), (14, 5), (15, 6), (15, 4)]
+(14, 5), Ghost { name: Pinky, pos: (15, 5), last_pos: (16, 5), house_timer: 0 }
+[(24, 29), (22, 29), (23, 30), (23, 28)]
+(24, 29), Ghost { name: Inky, pos: (23, 29), last_pos: (22, 29), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 238
+[(14, 29), (12, 29), (13, 30), (13, 28)]
+(12, 29), Ghost { name: Blinky, pos: (13, 29), last_pos: (14, 29), house_timer: 0 }
+[(15, 5), (13, 5), (14, 6), (14, 4)]
+(13, 5), Ghost { name: Pinky, pos: (14, 5), last_pos: (15, 5), house_timer: 0 }
+[(25, 29), (23, 29), (24, 30), (24, 28)]
+(25, 29), Ghost { name: Inky, pos: (24, 29), last_pos: (23, 29), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 239
+[(13, 29), (11, 29), (12, 30), (12, 28)]
+(11, 29), Ghost { name: Blinky, pos: (12, 29), last_pos: (13, 29), house_timer: 0 }
+[(14, 5), (12, 5), (13, 6), (13, 4)]
+(12, 5), Ghost { name: Pinky, pos: (13, 5), last_pos: (14, 5), house_timer: 0 }
+[(26, 29), (24, 29), (25, 30), (25, 28)]
+(26, 29), Ghost { name: Inky, pos: (25, 29), last_pos: (24, 29), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 240
+[(12, 29), (10, 29), (11, 30), (11, 28)]
+(10, 29), Ghost { name: Blinky, pos: (11, 29), last_pos: (12, 29), house_timer: 0 }
+[(13, 5), (11, 5), (12, 6), (12, 4)]
+(11, 5), Ghost { name: Pinky, pos: (12, 5), last_pos: (13, 5), house_timer: 0 }
+[(27, 29), (25, 29), (26, 30), (26, 28)]
+(26, 28), Ghost { name: Inky, pos: (26, 29), last_pos: (25, 29), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 241
+[(11, 29), (9, 29), (10, 30), (10, 28)]
+(9, 29), Ghost { name: Blinky, pos: (10, 29), last_pos: (11, 29), house_timer: 0 }
+[(12, 5), (10, 5), (11, 6), (11, 4)]
+(10, 5), Ghost { name: Pinky, pos: (11, 5), last_pos: (12, 5), house_timer: 0 }
+[(27, 28), (25, 28), (26, 29), (26, 27)]
+(26, 27), Ghost { name: Inky, pos: (26, 28), last_pos: (26, 29), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 242
+[(10, 29), (8, 29), (9, 30), (9, 28)]
+(8, 29), Ghost { name: Blinky, pos: (9, 29), last_pos: (10, 29), house_timer: 0 }
+[(11, 5), (9, 5), (10, 6), (10, 4)]
+(9, 5), Ghost { name: Pinky, pos: (10, 5), last_pos: (11, 5), house_timer: 0 }
+[(27, 27), (25, 27), (26, 28), (26, 26)]
+(26, 26), Ghost { name: Inky, pos: (26, 27), last_pos: (26, 28), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 243
+[(9, 29), (7, 29), (8, 30), (8, 28)]
+(7, 29), Ghost { name: Blinky, pos: (8, 29), last_pos: (9, 29), house_timer: 0 }
+[(10, 5), (8, 5), (9, 6), (9, 4)]
+(8, 5), Ghost { name: Pinky, pos: (9, 5), last_pos: (10, 5), house_timer: 0 }
+[(27, 26), (25, 26), (26, 27), (26, 25)]
+(25, 26), Ghost { name: Inky, pos: (26, 26), last_pos: (26, 27), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 244
+[(8, 29), (6, 29), (7, 30), (7, 28)]
+(6, 29), Ghost { name: Blinky, pos: (7, 29), last_pos: (8, 29), house_timer: 0 }
+[(9, 5), (7, 5), (8, 6), (8, 4)]
+(7, 5), Ghost { name: Pinky, pos: (8, 5), last_pos: (9, 5), house_timer: 0 }
+[(26, 26), (24, 26), (25, 27), (25, 25)]
+(24, 26), Ghost { name: Inky, pos: (25, 26), last_pos: (26, 26), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 245
+[(7, 29), (5, 29), (6, 30), (6, 28)]
+(5, 29), Ghost { name: Blinky, pos: (6, 29), last_pos: (7, 29), house_timer: 0 }
+[(8, 5), (6, 5), (7, 6), (7, 4)]
+(6, 5), Ghost { name: Pinky, pos: (7, 5), last_pos: (8, 5), house_timer: 0 }
+[(25, 26), (23, 26), (24, 27), (24, 25)]
+(24, 25), Ghost { name: Inky, pos: (24, 26), last_pos: (25, 26), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 246
+[(6, 29), (4, 29), (5, 30), (5, 28)]
+(4, 29), Ghost { name: Blinky, pos: (5, 29), last_pos: (6, 29), house_timer: 0 }
+[(7, 5), (5, 5), (6, 6), (6, 4)]
+(5, 5), Ghost { name: Pinky, pos: (6, 5), last_pos: (7, 5), house_timer: 0 }
+[(25, 25), (23, 25), (24, 26), (24, 24)]
+(24, 24), Ghost { name: Inky, pos: (24, 25), last_pos: (24, 26), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 247
+[(5, 29), (3, 29), (4, 30), (4, 28)]
+(3, 29), Ghost { name: Blinky, pos: (4, 29), last_pos: (5, 29), house_timer: 0 }
+[(6, 5), (4, 5), (5, 6), (5, 4)]
+(4, 5), Ghost { name: Pinky, pos: (5, 5), last_pos: (6, 5), house_timer: 0 }
+[(25, 24), (23, 24), (24, 25), (24, 23)]
+(24, 23), Ghost { name: Inky, pos: (24, 24), last_pos: (24, 25), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 248
+[(4, 29), (2, 29), (3, 30), (3, 28)]
+(2, 29), Ghost { name: Blinky, pos: (3, 29), last_pos: (4, 29), house_timer: 0 }
+[(5, 5), (3, 5), (4, 6), (4, 4)]
+(3, 5), Ghost { name: Pinky, pos: (4, 5), last_pos: (5, 5), house_timer: 0 }
+[(25, 23), (23, 23), (24, 24), (24, 22)]
+(25, 23), Ghost { name: Inky, pos: (24, 23), last_pos: (24, 24), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 249
+[(3, 29), (1, 29), (2, 30), (2, 28)]
+(1, 29), Ghost { name: Blinky, pos: (2, 29), last_pos: (3, 29), house_timer: 0 }
+[(4, 5), (2, 5), (3, 6), (3, 4)]
+(2, 5), Ghost { name: Pinky, pos: (3, 5), last_pos: (4, 5), house_timer: 0 }
+[(26, 23), (24, 23), (25, 24), (25, 22)]
+(26, 23), Ghost { name: Inky, pos: (25, 23), last_pos: (24, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 250
+[(2, 29), (0, 29), (1, 30), (1, 28)]
+(1, 28), Ghost { name: Blinky, pos: (1, 29), last_pos: (2, 29), house_timer: 0 }
+[(3, 5), (1, 5), (2, 6), (2, 4)]
+(1, 5), Ghost { name: Pinky, pos: (2, 5), last_pos: (3, 5), house_timer: 0 }
+[(27, 23), (25, 23), (26, 24), (26, 22)]
+(26, 22), Ghost { name: Inky, pos: (26, 23), last_pos: (25, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 251
+[(2, 28), (0, 28), (1, 29), (1, 27)]
+(1, 27), Ghost { name: Blinky, pos: (1, 28), last_pos: (1, 29), house_timer: 0 }
+[(2, 5), (0, 5), (1, 6), (1, 4)]
+(1, 4), Ghost { name: Pinky, pos: (1, 5), last_pos: (2, 5), house_timer: 0 }
+[(27, 22), (25, 22), (26, 23), (26, 21)]
+(26, 21), Ghost { name: Inky, pos: (26, 22), last_pos: (26, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 252
+[(2, 27), (0, 27), (1, 28), (1, 26)]
+(1, 26), Ghost { name: Blinky, pos: (1, 27), last_pos: (1, 28), house_timer: 0 }
+[(2, 4), (0, 4), (1, 5), (1, 3)]
+(1, 3), Ghost { name: Pinky, pos: (1, 4), last_pos: (1, 5), house_timer: 0 }
+[(27, 21), (25, 21), (26, 22), (26, 20)]
+(26, 20), Ghost { name: Inky, pos: (26, 21), last_pos: (26, 22), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 253
+[(2, 26), (0, 26), (1, 27), (1, 25)]
+(2, 26), Ghost { name: Blinky, pos: (1, 26), last_pos: (1, 27), house_timer: 0 }
+[(2, 3), (0, 3), (1, 4), (1, 2)]
+(1, 2), Ghost { name: Pinky, pos: (1, 3), last_pos: (1, 4), house_timer: 0 }
+[(27, 20), (25, 20), (26, 21), (26, 19)]
+(25, 20), Ghost { name: Inky, pos: (26, 20), last_pos: (26, 21), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 254
+[(3, 26), (1, 26), (2, 27), (2, 25)]
+(3, 26), Ghost { name: Blinky, pos: (2, 26), last_pos: (1, 26), house_timer: 0 }
+[(2, 2), (0, 2), (1, 3), (1, 1)]
+(1, 1), Ghost { name: Pinky, pos: (1, 2), last_pos: (1, 3), house_timer: 0 }
+[(26, 20), (24, 20), (25, 21), (25, 19)]
+(24, 20), Ghost { name: Inky, pos: (25, 20), last_pos: (26, 20), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 255
+[(4, 26), (2, 26), (3, 27), (3, 25)]
+(3, 25), Ghost { name: Blinky, pos: (3, 26), last_pos: (2, 26), house_timer: 0 }
+[(2, 1), (0, 1), (1, 2), (1, 0)]
+(2, 1), Ghost { name: Pinky, pos: (1, 1), last_pos: (1, 2), house_timer: 0 }
+[(25, 20), (23, 20), (24, 21), (24, 19)]
+(23, 20), Ghost { name: Inky, pos: (24, 20), last_pos: (25, 20), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 256
+[(4, 25), (2, 25), (3, 26), (3, 24)]
+(3, 24), Ghost { name: Blinky, pos: (3, 25), last_pos: (3, 26), house_timer: 0 }
+[(3, 1), (1, 1), (2, 2), (2, 0)]
+(3, 1), Ghost { name: Pinky, pos: (2, 1), last_pos: (1, 1), house_timer: 0 }
+[(24, 20), (22, 20), (23, 21), (23, 19)]
+(22, 20), Ghost { name: Inky, pos: (23, 20), last_pos: (24, 20), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 257
+[(4, 24), (2, 24), (3, 25), (3, 23)]
+(3, 23), Ghost { name: Blinky, pos: (3, 24), last_pos: (3, 25), house_timer: 0 }
+[(4, 1), (2, 1), (3, 2), (3, 0)]
+(4, 1), Ghost { name: Pinky, pos: (3, 1), last_pos: (2, 1), house_timer: 0 }
+[(23, 20), (21, 20), (22, 21), (22, 19)]
+(21, 20), Ghost { name: Inky, pos: (22, 20), last_pos: (23, 20), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 258
+[(4, 23), (2, 23), (3, 24), (3, 22)]
+(2, 23), Ghost { name: Blinky, pos: (3, 23), last_pos: (3, 24), house_timer: 0 }
+[(5, 1), (3, 1), (4, 2), (4, 0)]
+(5, 1), Ghost { name: Pinky, pos: (4, 1), last_pos: (3, 1), house_timer: 0 }
+[(22, 20), (20, 20), (21, 21), (21, 19)]
+(21, 21), Ghost { name: Inky, pos: (21, 20), last_pos: (22, 20), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 259
+[(3, 23), (1, 23), (2, 24), (2, 22)]
+(1, 23), Ghost { name: Blinky, pos: (2, 23), last_pos: (3, 23), house_timer: 0 }
+[(6, 1), (4, 1), (5, 2), (5, 0)]
+(6, 1), Ghost { name: Pinky, pos: (5, 1), last_pos: (4, 1), house_timer: 0 }
+[(22, 21), (20, 21), (21, 22), (21, 20)]
+(21, 22), Ghost { name: Inky, pos: (21, 21), last_pos: (21, 20), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 260
+[(2, 23), (0, 23), (1, 24), (1, 22)]
+(1, 22), Ghost { name: Blinky, pos: (1, 23), last_pos: (2, 23), house_timer: 0 }
+[(7, 1), (5, 1), (6, 2), (6, 0)]
+(6, 2), Ghost { name: Pinky, pos: (6, 1), last_pos: (5, 1), house_timer: 0 }
+[(22, 22), (20, 22), (21, 23), (21, 21)]
+(21, 23), Ghost { name: Inky, pos: (21, 22), last_pos: (21, 21), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 261
+[(2, 22), (0, 22), (1, 23), (1, 21)]
+(1, 21), Ghost { name: Blinky, pos: (1, 22), last_pos: (1, 23), house_timer: 0 }
+[(7, 2), (5, 2), (6, 3), (6, 1)]
+(6, 3), Ghost { name: Pinky, pos: (6, 2), last_pos: (6, 1), house_timer: 0 }
+[(22, 23), (20, 23), (21, 24), (21, 22)]
+(20, 23), Ghost { name: Inky, pos: (21, 23), last_pos: (21, 22), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 262
+[(2, 21), (0, 21), (1, 22), (1, 20)]
+(1, 20), Ghost { name: Blinky, pos: (1, 21), last_pos: (1, 22), house_timer: 0 }
+[(7, 3), (5, 3), (6, 4), (6, 2)]
+(6, 4), Ghost { name: Pinky, pos: (6, 3), last_pos: (6, 2), house_timer: 0 }
+[(21, 23), (19, 23), (20, 24), (20, 22)]
+(19, 23), Ghost { name: Inky, pos: (20, 23), last_pos: (21, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 263
+[(2, 20), (0, 20), (1, 21), (1, 19)]
+(2, 20), Ghost { name: Blinky, pos: (1, 20), last_pos: (1, 21), house_timer: 0 }
+[(7, 4), (5, 4), (6, 5), (6, 3)]
+(6, 5), Ghost { name: Pinky, pos: (6, 4), last_pos: (6, 3), house_timer: 0 }
+[(20, 23), (18, 23), (19, 24), (19, 22)]
+(18, 23), Ghost { name: Inky, pos: (19, 23), last_pos: (20, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 264
+[(3, 20), (1, 20), (2, 21), (2, 19)]
+(3, 20), Ghost { name: Blinky, pos: (2, 20), last_pos: (1, 20), house_timer: 0 }
+[(7, 5), (5, 5), (6, 6), (6, 4)]
+(6, 6), Ghost { name: Pinky, pos: (6, 5), last_pos: (6, 4), house_timer: 0 }
+[(19, 23), (17, 23), (18, 24), (18, 22)]
+(17, 23), Ghost { name: Inky, pos: (18, 23), last_pos: (19, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 265
+[(4, 20), (2, 20), (3, 21), (3, 19)]
+(4, 20), Ghost { name: Blinky, pos: (3, 20), last_pos: (2, 20), house_timer: 0 }
+[(7, 6), (5, 6), (6, 7), (6, 5)]
+(6, 7), Ghost { name: Pinky, pos: (6, 6), last_pos: (6, 5), house_timer: 0 }
+[(18, 23), (16, 23), (17, 24), (17, 22)]
+(16, 23), Ghost { name: Inky, pos: (17, 23), last_pos: (18, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 266
+[(5, 20), (3, 20), (4, 21), (4, 19)]
+(5, 20), Ghost { name: Blinky, pos: (4, 20), last_pos: (3, 20), house_timer: 0 }
+[(7, 7), (5, 7), (6, 8), (6, 6)]
+(6, 8), Ghost { name: Pinky, pos: (6, 7), last_pos: (6, 6), house_timer: 0 }
+[(17, 23), (15, 23), (16, 24), (16, 22)]
+(15, 23), Ghost { name: Inky, pos: (16, 23), last_pos: (17, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 267
+[(6, 20), (4, 20), (5, 21), (5, 19)]
+(6, 20), Ghost { name: Blinky, pos: (5, 20), last_pos: (4, 20), house_timer: 0 }
+[(7, 8), (5, 8), (6, 9), (6, 7)]
+(6, 9), Ghost { name: Pinky, pos: (6, 8), last_pos: (6, 7), house_timer: 0 }
+[(16, 23), (14, 23), (15, 24), (15, 22)]
+(14, 23), Ghost { name: Inky, pos: (15, 23), last_pos: (16, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 268
+[(7, 20), (5, 20), (6, 21), (6, 19)]
+(6, 21), Ghost { name: Blinky, pos: (6, 20), last_pos: (5, 20), house_timer: 0 }
+[(7, 9), (5, 9), (6, 10), (6, 8)]
+(6, 10), Ghost { name: Pinky, pos: (6, 9), last_pos: (6, 8), house_timer: 0 }
+[(15, 23), (13, 23), (14, 24), (14, 22)]
+(13, 23), Ghost { name: Inky, pos: (14, 23), last_pos: (15, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 269
+[(7, 21), (5, 21), (6, 22), (6, 20)]
+(6, 22), Ghost { name: Blinky, pos: (6, 21), last_pos: (6, 20), house_timer: 0 }
+[(7, 10), (5, 10), (6, 11), (6, 9)]
+(6, 11), Ghost { name: Pinky, pos: (6, 10), last_pos: (6, 9), house_timer: 0 }
+[(14, 23), (12, 23), (13, 24), (13, 22)]
+(12, 23), Ghost { name: Inky, pos: (13, 23), last_pos: (14, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 270
+[(7, 22), (5, 22), (6, 23), (6, 21)]
+(6, 23), Ghost { name: Blinky, pos: (6, 22), last_pos: (6, 21), house_timer: 0 }
+[(7, 11), (5, 11), (6, 12), (6, 10)]
+(6, 12), Ghost { name: Pinky, pos: (6, 11), last_pos: (6, 10), house_timer: 0 }
+[(13, 23), (11, 23), (12, 24), (12, 22)]
+(11, 23), Ghost { name: Inky, pos: (12, 23), last_pos: (13, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 271
+[(7, 23), (5, 23), (6, 24), (6, 22)]
+(7, 23), Ghost { name: Blinky, pos: (6, 23), last_pos: (6, 22), house_timer: 0 }
+[(7, 12), (5, 12), (6, 13), (6, 11)]
+(6, 13), Ghost { name: Pinky, pos: (6, 12), last_pos: (6, 11), house_timer: 0 }
+[(12, 23), (10, 23), (11, 24), (11, 22)]
+(10, 23), Ghost { name: Inky, pos: (11, 23), last_pos: (12, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 272
+[(8, 23), (6, 23), (7, 24), (7, 22)]
+(8, 23), Ghost { name: Blinky, pos: (7, 23), last_pos: (6, 23), house_timer: 0 }
+[(7, 13), (5, 13), (6, 14), (6, 12)]
+(6, 14), Ghost { name: Pinky, pos: (6, 13), last_pos: (6, 12), house_timer: 0 }
+[(11, 23), (9, 23), (10, 24), (10, 22)]
+(9, 23), Ghost { name: Inky, pos: (10, 23), last_pos: (11, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 273
+[(9, 23), (7, 23), (8, 24), (8, 22)]
+(9, 23), Ghost { name: Blinky, pos: (8, 23), last_pos: (7, 23), house_timer: 0 }
+[(7, 14), (5, 14), (6, 15), (6, 13)]
+(7, 14), Ghost { name: Pinky, pos: (6, 14), last_pos: (6, 13), house_timer: 0 }
+[(10, 23), (8, 23), (9, 24), (9, 22)]
+(8, 23), Ghost { name: Inky, pos: (9, 23), last_pos: (10, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 274
+[(10, 23), (8, 23), (9, 24), (9, 22)]
+(10, 23), Ghost { name: Blinky, pos: (9, 23), last_pos: (8, 23), house_timer: 0 }
+[(8, 14), (6, 14), (7, 15), (7, 13)]
+(8, 14), Ghost { name: Pinky, pos: (7, 14), last_pos: (6, 14), house_timer: 0 }
+[(9, 23), (7, 23), (8, 24), (8, 22)]
+(7, 23), Ghost { name: Inky, pos: (8, 23), last_pos: (9, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 275
+[(11, 23), (9, 23), (10, 24), (10, 22)]
+(11, 23), Ghost { name: Blinky, pos: (10, 23), last_pos: (9, 23), house_timer: 0 }
+[(9, 14), (7, 14), (8, 15), (8, 13)]
+(9, 14), Ghost { name: Pinky, pos: (8, 14), last_pos: (7, 14), house_timer: 0 }
+[(8, 23), (6, 23), (7, 24), (7, 22)]
+(6, 23), Ghost { name: Inky, pos: (7, 23), last_pos: (8, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 276
+[(12, 23), (10, 23), (11, 24), (11, 22)]
+(12, 23), Ghost { name: Blinky, pos: (11, 23), last_pos: (10, 23), house_timer: 0 }
+[(10, 14), (8, 14), (9, 15), (9, 13)]
+(9, 15), Ghost { name: Pinky, pos: (9, 14), last_pos: (8, 14), house_timer: 0 }
+[(7, 23), (5, 23), (6, 24), (6, 22)]
+(6, 22), Ghost { name: Inky, pos: (6, 23), last_pos: (7, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick
+Start tick: 277
+[(13, 23), (11, 23), (12, 24), (12, 22)]
+(13, 23), Ghost { name: Blinky, pos: (12, 23), last_pos: (11, 23), house_timer: 0 }
+[(10, 15), (8, 15), (9, 16), (9, 14)]
+(9, 16), Ghost { name: Pinky, pos: (9, 15), last_pos: (9, 14), house_timer: 0 }
+[(7, 22), (5, 22), (6, 23), (6, 21)]
+(6, 21), Ghost { name: Inky, pos: (6, 22), last_pos: (6, 23), house_timer: 0 }
+[(28, 14), (26, 14), (27, 15), (27, 13)]
+End tick

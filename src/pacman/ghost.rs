@@ -10,14 +10,16 @@ const GHOST_MODE_TIMER :u16 = 7 * 4;
 
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub enum GhostMode {
-    Chase,
-    Scatter,
-    Frightened,
+    Chase, Scatter, Frightened
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy)]
 pub enum Name {
     Blinky, Pinky, Inky, Clyde
+}
+
+pub enum Interaction {
+    KillPlayer, KillGhost(u8)
 }
 
 pub struct Ghosts {
@@ -31,10 +33,10 @@ impl Ghosts {
     pub fn new() -> Self {
         Ghosts {
             ghosts: [
-                Ghost::new(Name::Blinky, 15, 15),
-                Ghost::new(Name::Pinky, 15, 14),
-                Ghost::new(Name::Inky, 14, 15),
-                Ghost::new(Name::Clyde, 14, 14)
+                Ghost::new(Name::Blinky),
+                Ghost::new(Name::Pinky),
+                Ghost::new(Name::Inky),
+                Ghost::new(Name::Clyde)
             ],
             ghost_mode: GhostMode::Chase,
             mode_timer: 0,
@@ -53,10 +55,6 @@ impl Ghosts {
     pub fn frighten(&mut self) {
         self.ghost_mode = GhostMode::Frightened;
         self.frightened_timer = FRIGHTNED_TIMER;
-    }
-
-    pub fn frightened(&self) -> bool {
-        self.ghost_mode != GhostMode::Frightened
     }
 
     pub fn move_ghosts(&mut self, map: &Map, player: (i32, i32, Direction)) {
@@ -107,6 +105,54 @@ impl Ghosts {
             }
         }
     }
+
+    pub fn interact_with_player(&mut self, plr: (i32, i32)) -> Option<Interaction> {
+        if self.ghost_mode == GhostMode::Frightened {
+            let mut killed = 0;
+            for g in self.ghosts.iter_mut() {
+                if g.pos == plr || g.last_pos == plr {
+                    println!("Killed! {:?}", g);
+                    *g = Ghost::new(g.name);
+                    killed += 1;
+                }
+            };
+            if killed == 0 {
+                None
+            } else {
+                Some(Interaction::KillGhost(killed))
+            }
+        } else {
+            if self.ghosts.iter().any(|g| g.pos == plr || g.last_pos == plr) {
+                Some(Interaction::KillPlayer)
+            } else {
+                None
+            }
+        }
+    }
+
+    // DEBUG VIEWS
+    pub fn targets(&self, plr: (i32, i32, Direction)) -> [(i32, i32); 4] {
+        match self.ghost_mode {
+            GhostMode::Chase => [
+                (plr.0, plr.1),
+                calc_pinky_target(plr),
+                calc_inky_target(self.ghosts[0].pos, plr),
+                calc_clyde_targe(self.ghosts[3].pos, (plr.0, plr.1)),
+            ],
+            GhostMode::Scatter => [
+                BLINKY_HOME,
+                PINKY_HOME,
+                INKY_HOME,
+                CLYDE_HOME,
+            ],
+            GhostMode::Frightened => [
+                (300, 300),
+                (300, 300),
+                (300, 300),
+                (300, 300),
+            ],
+        }
+    }
 }
 
 #[derive(Debug)]
@@ -118,10 +164,16 @@ pub struct Ghost {
 }
 
 impl Ghost {
-    fn new(name: Name, x: i32, y: i32) -> Self {
+    fn new(name: Name) -> Self {
+        let start_p = match name {
+            Name::Blinky => (15, 15),
+            Name::Pinky => (15, 14),
+            Name::Inky => (14, 15),
+            Name::Clyde => (14, 14),
+        };
         Ghost {
-            pos: (x, y),
-            last_pos: (x, y),
+            pos: start_p,
+            last_pos: (i32::min_value(), i32::min_value()),
             house_timer: match name {
                 Name::Blinky => 2,
                 Name::Pinky => 10,
@@ -140,42 +192,23 @@ impl Ghost {
         self.pos.1
     }
 
-    pub fn pos(&self) -> (i32, i32) {
-        self.pos
-    }
-
-    pub fn last_pos(&self) -> (i32, i32) {
-        self.last_pos
-    }
-
     fn move_to(&mut self, map: &Map, mut target: (i32, i32)) {
         if map.is_house(self.pos.0, self.pos.1) {
             target = (13, 11); // (14, 11)
         }
-        let options = vec![
-            (self.pos.0 + 1, self.pos.1),
-            (self.pos.0 - 1, self.pos.1),
-            (self.pos.0, self.pos.1 + 1),
-            (self.pos.0, self.pos.1 - 1)
-        ];
+        let options = self.get_options();
         let decision = options
             .iter()
             .filter(|opt| **opt != self.last_pos)
             .filter(|(x, y)| map.is_house(*x, *y) || !map.is_wall(*x, *y))
             .min_by_key(|(x, y)| (*x - target.0).pow(2) + (*y - target.1).pow(2));
         if let Some(d) = decision {
-            self.last_pos = self.pos;
-            self.pos = *d;
+            self.change_pos(*d);
         }
     }
 
     fn flee(&mut self, map: &Map) {
-        let mut options :Vec<_> = vec![
-            (self.pos.0 + 1, self.pos.1),
-            (self.pos.0 - 1, self.pos.1),
-            (self.pos.0, self.pos.1 + 1),
-            (self.pos.0, self.pos.1 - 1)
-        ];
+        let mut options = self.get_options();
         options.retain(|opt| *opt != self.last_pos);
         use rand::Rng;
         let mut rng = rand::thread_rng();
@@ -183,18 +216,14 @@ impl Ghost {
             let i = rng.gen::<usize>() % options.len();
             let opt = options.swap_remove(i);
             if !map.is_wall(opt.0, opt.1) {
-                self.pos = opt;
+                self.change_pos(opt);
+                break
             }
         }
     }
 
     fn house_move(&mut self, map: &Map) {
-        let mut options :Vec<_> = vec![
-            (self.pos.0 + 1, self.pos.1),
-            (self.pos.0 - 1, self.pos.1),
-            (self.pos.0, self.pos.1 + 1),
-            (self.pos.0, self.pos.1 - 1)
-        ];
+        let mut options = self.get_options();
         options.retain(|opt| *opt != self.last_pos);
         use rand::Rng;
         let mut rng = rand::thread_rng();
@@ -202,10 +231,25 @@ impl Ghost {
             let i = rng.gen::<usize>() % options.len();
             let opt = options.swap_remove(i);
             if map.is_house(opt.0, opt.1) {
-                self.pos = opt;
+                self.change_pos(opt);
+                break
             }
         }
         self.house_timer = self.house_timer.saturating_sub(1);
+    }
+
+    fn change_pos(&mut self, to: (i32, i32)) {
+        self.last_pos = self.pos;
+        self.pos = to;
+    }
+
+    fn get_options(&self) -> Vec<(i32, i32)> {
+        vec![
+            (self.pos.0 + 1, self.pos.1),
+            (self.pos.0 - 1, self.pos.1),
+            (self.pos.0, self.pos.1 + 1),
+            (self.pos.0, self.pos.1 - 1)
+        ]
     }
 }
 

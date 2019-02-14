@@ -56,4 +56,9 @@ impl Controler {
     pub fn frightened(&self) -> bool {
         self.game.ghost_mode() == GhostMode::Frightened
     }
+
+    // DEBUG VIEWS
+    pub fn ghost_targets(&self) -> [(i32, i32); 4] {
+        self.game.ghost_targets()
+    }
 }

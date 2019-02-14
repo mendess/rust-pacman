@@ -5,13 +5,13 @@ use self::map::Map;
 use self::map::Tile;
 use self::map::PU;
 
-use self::ghost::{Ghost, Ghosts, GhostMode};
+use self::ghost::{Ghost, Ghosts, GhostMode, Interaction};
 
 const START_POS :(i32, i32) = (14, 23);
 
 pub struct Pacman {
     map: Map,
-    // lives: u8,
+    lives: u8,
     score: u32,
     // level: u32,
     x: i32,
@@ -62,10 +62,16 @@ impl Pacman {
         self.ticks += 1;
         self.move_pacman();
         self.move_ghosts();
-        self.move_timers();
-        if self.player_ghost_overlap() {
-            self.x = START_POS.0;
-            self.y = START_POS.1;
+        match self.ghosts.interact_with_player((self.x, self.y)) {
+            Some(Interaction::KillPlayer) => {
+                self.x = START_POS.0;
+                self.y = START_POS.1;
+                self.lives -= 1;
+            },
+            Some(Interaction::KillGhost(n)) => {
+                self.score += 20 * n as u32;
+            },
+            None => (),
         }
     }
 
@@ -105,14 +111,8 @@ impl Pacman {
         }
     }
 
-    fn move_timers(&mut self) {
-    }
-
     fn move_ghosts(&mut self) {
-        self.ghosts.move_ghosts(
-            &self.map,
-            (self.x, self.y, self.direction),
-            );
+        self.ghosts.move_ghosts(&self.map, (self.x, self.y, self.direction));
     }
 
     fn can_turn(&self) -> bool {
@@ -145,12 +145,6 @@ impl Pacman {
         self.ghosts.ghost_mode()
     }
 
-    pub fn player_ghost_overlap(&self) -> bool {
-        self.ghosts.frightened()
-            && self.ghosts.get().iter()
-            .any(|g| g.pos() == (self.x, self.y) || g.last_pos() == (self.x, self.y))
-    }
-
     // pub fn stats(&self) -> Stats {
     //     Stats {
     //         lives: self.lives,
@@ -158,13 +152,19 @@ impl Pacman {
     //         level: self.level,
     //     }
     // }
+
+    // DEBUG VIEWS
+    pub fn ghost_targets(&self) -> [(i32, i32); 4] {
+        self.ghosts.targets((self.x, self.y, self.direction))
+    }
+
 }
 
 impl Default for Pacman {
     fn default() -> Self {
         Pacman {
             map: Map::new(),
-            // lives: 5,
+            lives: 5,
             score: 0,
             // level: 1,
             x: START_POS.0,
