@@ -1,5 +1,6 @@
 # rust-pacman
 
 TODO:
-- Ghost AI
+- Eat ghosts
+- Stats on screen
 - Smooth Animation

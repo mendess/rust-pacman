@@ -5,10 +5,9 @@ use self::map::Map;
 use self::map::Tile;
 use self::map::PU;
 
-use self::ghost::{Ghost, GhostMode};
+use self::ghost::{Ghost, Ghosts, GhostMode};
 
 const START_POS :(i32, i32) = (14, 23);
-const FRIGHTNED_TIMER :u16 = 30;
 
 pub struct Pacman {
     map: Map,
@@ -19,15 +18,24 @@ pub struct Pacman {
     y: i32,
     direction: Direction,
     direction_intent: Direction,
-    ghosts: [Ghost; 4],
-    ghost_mode: GhostMode,
-    ghost_mode_timer: u16,
+    ghosts: Ghosts,
     ticks: u32,
 }
 
 #[derive(Copy, Clone, Debug)]
 pub enum Direction {
     Up, Down, Left, Right
+}
+
+impl Direction {
+    pub fn to_vector(self) -> (i32, i32) {
+        match self {
+            Direction::Up    => (0, -1),
+            Direction::Down  => (0,  1),
+            Direction::Left  => (0, -1),
+            Direction::Right => ( 1, 0),
+        }
+    }
 }
 
 #[allow(dead_code)]
@@ -53,6 +61,7 @@ impl Pacman {
     pub fn tick(&mut self) {
         self.ticks += 1;
         self.move_pacman();
+        self.move_ghosts();
         self.move_timers();
         if self.player_ghost_overlap() {
             self.x = START_POS.0;
@@ -76,7 +85,6 @@ impl Pacman {
             } else if x == Map::map_width() as i32 {
                 self.x = 0;
             },
-            Some(Tile::Wall) => (),
             Some(Tile::NotWall(pu)) => {
                 self.x = x;
                 self.y = y;
@@ -88,13 +96,23 @@ impl Pacman {
                     },
                     PU::PowerUp => {
                         self.map.consume(x, y);
-                        self.ghost_mode = GhostMode::Frightened;
-                        self.ghost_mode_timer = FRIGHTNED_TIMER;
+                        self.ghosts.frighten();
                         self.score += 100;
                     },
                 }
             },
+            _ => (),
         }
+    }
+
+    fn move_timers(&mut self) {
+    }
+
+    fn move_ghosts(&mut self) {
+        self.ghosts.move_ghosts(
+            &self.map,
+            (self.x, self.y, self.direction),
+            );
     }
 
     fn can_turn(&self) -> bool {
@@ -120,24 +138,17 @@ impl Pacman {
     }
 
     pub fn ghosts(&self) -> &[Ghost] {
-        &self.ghosts
+        &self.ghosts.get()
     }
 
     pub fn ghost_mode(&self) -> GhostMode {
-        self.ghost_mode
-    }
-
-    pub fn move_timers(&mut self) {
-        self.ghost_mode_timer = self.ghost_mode_timer.saturating_sub(1);
-        if self.ghost_mode_timer == 0 {
-            self.ghost_mode = GhostMode::Chase;
-        }
+        self.ghosts.ghost_mode()
     }
 
     pub fn player_ghost_overlap(&self) -> bool {
-        self.ghost_mode != GhostMode::Frightened
-            && self.ghosts.iter()
-            .any(|g| g.x as i32 == self.x && g.y as i32 == self.y)
+        self.ghosts.frightened()
+            && self.ghosts.get().iter()
+            .any(|g| g.pos() == (self.x, self.y) || g.last_pos() == (self.x, self.y))
     }
 
     // pub fn stats(&self) -> Stats {
@@ -160,14 +171,7 @@ impl Default for Pacman {
             y: START_POS.1,
             direction: Direction::Left,
             direction_intent: Direction::Left,
-            ghosts: [
-                Ghost{ x: 15, y: 15, ttr: 0.0 }, // blinky
-                Ghost{ x: 5, y: 5, ttr: 0.0 }, // pinky
-                Ghost{ x: 5, y: 5, ttr: 0.0 }, // inky
-                Ghost{ x: 5, y: 5, ttr: 0.0 }  // clyde
-            ],
-            ghost_mode: GhostMode::Scatter,
-            ghost_mode_timer: 0,
+            ghosts: Ghosts::new(),
             ticks: 0,
         }
     }

@@ -5,7 +5,7 @@ use crate::pacman::map::{ Tile, PU };
 use crate::pacman::Direction;
 
 pub struct View {
-    background_color: Color,
+    // background_color: Color,
     wall_color: Color,
     blinky_color: Color,
     pinky_color: Color,
@@ -19,7 +19,7 @@ pub struct View {
 impl View {
     pub fn new() -> Self {
         View {
-            background_color: [0.1294, 0.1294, 0.8706, 1.0],
+            // background_color: [0.1294, 0.1294, 0.8706, 1.0],
             wall_color: [0.1294, 0.1294, 0.8706, 1.0],
             blinky_color: [1.0, 0.0, 0.0, 1.0],
             pinky_color: [1.0, 0.7216, 1.0, 1.0],
@@ -108,8 +108,8 @@ impl View {
 
         let ghosts = controler.get_ghosts();
         let blinky = [
-            ghosts[0].x as f64 * self.tile_size,
-            ghosts[0].y as f64 * self.tile_size,
+            ghosts[0].x() as f64 * self.tile_size,
+            ghosts[0].y() as f64 * self.tile_size,
             self.tile_size,
             self.tile_size
         ];
@@ -117,8 +117,8 @@ impl View {
             .draw(blinky, &c.draw_state, c.transform, g);
 
         let pinky = [
-            ghosts[1].x as f64 * self.tile_size,
-            ghosts[1].y as f64 * self.tile_size,
+            ghosts[1].x() as f64 * self.tile_size,
+            ghosts[1].y() as f64 * self.tile_size,
             self.tile_size,
             self.tile_size
         ];
@@ -126,8 +126,8 @@ impl View {
             .draw(pinky, &c.draw_state, c.transform, g);
 
         let inky = [
-            ghosts[2].x as f64 * self.tile_size,
-            ghosts[2].y as f64 * self.tile_size,
+            ghosts[2].x() as f64 * self.tile_size,
+            ghosts[2].y() as f64 * self.tile_size,
             self.tile_size,
             self.tile_size
         ];
@@ -135,8 +135,8 @@ impl View {
             .draw(inky, &c.draw_state, c.transform, g);
 
         let clyde = [
-            ghosts[3].x as f64 * self.tile_size,
-            ghosts[3].y as f64 * self.tile_size,
+            ghosts[3].x() as f64 * self.tile_size,
+            ghosts[3].y() as f64 * self.tile_size,
             self.tile_size,
             self.tile_size
         ];

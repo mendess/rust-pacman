@@ -1,5 +1,5 @@
-const MAP_WIDTH :usize = 28;
-const MAP_HEIGHT :usize = 31;
+pub const MAP_WIDTH :usize = 28;
+pub const MAP_HEIGHT :usize = 31;
 
 pub struct Map {
     tiles: [Tile; (MAP_WIDTH*MAP_HEIGHT) as usize],
@@ -9,6 +9,7 @@ pub struct Map {
 pub enum Tile {
     Wall,
     NotWall(PU),
+    House,
 }
 
 #[derive(Clone, Copy)]
@@ -30,6 +31,20 @@ impl Map {
             None
         } else {
             Some(self.tiles[MAP_WIDTH * y as usize + x as usize])
+        }
+    }
+
+    pub fn is_wall(&self, x: i32, y: i32) -> bool {
+        match self.get(x, y) {
+            Some(Tile::NotWall(_)) => false,
+            _ => true,
+        }
+    }
+
+    pub fn is_house(&self, x: i32, y: i32) -> bool {
+        match self.get(x, y) {
+            Some(Tile::House) => true,
+            _ => false,
         }
     }
 
@@ -75,10 +90,10 @@ impl Default for Map {
             "######.##### ## #####.######",
             "######.##### ## #####.######",
             "######.##          ##.######",
-            "######.## ###  ### ##.######",
-            "######.## #      # ##.######",
-            "      .   #      #   .      ",
-            "######.## #      # ##.######",
+            "######.## ###HH### ##.######",
+            "######.## #HHHHHH# ##.######",
+            "      .   #HHHHHH#   .      ",
+            "######.## #HHHHHH# ##.######",
             "######.## ######## ##.######",
             "######.##          ##.######",
             "######.## ######## ##.######",
@@ -102,6 +117,7 @@ impl Default for Map {
                     '.' => Some(Tile::NotWall(PU::Dot)),
                     ' ' => Some(Tile::NotWall(PU::Empty)),
                     'X' => Some(Tile::NotWall(PU::PowerUp)),
+                    'H' => Some(Tile::House),
                     _ => None,
                 }
             }).collect();
