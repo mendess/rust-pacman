@@ -6,11 +6,12 @@ use piston::input::Button;
 pub struct Controler {
     game: Pacman,
     delta: f64,
+    paused: bool,
 }
 
 impl Controler {
     pub fn new(game :Pacman) -> Self {
-        Controler { game, delta: 0.0 }
+        Controler { game, delta: 0.0, paused: false }
     }
 
     pub fn event(&mut self, event :&Event) -> bool {
@@ -26,6 +27,7 @@ impl Controler {
                 Button::Keyboard(Key::J) => self.game.set_direction_intent(Direction::Down),
                 Button::Keyboard(Key::H) => self.game.set_direction_intent(Direction::Left),
                 Button::Keyboard(Key::L) => self.game.set_direction_intent(Direction::Right),
+                Button::Keyboard(Key::P) => self.paused = !self.paused,
                 _ => (),
             }
         }
@@ -34,7 +36,9 @@ impl Controler {
             self.delta += u.dt;
             if self.delta > 0.25 {
                 self.delta -= 0.25;
-                self.game.tick();
+                if !self.paused {
+                    self.game.tick();
+                }
             }
         }
 
