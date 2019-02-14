@@ -1,19 +1,17 @@
 use graphics::types::Color;
 use graphics::{Context, Graphics};
 use crate::controler::Controler;
-use crate::pacman::map::{ Tile, PU };
+use crate::pacman::map::{Tile, PU};
 use crate::pacman::Direction;
 
 pub struct View {
     // background_color: Color,
     wall_color: Color,
-    blinky_color: Color,
-    pinky_color: Color,
-    inky_color: Color,
-    clyde_color: Color,
+    ghost_colors: [Color;4],
     frightened_color: Color,
     dot_color: Color,
     tile_size: f64,
+    offset: f64,
 }
 
 impl View {
@@ -21,13 +19,16 @@ impl View {
         View {
             // background_color: [0.1294, 0.1294, 0.8706, 1.0],
             wall_color: [0.1294, 0.1294, 0.8706, 1.0],
-            blinky_color: [1.0, 0.0, 0.0, 1.0],
-            pinky_color: [1.0, 0.7216, 1.0, 1.0],
-            inky_color: [0.0, 1.0, 1.0, 1.0],
-            clyde_color: [1.0, 0.7216, 0.3176, 1.0],
+            ghost_colors: [
+                [1.0, 0.0, 0.0, 1.0],
+                [1.0, 0.7216, 1.0, 1.0],
+                [0.0, 1.0, 1.0, 1.0],
+                [1.0, 0.7216, 0.3176, 1.0],
+            ],
             frightened_color: [0.0039, 0.0902, 1.0, 1.0],
             dot_color: [1.0, 1.0, 1.0, 1.0],
             tile_size: 20.0,
+            offset: 30.0,
         }
     }
 
@@ -40,42 +41,36 @@ impl View {
         for line in controler.get_map().scan_lines() {
             for tile in line.iter() {
                 match tile {
-                    Tile::Wall =>
-                        Rectangle::new(self.wall_color)
-                        .draw(
-                            [
-                            x + self.tile_size / 4.0,
-                            y + self.tile_size / 4.0,
+                    Tile::Wall => {
+                        let sqr = [
+                            self.offset + x + self.tile_size / 4.0,
+                            self.offset + y + self.tile_size / 4.0,
                             self.tile_size / 2.0,
                             self.tile_size / 2.0
-                            ],
-                            &c.draw_state,
-                            c.transform,
-                            g),
-                    Tile::NotWall(PU::Dot) =>
-                        Rectangle::new(self.dot_color)
-                        .draw(
-                            [
-                            x + self.tile_size * (5.0/12.0),
-                            y + self.tile_size * (5.0/12.0),
+                        ];
+                        Rectangle::new(self.wall_color)
+                            .draw(sqr, &c.draw_state, c.transform, g);
+                    },
+                    Tile::NotWall(PU::Dot) => {
+                        let sqr = [
+                            self.offset + x + self.tile_size * (5.0/12.0),
+                            self.offset + y + self.tile_size * (5.0/12.0),
                             self.tile_size / 6.0,
                             self.tile_size / 6.0
-                            ],
-                            &c.draw_state,
-                            c.transform,
-                            g),
-                    Tile::NotWall(PU::PowerUp) =>
-                        CircleArc::new(self.dot_color, self.tile_size / 4.0, 0.0, 2.0 * 3.14)
-                        .draw(
-                            [
-                            x + self.tile_size * (3.0/8.0),
-                            y + self.tile_size * (3.0/8.0),
+                        ];
+                        Rectangle::new(self.dot_color)
+                            .draw(sqr, &c.draw_state, c.transform, g);
+                    },
+                    Tile::NotWall(PU::PowerUp) => {
+                        let sqr = [
+                            self.offset + x + self.tile_size * (3.0/8.0),
+                            self.offset + y + self.tile_size * (3.0/8.0),
                             self.tile_size / 4.0,
                             self.tile_size / 4.0
-                            ],
-                            &c.draw_state,
-                            c.transform,
-                            g),
+                        ];
+                        CircleArc::new(self.dot_color, self.tile_size / 4.0, 0.0, 2.0 * 3.14)
+                            .draw(sqr, &c.draw_state, c.transform, g);
+                    },
                     _ => (),
                 }
                 x += self.tile_size;
@@ -86,8 +81,8 @@ impl View {
 
         let (x, y, d) = controler.get_player();
         let pacman = [
-            5.0 + (x as f64) * self.tile_size,
-            5.0 + (y as f64) * self.tile_size,
+            self.offset + 5.0 + (x as f64) * self.tile_size,
+            self.offset + 5.0 + (y as f64) * self.tile_size,
             self.tile_size / 2.0,
             self.tile_size / 2.0,
         ];
@@ -106,41 +101,27 @@ impl View {
 
         let pick_color = |c| if controler.frightened() { self.frightened_color } else { c };
 
-        let ghosts = controler.get_ghosts();
-        let blinky = [
-            ghosts[0].x() as f64 * self.tile_size,
-            ghosts[0].y() as f64 * self.tile_size,
-            self.tile_size,
-            self.tile_size
-        ];
-        Rectangle::new(pick_color(self.blinky_color))
-            .draw(blinky, &c.draw_state, c.transform, g);
+        for (i, ghost) in controler.get_ghosts().iter().enumerate() {
+            let g_square = self.ghost_square(ghost.x(), ghost.y());
+            Rectangle::new(pick_color(self.ghost_colors[i]))
+                .draw(g_square, &c.draw_state, c.transform, g);
+        }
 
-        let pinky = [
-            ghosts[1].x() as f64 * self.tile_size,
-            ghosts[1].y() as f64 * self.tile_size,
-            self.tile_size,
-            self.tile_size
-        ];
-        Rectangle::new(pick_color(self.pinky_color))
-            .draw(pinky, &c.draw_state, c.transform, g);
+        // DEBUG
+        for (i, sqr) in controler.ghost_targets().iter().enumerate() {
+            let g_square = self.ghost_square(sqr.0, sqr.1);
+            Rectangle::new_border(self.ghost_colors[i], 1.0)
+                .draw(g_square, &c.draw_state, c.transform, g);
+        }
+    }
 
-        let inky = [
-            ghosts[2].x() as f64 * self.tile_size,
-            ghosts[2].y() as f64 * self.tile_size,
+    fn ghost_square(&self, x: i32, y: i32) -> [f64; 4] {
+        [
+            self.offset + x as f64 * self.tile_size,
+            self.offset + y as f64 * self.tile_size,
             self.tile_size,
             self.tile_size
-        ];
-        Rectangle::new(pick_color(self.inky_color))
-            .draw(inky, &c.draw_state, c.transform, g);
-
-        let clyde = [
-            ghosts[3].x() as f64 * self.tile_size,
-            ghosts[3].y() as f64 * self.tile_size,
-            self.tile_size,
-            self.tile_size
-        ];
-        Rectangle::new(pick_color(self.clyde_color))
-            .draw(clyde, &c.draw_state, c.transform, g);
+        ]
     }
 }
+
