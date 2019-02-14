@@ -1,6 +1,6 @@
-use crate::pacman::{ Pacman, Direction, ghost::Ghost, map::Map, ghost::GhostMode };
+use crate::pacman::{Pacman, Direction, ghost::Ghost, map::Map, ghost::GhostMode, Stats};
 use piston::input::Event;
-use piston::input::{ PressEvent, UpdateEvent };
+use piston::input::{PressEvent, UpdateEvent};
 use piston::input::Button;
 
 pub struct Controler {
@@ -59,6 +59,10 @@ impl Controler {
 
     pub fn frightened(&self) -> bool {
         self.game.ghost_mode() == GhostMode::Frightened
+    }
+
+    pub fn get_stats(&self) -> Stats {
+        self.game.stats()
     }
 
 }

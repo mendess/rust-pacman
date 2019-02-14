@@ -13,7 +13,7 @@ pub struct Pacman {
     map: Map,
     lives: u8,
     score: u32,
-    // level: u32,
+    level: u32,
     x: i32,
     y: i32,
     direction: Direction,
@@ -38,12 +38,10 @@ impl Direction {
     }
 }
 
-#[allow(dead_code)]
 pub struct Stats {
     pub lives: u8,
     pub score: u32,
     pub level: u32,
-    pub ghostbusting: bool,
 }
 
 impl Pacman {
@@ -145,13 +143,13 @@ impl Pacman {
         self.ghosts.ghost_mode()
     }
 
-    // pub fn stats(&self) -> Stats {
-    //     Stats {
-    //         lives: self.lives,
-    //         score: self.score,
-    //         level: self.level,
-    //     }
-    // }
+    pub fn stats(&self) -> Stats {
+        Stats {
+            lives: self.lives,
+            score: self.score,
+            level: self.level,
+        }
+    }
 
 }
 
@@ -161,7 +159,7 @@ impl Default for Pacman {
             map: Map::new(),
             lives: 5,
             score: 0,
-            // level: 1,
+            level: 1,
             x: START_POS.0,
             y: START_POS.1,
             direction: Direction::Left,

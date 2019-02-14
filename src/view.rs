@@ -33,8 +33,7 @@ impl View {
     }
 
     pub fn draw<G: Graphics>(&self, controler: &Controler, c: &Context, g: &mut G) {
-        use graphics::{ Rectangle };
-        use graphics::CircleArc;
+        use graphics::{Rectangle, CircleArc, Text};
 
         let mut x = 0.0;
         let mut y = 0.0;
@@ -106,6 +105,8 @@ impl View {
             Rectangle::new(pick_color(self.ghost_colors[i]))
                 .draw(g_square, &c.draw_state, c.transform, g);
         }
+
+        let stats = controler.get_stats();
 
         // DEBUG
         // for (i, sqr) in controler.ghost_targets().iter().enumerate() {
