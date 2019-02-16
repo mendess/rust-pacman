@@ -254,27 +254,28 @@ fn calc_clyde_targe(clyde :(i32, i32), plr :(i32, i32)) -> (i32, i32) {
 }
 
 // DEBUG VIEWS
-// impl Ghosts {
-//     pub fn targets(&self, plr: (i32, i32, Direction)) -> [(i32, i32); 4] {
-//         match self.ghost_mode {
-//             GhostMode::Chase => [
-//                 (plr.0, plr.1),
-//                 calc_pinky_target(plr),
-//                 calc_inky_target(self.ghosts[0].pos, plr),
-//                 calc_clyde_targe(self.ghosts[3].pos, (plr.0, plr.1)),
-//             ],
-//             GhostMode::Scatter => [
-//                 BLINKY_HOME,
-//                 PINKY_HOME,
-//                 INKY_HOME,
-//                 CLYDE_HOME,
-//             ],
-//             GhostMode::Frightened => [
-//                 (300, 300),
-//                 (300, 300),
-//                 (300, 300),
-//                 (300, 300),
-//             ],
-//         }
-//     }
-// }
+#[allow(dead_code)]
+impl Ghosts {
+    pub fn targets(&self, plr: (i32, i32, Direction)) -> [(i32, i32); 4] {
+        match self.ghost_mode {
+            GhostMode::Chase => [
+                (plr.0, plr.1),
+                calc_pinky_target(plr),
+                calc_inky_target(self.ghosts[0].pos, plr),
+                calc_clyde_targe(self.ghosts[3].pos, (plr.0, plr.1)),
+            ],
+            GhostMode::Scatter => [
+                BLINKY_HOME,
+                PINKY_HOME,
+                INKY_HOME,
+                CLYDE_HOME,
+            ],
+            GhostMode::Frightened => [
+                (300, 300),
+                (300, 300),
+                (300, 300),
+                (300, 300),
+            ],
+        }
+    }
+}

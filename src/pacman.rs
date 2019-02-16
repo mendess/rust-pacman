@@ -171,8 +171,8 @@ impl Default for Pacman {
 }
 
 // // DEBUG VIEWS
-// impl Pacman {
-//     pub fn ghost_targets(&self) -> [(i32, i32); 4] {
-//         self.ghosts.targets((self.x, self.y, self.direction))
-//     }
-// }
+impl Pacman {
+    pub fn ghost_targets(&self) -> [(i32, i32); 4] {
+        self.ghosts.targets((self.x, self.y, self.direction))
+    }
+}

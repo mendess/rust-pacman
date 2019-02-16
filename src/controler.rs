@@ -67,10 +67,11 @@ impl Controler {
 
 }
 
-// // DEBUG VIEWS
-// impl Controler {
+// DEBUG VIEWS
+#[allow(dead_code)]
+impl Controler {
 
-//     pub fn ghost_targets(&self) -> [(i32, i32); 4] {
-//         self.game.ghost_targets()
-//     }
-// }
+    pub fn ghost_targets(&self) -> [(i32, i32); 4] {
+        self.game.ghost_targets()
+    }
+}

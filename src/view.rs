@@ -1,13 +1,22 @@
-use graphics::types::Color;
-use graphics::{Context, Graphics};
+use opengl_graphics::Texture;
+use opengl_graphics::GlGraphics;
+use texture::TextureSettings;
+use graphics::{
+    Context,
+    image::Image,
+    rectangle::Rectangle,
+    circle_arc::CircleArc,
+    types::Color
+};
 use crate::controler::Controler;
 use crate::pacman::map::{Tile, PU};
 use crate::pacman::Direction;
+use std::path::Path;
 
 pub struct View {
     // background_color: Color,
     wall_color: Color,
-    ghost_colors: [Color;4],
+    ghost_textures: [Texture;4],
     frightened_color: Color,
     dot_color: Color,
     tile_size: f64,
@@ -16,15 +25,27 @@ pub struct View {
 
 impl View {
     pub fn new() -> Self {
+        let ghost_textures = {
+            let mut textures = Vec::with_capacity(4);
+            for name in [
+                "images/blinky.png",
+                "images/pinky.png",
+                "images/inky.png",
+                "images/clyde.png"].iter() {
+                    textures.push(Texture::from_path(Path::new(name), &TextureSettings::new())
+                                  .expect(&format!("Failed to load ghost: {}", name)));
+                }
+            [
+                textures.remove(0),
+                textures.remove(0),
+                textures.remove(0),
+                textures.remove(0)
+            ]
+        };
         View {
             // background_color: [0.1294, 0.1294, 0.8706, 1.0],
             wall_color: [0.1294, 0.1294, 0.8706, 1.0],
-            ghost_colors: [
-                [1.0, 0.0, 0.0, 1.0],
-                [1.0, 0.7216, 1.0, 1.0],
-                [0.0, 1.0, 1.0, 1.0],
-                [1.0, 0.7216, 0.3176, 1.0],
-            ],
+            ghost_textures: ghost_textures,
             frightened_color: [0.0039, 0.0902, 1.0, 1.0],
             dot_color: [1.0, 1.0, 1.0, 1.0],
             tile_size: 20.0,
@@ -32,9 +53,7 @@ impl View {
         }
     }
 
-    pub fn draw<G: Graphics>(&self, controler: &Controler, c: &Context, g: &mut G) {
-        use graphics::{Rectangle, CircleArc, Text};
-
+    pub fn draw(&self, controler: &Controler, c: &Context, g: &mut GlGraphics) {
         let mut x = 0.0;
         let mut y = 0.0;
         for line in controler.get_map().scan_lines() {
@@ -102,8 +121,8 @@ impl View {
 
         for (i, ghost) in controler.get_ghosts().iter().enumerate() {
             let g_square = self.ghost_square(ghost.x(), ghost.y());
-            Rectangle::new(pick_color(self.ghost_colors[i]))
-                .draw(g_square, &c.draw_state, c.transform, g);
+            let img = Image::new().rect(g_square);
+            img.draw(&self.ghost_textures[i], &c.draw_state, c.transform, g);
         }
 
         let stats = controler.get_stats();
