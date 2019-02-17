@@ -4,7 +4,7 @@ mod controler;
 
 use piston::window::WindowSettings;
 use piston::event_loop::{ EventSettings, Events };
-use piston::input::RenderEvent;
+use piston::input::{ RenderEvent, ResizeEvent };
 use glutin_window::GlutinWindow as Window;
 use opengl_graphics::{ GlGraphics, OpenGL };
 
@@ -25,7 +25,7 @@ fn main() {
 
     let mut gl = GlGraphics::new(opengl);
     let mut controler = Controler::new(Pacman::new());
-    let view = View::new();
+    let mut view = View::new();
 
     let mut events = Events::new(EventSettings::new());
     while let Some(e) = events.next(&mut window) {
@@ -34,6 +34,8 @@ fn main() {
                 graphics::clear([0.0; 4], g);
                 view.draw(&controler, &c, g);
             })
+        } else if let Some(r) = e.resize_args() {
+            view.resize(r[0], r[1]);
         } else {
             if controler.event(&e) { break }
         }

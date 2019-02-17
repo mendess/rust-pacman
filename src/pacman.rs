@@ -8,12 +8,15 @@ use self::map::PU;
 use self::ghost::{Ghost, Ghosts, GhostMode, Interaction};
 
 const START_POS :(i32, i32) = (14, 23);
+const SCORE_PELLET :u32 = 10;
+const SCORE_PU :u32 = 50;
+const SCORE_GHOST :u32 = 200;
 
 pub struct Pacman {
     map: Map,
     lives: u8,
     score: u32,
-    level: u32,
+    level: usize,
     x: i32,
     y: i32,
     direction: Direction,
@@ -41,7 +44,7 @@ impl Direction {
 pub struct Stats {
     pub lives: u8,
     pub score: u32,
-    pub level: u32,
+    pub level: usize,
 }
 
 impl Pacman {
@@ -67,7 +70,7 @@ impl Pacman {
                 self.lives -= 1;
             },
             Some(Interaction::KillGhost(n)) => {
-                self.score += 20 * n as u32;
+                self.score += SCORE_GHOST * n as u32;
             },
             None => (),
         }
@@ -96,12 +99,12 @@ impl Pacman {
                     PU::Empty => (),
                     PU::Dot => {
                         self.map.consume(x, y);
-                        self.score += 10;
+                        self.score += SCORE_PELLET;
                     },
                     PU::PowerUp => {
                         self.map.consume(x, y);
                         self.ghosts.frighten();
-                        self.score += 100;
+                        self.score += SCORE_PU;
                     },
                 }
             },
@@ -131,8 +134,8 @@ impl Pacman {
         &self.map
     }
 
-    pub fn player(&self) -> (f64, f64, Direction) {
-        (self.x.into(), self.y.into(), self.direction_intent)
+    pub fn player(&self) -> (i32, i32, Direction) {
+        (self.x, self.y, self.direction_intent)
     }
 
     pub fn ghosts(&self) -> &[Ghost] {
@@ -174,5 +177,9 @@ impl Default for Pacman {
 impl Pacman {
     pub fn ghost_targets(&self) -> [(i32, i32); 4] {
         self.ghosts.targets((self.x, self.y, self.direction))
+    }
+
+    pub fn level_up(&mut self) {
+        self.level += 1;
     }
 }
