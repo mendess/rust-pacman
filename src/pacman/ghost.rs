@@ -27,6 +27,7 @@ pub struct Ghosts {
     ghost_mode: GhostMode,
     mode_timer: u16,
     frightened_timer: u16,
+    num_scatters: u8,
 }
 
 impl Ghosts {
@@ -41,6 +42,7 @@ impl Ghosts {
             ghost_mode: GhostMode::Chase,
             mode_timer: 0,
             frightened_timer: 0,
+            num_scatters: 2,
         }
     }
 
@@ -72,7 +74,7 @@ impl Ghosts {
                         Name::Blinky => plr,
                         Name::Pinky => calc_pinky_target(player),
                         Name::Inky => calc_inky_target(blinky, player),
-                        Name::Clyde => calc_clyde_targe(ghst.pos, plr),
+                        Name::Clyde => calc_clyde_target(ghst.pos, plr),
                     };
                     ghst.move_to(map, target);
                 }
@@ -97,7 +99,8 @@ impl Ghosts {
             if self.mode_timer == 0 {
                 self.mode_timer = GHOST_MODE_TIMER;
                 self.ghost_mode =
-                    if self.ghost_mode == GhostMode::Chase {
+                    if self.ghost_mode == GhostMode::Chase && self.num_scatters > 0 {
+                        self.num_scatters -= 1;
                         GhostMode::Scatter
                     } else {
                         GhostMode::Chase
@@ -114,7 +117,7 @@ impl Ghosts {
                     *g = Ghost::new(g.name);
                     killed += 1;
                 }
-            };
+            }
             if killed == 0 {
                 None
             } else {
@@ -127,6 +130,10 @@ impl Ghosts {
                 None
             }
         }
+    }
+
+    pub fn reset(&mut self) {
+        *self = Ghosts::new();
     }
 
 }
@@ -220,12 +227,21 @@ impl Ghost {
     }
 
     fn get_options(&self) -> Vec<(i32, i32)> {
+        let wrap = |x| if x < 0 {
+            map::MAP_WIDTH as i32 - 1
+        } else if x == map::MAP_WIDTH as i32 {
+            0
+        } else {
+            x
+        };
         vec![
             (self.pos.0 + 1, self.pos.1),
             (self.pos.0 - 1, self.pos.1),
             (self.pos.0, self.pos.1 + 1),
             (self.pos.0, self.pos.1 - 1)
-        ]
+        ].iter().cloned()
+        .map(|(x, y)| (wrap(x), y))
+        .collect()
     }
 }
 
@@ -245,7 +261,7 @@ fn calc_inky_target(blinky: (i32, i32), player: (i32, i32, Direction)) -> (i32, 
     (blinky.0 + tgt_vec.0, blinky.1 + tgt_vec.1)
 }
 
-fn calc_clyde_targe(clyde :(i32, i32), plr :(i32, i32)) -> (i32, i32) {
+fn calc_clyde_target(clyde :(i32, i32), plr :(i32, i32)) -> (i32, i32) {
     if (((clyde.0 - plr.0).pow(2) + (clyde.1 - plr.1).pow(2)) as f64).sqrt() < 8.0 {
         CLYDE_HOME
     } else {
@@ -262,7 +278,7 @@ impl Ghosts {
                 (plr.0, plr.1),
                 calc_pinky_target(plr),
                 calc_inky_target(self.ghosts[0].pos, plr),
-                calc_clyde_targe(self.ghosts[3].pos, (plr.0, plr.1)),
+                calc_clyde_target(self.ghosts[3].pos, (plr.0, plr.1)),
             ],
             GhostMode::Scatter => [
                 BLINKY_HOME,

@@ -1,8 +1,55 @@
 pub const MAP_WIDTH :usize = 28;
 pub const MAP_HEIGHT :usize = 31;
+const MAP_STR :[&'static str;31] = [
+    "############################",
+    "#............##............#",
+    "#.####.#####.##.#####.####.#",
+    "#X####.#####.##.#####.####X#",
+    "#.####.#####.##.#####.####.#",
+    "#..........................#",
+    "#.####.##.########.##.####.#",
+    "#.####.##.########.##.####.#",
+    "#......##....##....##......#",
+    "######.##### ## #####.######",
+    "######.##### ## #####.######",
+    "######.##          ##.######",
+    "######.## ###HH### ##.######",
+    "######.## #HHHHHH# ##.######",
+    "      .   #HHHHHH#   .      ",
+    "######.## #HHHHHH# ##.######",
+    "######.## ######## ##.######",
+    "######.##          ##.######",
+    "######.## ######## ##.######",
+    "######.## ######## ##.######",
+    "#............##............#",
+    "#.####.#####.##.#####.####.#",
+    "#.####.#####.##.#####.####.#",
+    "#X..##................##..X#",
+    "###.##.##.########.##.##.###",
+    "###.##.##.########.##.##.###",
+    "#......##....##....##......#",
+    "#.##########.##.##########.#",
+    "#.##########.##.##########.#",
+    "#..........................#",
+    "############################",
+    ];
+
+fn pellet_coords() -> Vec<(usize, usize)> {
+    MAP_STR.iter()
+        .enumerate()
+        .map(|(y, line)| line
+             .chars()
+             .enumerate()
+             .filter(|(_, c)| *c == '.')
+             .map(move |(x, _)| (x, y))
+             .collect::<Vec<(usize, usize)>>())
+        .fold(vec![], |mut acc, mut l|  {acc.append(&mut l); acc})
+}
 
 pub struct Map {
     tiles: [Tile; (MAP_WIDTH*MAP_HEIGHT) as usize],
+    pellets: u32,
+    pellet_coords: Vec<(usize, usize)>,
 }
 
 #[derive(Clone, Copy)]
@@ -53,14 +100,11 @@ impl Map {
         self.tiles[MAP_WIDTH * y + x] = tile;
     }
 
-    pub fn consume(&mut self, x: i32, y: i32) -> i32 {
-        let score = match self.get(x, y) {
-            Some(Tile::NotWall(PU::Dot)) => 10,
-            Some(Tile::NotWall(PU::PowerUp)) => 100,
-            _ => 0,
+    pub fn consume(&mut self, x: i32, y: i32) {
+        if let Some(Tile::NotWall(PU::Dot)) = self.get(x, y) {
+            self.pellets -= 1;
         };
         self.set(x as u32, y as u32, Tile::NotWall(PU::Empty));
-        score
     }
 
     pub fn scan_lines(&self) -> ScanLine {
@@ -70,47 +114,21 @@ impl Map {
         }
     }
 
-    pub const fn map_width() -> usize {
-        MAP_WIDTH
+    pub fn pellets(&self) -> u32 {
+        self.pellets
+    }
+
+    pub fn reset(&mut self) {
+        for (x, y) in self.pellet_coords.iter().cloned() {
+            self.tiles[MAP_WIDTH * y + x] = Tile::NotWall(PU::Dot);
+        }
+        self.pellets = self.pellet_coords.len() as u32;
     }
 }
 
 impl Default for Map {
     fn default() -> Self {
-        let map_str = [
-            "############################",
-            "#............##............#",
-            "#.####.#####.##.#####.####.#",
-            "#X####.#####.##.#####.####X#",
-            "#.####.#####.##.#####.####.#",
-            "#..........................#",
-            "#.####.##.########.##.####.#",
-            "#.####.##.########.##.####.#",
-            "#......##....##....##......#",
-            "######.##### ## #####.######",
-            "######.##### ## #####.######",
-            "######.##          ##.######",
-            "######.## ###HH### ##.######",
-            "######.## #HHHHHH# ##.######",
-            "      .   #HHHHHH#   .      ",
-            "######.## #HHHHHH# ##.######",
-            "######.## ######## ##.######",
-            "######.##          ##.######",
-            "######.## ######## ##.######",
-            "######.## ######## ##.######",
-            "#............##............#",
-            "#.####.#####.##.#####.####.#",
-            "#.####.#####.##.#####.####.#",
-            "#X..##................##..X#",
-            "###.##.##.########.##.##.###",
-            "###.##.##.########.##.##.###",
-            "#......##....##....##......#",
-            "#.##########.##.##########.#",
-            "#.##########.##.##########.#",
-            "#..........................#",
-            "############################"];
-
-        let map :Vec<Tile> = map_str.iter().flat_map(|x| x.chars())
+        let map :Vec<Tile> = MAP_STR.iter().flat_map(|x| x.chars())
             .filter_map(|c| {
                 match c {
                     '#' => Some(Tile::Wall),
@@ -125,8 +143,14 @@ impl Default for Map {
         for i in 0..map.len() {
             m[i] = map[i];
         }
+        let n_pellets = map
+            .iter()
+            .filter(|c| if let Tile::NotWall(PU::Dot) = c { true } else { false })
+            .count() as u32;
         Map {
-            tiles: m
+            tiles: m,
+            pellet_coords: pellet_coords(),
+            pellets: n_pellets,
         }
     }
 }
@@ -148,5 +172,13 @@ impl<'a> Iterator for ScanLine<'a> {
         } else {
             Some(&self.map.tiles[line_start..(line_start + MAP_WIDTH)])
         }
+    }
+}
+
+// DEBUG
+#[allow(dead_code)]
+impl Map {
+    pub fn remove_all_pellets(&mut self){
+        self.pellets = 0;
     }
 }

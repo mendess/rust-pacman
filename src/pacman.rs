@@ -53,6 +53,7 @@ impl Pacman {
     }
 
     pub fn set_direction_intent(&mut self, direction: Direction) {
+        if self.lives == 0 { return }
         self.direction_intent = direction;
         if self.can_turn() {
             self.direction = self.direction_intent;
@@ -61,6 +62,13 @@ impl Pacman {
 
     pub fn tick(&mut self) {
         self.ticks += 1;
+        if self.map.pellets() == 0 {
+            self.advance_level();
+            return
+        }
+        if self.lives == 0 {
+            return
+        }
         self.move_pacman();
         self.move_ghosts();
         match self.ghosts.interact_with_player((self.x, self.y)) {
@@ -88,8 +96,8 @@ impl Pacman {
         };
         match self.map.get(x, y) {
             None => if x == -1 {
-                self.x = Map::map_width() as i32 - 1;
-            } else if x == Map::map_width() as i32 {
+                self.x = map::MAP_WIDTH as i32 - 1;
+            } else if x == map::MAP_WIDTH as i32 {
                 self.x = 0;
             },
             Some(Tile::NotWall(pu)) => {
@@ -128,6 +136,14 @@ impl Pacman {
             Some(Tile::Wall) => false,
             _ => true
         }
+    }
+
+    fn advance_level(&mut self) {
+        self.level += 1;
+        self.x = START_POS.0;
+        self.y = START_POS.1;
+        self.ghosts.reset();
+        self.map.reset();
     }
 
     pub fn map(&self) -> &Map {
@@ -180,6 +196,6 @@ impl Pacman {
     }
 
     pub fn level_up(&mut self) {
-        self.level += 1;
+        self.map.remove_all_pellets();
     }
 }

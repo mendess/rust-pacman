@@ -149,29 +149,8 @@ impl View {
             x = 0.0;
         }
 
-        {// pacman
-            let (x, y, d) = controler.get_player();
-            let pac_texture = match d {
-                Direction::Up    => &self.pacmans[0],
-                Direction::Right => &self.pacmans[1],
-                Direction::Down  => &self.pacmans[2],
-                Direction::Left  => &self.pacmans[3],
-            };
-            Image::new().rect(offset(self.entity_sq(x, y)))
-                .draw(pac_texture, &c.draw_state, c.transform, g);
-        }
-
-
-        let pick_color = |c| if controler.frightened() { &self.frightened } else { c };
-
-        for (i, ghost) in controler.get_ghosts().iter().enumerate() {
-            Image::new().rect(offset(self.entity_sq(ghost.x(), ghost.y())))
-                .draw(pick_color(&self.ghost_textures[i]), &c.draw_state, c.transform, g);
-        }
-
+        let stats = controler.get_stats();
         {// Stats
-            let stats = controler.get_stats();
-
             let mut sc = stats.score;
             let mut i = -1;
             while sc > 0 {
@@ -213,11 +192,37 @@ impl View {
                           .draw(t, &c.draw_state, c.transform, g));
         }
 
+        if stats.lives > 0 {// pacman
+            let (x, y, d) = controler.get_player();
+            let pac_texture = match d {
+                Direction::Up    => &self.pacmans[0],
+                Direction::Right => &self.pacmans[1],
+                Direction::Down  => &self.pacmans[2],
+                Direction::Left  => &self.pacmans[3],
+            };
+            Image::new().rect(offset(self.entity_sq(x, y)))
+                .draw(pac_texture, &c.draw_state, c.transform, g);
+        }
+
+
+        let pick_color = |c| if controler.frightened() { &self.frightened } else { c };
+
+        for (i, ghost) in controler.get_ghosts().iter().enumerate() {
+            Image::new().rect(offset(self.entity_sq(ghost.x(), ghost.y())))
+                .draw(pick_color(&self.ghost_textures[i]), &c.draw_state, c.transform, g);
+        }
+
+
         // DEBUG
         // for (i, sqr) in controler.ghost_targets().iter().enumerate() {
-        //     let g_square = self.entity_sq(sqr.0, sqr.1);
-        //     Rectangle::new_border(self.ghost_colors[i], 1.0)
-        //         .draw(g_square, &c.draw_state, c.transform, g);
+        //     let ghost_colors = [
+        //         [1.0, 0.0, 0.0, 1.0],
+        //         [1.0, 0.7216, 1.0, 1.0],
+        //         [0.0, 1.0, 1.0, 1.0],
+        //         [1.0, 0.7216, 0.3176, 1.0],
+        //     ];
+        //         Rectangle::new_border(ghost_colors[i], 1.0)
+        //             .draw(offset(self.entity_sq(sqr.0, sqr.1)), &c.draw_state, c.transform, g);
         // }
     }
 
