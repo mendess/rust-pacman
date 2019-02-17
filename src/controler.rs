@@ -28,7 +28,7 @@ impl Controler {
                 Button::Keyboard(Key::H) => self.game.set_direction_intent(Direction::Left),
                 Button::Keyboard(Key::L) => self.game.set_direction_intent(Direction::Right),
                 Button::Keyboard(Key::P) => self.paused = !self.paused,
-                Button::Keyboard(Key::U) => self.game.level_up(),
+                // Button::Keyboard(Key::U) => self.game.level_up(),
                 _ => (),
             }
         }
