@@ -1,6 +1,6 @@
-pub const MAP_WIDTH :usize = 28;
-pub const MAP_HEIGHT :usize = 31;
-const MAP_STR :[&'static str;31] = [
+pub const MAP_WIDTH: usize = 28;
+pub const MAP_HEIGHT: usize = 31;
+const MAP_STR: [&'static str; 31] = [
     "############################",
     "#............##............#",
     "#.####.#####.##.#####.####.#",
@@ -32,22 +32,27 @@ const MAP_STR :[&'static str;31] = [
     "#.##########.##.##########.#",
     "#..........................#",
     "############################",
-    ];
+];
 
 fn pellet_coords() -> Vec<(usize, usize)> {
-    MAP_STR.iter()
+    MAP_STR
+        .iter()
         .enumerate()
-        .map(|(y, line)| line
-             .chars()
-             .enumerate()
-             .filter(|(_, c)| *c == '.')
-             .map(move |(x, _)| (x, y))
-             .collect::<Vec<(usize, usize)>>())
-        .fold(vec![], |mut acc, mut l|  {acc.append(&mut l); acc})
+        .map(|(y, line)| {
+            line.chars()
+                .enumerate()
+                .filter(|(_, c)| *c == '.')
+                .map(move |(x, _)| (x, y))
+                .collect::<Vec<(usize, usize)>>()
+        })
+        .fold(vec![], |mut acc, mut l| {
+            acc.append(&mut l);
+            acc
+        })
 }
 
 pub struct Map {
-    tiles: [Tile; (MAP_WIDTH*MAP_HEIGHT) as usize],
+    tiles: [Tile; (MAP_WIDTH * MAP_HEIGHT) as usize],
     pellets: u32,
     pellet_coords: Vec<(usize, usize)>,
 }
@@ -128,24 +133,31 @@ impl Map {
 
 impl Default for Map {
     fn default() -> Self {
-        let map :Vec<Tile> = MAP_STR.iter().flat_map(|x| x.chars())
-            .filter_map(|c| {
-                match c {
-                    '#' => Some(Tile::Wall),
-                    '.' => Some(Tile::NotWall(PU::Dot)),
-                    ' ' => Some(Tile::NotWall(PU::Empty)),
-                    'X' => Some(Tile::NotWall(PU::PowerUp)),
-                    'H' => Some(Tile::House),
-                    _ => None,
-                }
-            }).collect();
+        let map: Vec<Tile> = MAP_STR
+            .iter()
+            .flat_map(|x| x.chars())
+            .filter_map(|c| match c {
+                '#' => Some(Tile::Wall),
+                '.' => Some(Tile::NotWall(PU::Dot)),
+                ' ' => Some(Tile::NotWall(PU::Empty)),
+                'X' => Some(Tile::NotWall(PU::PowerUp)),
+                'H' => Some(Tile::House),
+                _ => None,
+            })
+            .collect();
         let mut m = [Tile::NotWall(PU::Empty); MAP_WIDTH * MAP_HEIGHT];
         for i in 0..map.len() {
             m[i] = map[i];
         }
         let n_pellets = map
             .iter()
-            .filter(|c| if let Tile::NotWall(PU::Dot) = c { true } else { false })
+            .filter(|c| {
+                if let Tile::NotWall(PU::Dot) = c {
+                    true
+                } else {
+                    false
+                }
+            })
             .count() as u32;
         Map {
             tiles: m,
@@ -159,7 +171,6 @@ pub struct ScanLine<'a> {
     map: &'a Map,
     line: usize,
 }
-
 
 impl<'a> Iterator for ScanLine<'a> {
     type Item = &'a [Tile];
@@ -178,7 +189,7 @@ impl<'a> Iterator for ScanLine<'a> {
 // DEBUG
 #[allow(dead_code)]
 impl Map {
-    pub fn remove_all_pellets(&mut self){
+    pub fn remove_all_pellets(&mut self) {
         self.pellets = 0;
     }
 }

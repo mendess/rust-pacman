@@ -1,25 +1,31 @@
 use super::map::{self, Map};
 use super::Direction;
 
-const BLINKY_HOME :(i32, i32) = (map::MAP_WIDTH as i32 - 3, -2);
-const PINKY_HOME  :(i32, i32) = (2 , -2);
-const INKY_HOME   :(i32, i32) = (map::MAP_WIDTH as i32 - 1 ,map::MAP_HEIGHT as i32);
-const CLYDE_HOME  :(i32, i32) = (0, map::MAP_HEIGHT as i32);
-const FRIGHTNED_TIMER :u16 = 30;
-const GHOST_MODE_TIMER :u16 = 7 * 4;
+const BLINKY_HOME: (i32, i32) = (map::MAP_WIDTH as i32 - 3, -2);
+const PINKY_HOME: (i32, i32) = (2, -2);
+const INKY_HOME: (i32, i32) = (map::MAP_WIDTH as i32 - 1, map::MAP_HEIGHT as i32);
+const CLYDE_HOME: (i32, i32) = (0, map::MAP_HEIGHT as i32);
+const FRIGHTNED_TIMER: u16 = 30;
+const GHOST_MODE_TIMER: u16 = 7 * 4;
 
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub enum GhostMode {
-    Chase, Scatter, Frightened
+    Chase,
+    Scatter,
+    Frightened,
 }
 
 #[derive(Debug, Clone, Copy)]
 pub enum Name {
-    Blinky, Pinky, Inky, Clyde
+    Blinky,
+    Pinky,
+    Inky,
+    Clyde,
 }
 
 pub enum Interaction {
-    KillPlayer, KillGhost(u8)
+    KillPlayer,
+    KillGhost(u8),
 }
 
 pub struct Ghosts {
@@ -37,7 +43,7 @@ impl Ghosts {
                 Ghost::new(Name::Blinky),
                 Ghost::new(Name::Pinky),
                 Ghost::new(Name::Inky),
-                Ghost::new(Name::Clyde)
+                Ghost::new(Name::Clyde),
             ],
             ghost_mode: GhostMode::Chase,
             mode_timer: 0,
@@ -64,7 +70,7 @@ impl Ghosts {
         for ghst in self.ghosts.iter_mut() {
             if ghst.house_timer != 0 {
                 ghst.house_move(map);
-                continue
+                continue;
             }
             let plr = (player.0, player.1);
             match self.ghost_mode {
@@ -86,7 +92,7 @@ impl Ghosts {
                         Name::Clyde => CLYDE_HOME,
                     };
                     ghst.move_to(map, target);
-                },
+                }
             }
         }
         if self.ghost_mode == GhostMode::Frightened {
@@ -98,13 +104,12 @@ impl Ghosts {
             self.mode_timer = self.mode_timer.saturating_sub(1);
             if self.mode_timer == 0 {
                 self.mode_timer = GHOST_MODE_TIMER;
-                self.ghost_mode =
-                    if self.ghost_mode == GhostMode::Chase && self.num_scatters > 0 {
-                        self.num_scatters -= 1;
-                        GhostMode::Scatter
-                    } else {
-                        GhostMode::Chase
-                    }
+                self.ghost_mode = if self.ghost_mode == GhostMode::Chase && self.num_scatters > 0 {
+                    self.num_scatters -= 1;
+                    GhostMode::Scatter
+                } else {
+                    GhostMode::Chase
+                }
             }
         }
     }
@@ -124,7 +129,11 @@ impl Ghosts {
                 Some(Interaction::KillGhost(killed))
             }
         } else {
-            if self.ghosts.iter().any(|g| g.pos == plr || g.last_pos == plr) {
+            if self
+                .ghosts
+                .iter()
+                .any(|g| g.pos == plr || g.last_pos == plr)
+            {
                 Some(Interaction::KillPlayer)
             } else {
                 None
@@ -135,7 +144,6 @@ impl Ghosts {
     pub fn reset(&mut self) {
         *self = Ghosts::new();
     }
-
 }
 
 #[derive(Debug)]
@@ -200,7 +208,7 @@ impl Ghost {
             let opt = options.swap_remove(i);
             if !map.is_wall(opt.0, opt.1) {
                 self.change_pos(opt);
-                break
+                break;
             }
         }
     }
@@ -215,7 +223,7 @@ impl Ghost {
             let opt = options.swap_remove(i);
             if map.is_house(opt.0, opt.1) {
                 self.change_pos(opt);
-                break
+                break;
             }
         }
         self.house_timer = self.house_timer.saturating_sub(1);
@@ -227,25 +235,29 @@ impl Ghost {
     }
 
     fn get_options(&self) -> Vec<(i32, i32)> {
-        let wrap = |x| if x < 0 {
-            map::MAP_WIDTH as i32 - 1
-        } else if x == map::MAP_WIDTH as i32 {
-            0
-        } else {
-            x
+        let wrap = |x| {
+            if x < 0 {
+                map::MAP_WIDTH as i32 - 1
+            } else if x == map::MAP_WIDTH as i32 {
+                0
+            } else {
+                x
+            }
         };
         vec![
             (self.pos.0 + 1, self.pos.1),
             (self.pos.0 - 1, self.pos.1),
             (self.pos.0, self.pos.1 + 1),
-            (self.pos.0, self.pos.1 - 1)
-        ].iter().cloned()
+            (self.pos.0, self.pos.1 - 1),
+        ]
+        .iter()
+        .cloned()
         .map(|(x, y)| (wrap(x), y))
         .collect()
     }
 }
 
-fn calc_pinky_target(player :(i32, i32, Direction)) -> (i32, i32) {
+fn calc_pinky_target(player: (i32, i32, Direction)) -> (i32, i32) {
     let v = player.2.to_vector();
     let plr = (player.0, player.1);
     (plr.0 + v.0 * 4, plr.1 + v.1 * 4)
@@ -261,7 +273,7 @@ fn calc_inky_target(blinky: (i32, i32), player: (i32, i32, Direction)) -> (i32, 
     (blinky.0 + tgt_vec.0, blinky.1 + tgt_vec.1)
 }
 
-fn calc_clyde_target(clyde :(i32, i32), plr :(i32, i32)) -> (i32, i32) {
+fn calc_clyde_target(clyde: (i32, i32), plr: (i32, i32)) -> (i32, i32) {
     if (((clyde.0 - plr.0).pow(2) + (clyde.1 - plr.1).pow(2)) as f64).sqrt() < 8.0 {
         CLYDE_HOME
     } else {
@@ -280,18 +292,8 @@ impl Ghosts {
                 calc_inky_target(self.ghosts[0].pos, plr),
                 calc_clyde_target(self.ghosts[3].pos, (plr.0, plr.1)),
             ],
-            GhostMode::Scatter => [
-                BLINKY_HOME,
-                PINKY_HOME,
-                INKY_HOME,
-                CLYDE_HOME,
-            ],
-            GhostMode::Frightened => [
-                (300, 300),
-                (300, 300),
-                (300, 300),
-                (300, 300),
-            ],
+            GhostMode::Scatter => [BLINKY_HOME, PINKY_HOME, INKY_HOME, CLYDE_HOME],
+            GhostMode::Frightened => [(300, 300), (300, 300), (300, 300), (300, 300)],
         }
     }
 }

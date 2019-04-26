@@ -1,16 +1,16 @@
+mod controler;
 mod pacman;
 mod view;
-mod controler;
 
-use piston::window::WindowSettings;
-use piston::event_loop::{ EventSettings, Events };
-use piston::input::{ RenderEvent, ResizeEvent };
 use glutin_window::GlutinWindow as Window;
-use opengl_graphics::{ GlGraphics, OpenGL };
+use opengl_graphics::{GlGraphics, OpenGL};
+use piston::event_loop::{EventSettings, Events};
+use piston::input::{RenderEvent, ResizeEvent};
+use piston::window::WindowSettings;
 
+use crate::controler::Controler;
 use crate::pacman::Pacman;
 use crate::view::View;
-use crate::controler::Controler;
 
 // TODO: Control the ghosts for Milady
 
@@ -37,7 +37,9 @@ fn main() {
         } else if let Some(r) = e.resize_args() {
             view.resize(r[0], r[1]);
         } else {
-            if controler.event(&e) { break }
+            if controler.event(&e) {
+                break;
+            }
         }
     }
 }

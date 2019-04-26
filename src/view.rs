@@ -1,36 +1,31 @@
-use opengl_graphics::Texture;
-use opengl_graphics::GlGraphics;
-use texture::TextureSettings;
-use graphics::{
-    Context,
-    image::Image,
-    rectangle::Rectangle,
-    circle_arc::CircleArc,
-    types::Color
-};
 use crate::controler::Controler;
-use crate::pacman::map::{Tile, PU, MAP_WIDTH, MAP_HEIGHT};
+use crate::pacman::map::{Tile, MAP_HEIGHT, MAP_WIDTH, PU};
 use crate::pacman::Direction;
+use graphics::{circle_arc::CircleArc, image::Image, rectangle::Rectangle, types::Color, Context};
+use opengl_graphics::GlGraphics;
+use opengl_graphics::Texture;
 use std::path::Path;
+use texture::TextureSettings;
 
 pub struct View {
     wall_color: Color,
-    ghost_textures: [Texture;4],
+    ghost_textures: [Texture; 4],
     frightened: Texture,
     numbers: Vec<Texture>,
-    pacmans: [Texture;4],
-    fruits: [Texture;20],
+    pacmans: [Texture; 4],
+    fruits: [Texture; 20],
     dot_color: Color,
     tile_size: f64,
     x_offset: f64,
     y_offset: f64,
 }
 
-fn load_image(name :&str) -> Texture {
+fn load_image(name: &str) -> Texture {
     Texture::from_path(
         Path::new(&format!("images/{}.png", name)),
-        &TextureSettings::new()
-        ).expect(&format!("Failed to load: {}", name))
+        &TextureSettings::new(),
+    )
+    .expect(&format!("Failed to load: {}", name))
 }
 
 impl View {
@@ -44,12 +39,11 @@ impl View {
                 textures.remove(0),
                 textures.remove(0),
                 textures.remove(0),
-                textures.remove(0)
+                textures.remove(0),
             ]
         };
         let frightened = load_image("frightened");
-        let numbers =
-            (0..10)
+        let numbers = (0..10)
             .map(|i| load_image(&i.to_string()))
             .collect::<Vec<_>>();
         let pacmans = [
@@ -79,7 +73,7 @@ impl View {
             load_image("key"),
             load_image("key"),
             load_image("key"),
-            ];
+        ];
         View {
             wall_color: [0.1294, 0.1294, 0.8706, 1.0],
             ghost_textures,
@@ -102,45 +96,48 @@ impl View {
     }
 
     pub fn draw(&self, controler: &Controler, c: &Context, g: &mut GlGraphics) {
-        let offset = |mut a :[f64; 4]| {a[0] += self.x_offset; a[1] += self.y_offset; a};
+        let offset = |mut a: [f64; 4]| {
+            a[0] += self.x_offset;
+            a[1] += self.y_offset;
+            a
+        };
         let mut x = 0.0;
         let mut y = 0.0;
         for line in controler.get_map().scan_lines() {
             for tile in line.iter() {
                 match tile {
                     Tile::Wall => {
-                        let sqr = offset(
-                            [
+                        let sqr = offset([
                             x + self.tile_size / 4.0,
                             y + self.tile_size / 4.0,
                             self.tile_size / 2.0,
-                            self.tile_size / 2.0
-                            ]);
-                        Rectangle::new(self.wall_color)
-                            .draw(sqr, &c.draw_state, c.transform, g);
-                    },
+                            self.tile_size / 2.0,
+                        ]);
+                        Rectangle::new(self.wall_color).draw(sqr, &c.draw_state, c.transform, g);
+                    }
                     Tile::NotWall(PU::Dot) => {
-                        let sqr = offset(
-                            [
-                            x + self.tile_size * (5.0/12.0),
-                            y + self.tile_size * (5.0/12.0),
+                        let sqr = offset([
+                            x + self.tile_size * (5.0 / 12.0),
+                            y + self.tile_size * (5.0 / 12.0),
                             self.tile_size / 6.0,
-                            self.tile_size / 6.0
-                            ]);
-                        Rectangle::new(self.dot_color)
-                            .draw(sqr, &c.draw_state, c.transform, g);
-                    },
+                            self.tile_size / 6.0,
+                        ]);
+                        Rectangle::new(self.dot_color).draw(sqr, &c.draw_state, c.transform, g);
+                    }
                     Tile::NotWall(PU::PowerUp) => {
-                        let sqr = offset(
-                            [
-                            x + self.tile_size * (3.0/8.0),
-                            y + self.tile_size * (3.0/8.0),
+                        let sqr = offset([
+                            x + self.tile_size * (3.0 / 8.0),
+                            y + self.tile_size * (3.0 / 8.0),
                             self.tile_size / 4.0,
-                            self.tile_size / 4.0
-                            ]);
-                        CircleArc::new(self.dot_color, self.tile_size / 4.0, 0.0, 2.0 * 3.14)
-                            .draw(sqr, &c.draw_state, c.transform, g);
-                    },
+                            self.tile_size / 4.0,
+                        ]);
+                        CircleArc::new(self.dot_color, self.tile_size / 4.0, 0.0, 2.0 * 3.14).draw(
+                            sqr,
+                            &c.draw_state,
+                            c.transform,
+                            g,
+                        );
+                    }
                     _ => (),
                 }
                 x += self.tile_size;
@@ -150,7 +147,8 @@ impl View {
         }
 
         let stats = controler.get_stats();
-        {// Stats
+        {
+            // Stats
             let mut sc = stats.score;
             let mut i = -1;
             while sc > 0 {
@@ -160,21 +158,27 @@ impl View {
             sc = stats.score;
             while sc > 0 {
                 let d = sc % 10;
-                let sq = offset(
-                    [
+                let sq = offset([
                     (MAP_WIDTH / 2) as f64 * self.tile_size + i as f64 * self.tile_size * 1.702,
                     self.tile_size * -2.0,
                     self.tile_size,
-                    self.tile_size * 1.702
-                    ]);
-                Image::new().rect(sq)
-                    .draw(&self.numbers[d as usize], &c.draw_state, c.transform, g);
+                    self.tile_size * 1.702,
+                ]);
+                Image::new().rect(sq).draw(
+                    &self.numbers[d as usize],
+                    &c.draw_state,
+                    c.transform,
+                    g,
+                );
                 sc = sc / 10;
                 i -= 1;
             }
 
             for i in 0..stats.lives {
-                Image::new().rect(offset(self.entity_sq(i as i32 * 2, (MAP_HEIGHT + 1) as i32)))
+                Image::new()
+                    .rect(offset(
+                        self.entity_sq(i as i32 * 2, (MAP_HEIGHT + 1) as i32),
+                    ))
                     .draw(&self.pacmans[3], &c.draw_state, c.transform, g);
             }
 
@@ -183,35 +187,51 @@ impl View {
             self.fruits[cap_at_13(stats.level.saturating_sub(7))..cap_at_20(stats.level)]
                 .iter()
                 .enumerate()
-                .for_each(|(i, t)|
-                          Image::new()
-                          .rect(offset(self.entity_sq(
-                                      (MAP_WIDTH - i - 1) as i32,
-                                      (MAP_HEIGHT + 1) as i32)
-                                      ))
-                          .draw(t, &c.draw_state, c.transform, g));
+                .for_each(|(i, t)| {
+                    Image::new()
+                        .rect(offset(self.entity_sq(
+                            (MAP_WIDTH - i - 1) as i32,
+                            (MAP_HEIGHT + 1) as i32,
+                        )))
+                        .draw(t, &c.draw_state, c.transform, g)
+                });
         }
 
-        if stats.lives > 0 {// pacman
+        if stats.lives > 0 {
+            // pacman
             let (x, y, d) = controler.get_player();
             let pac_texture = match d {
-                Direction::Up    => &self.pacmans[0],
+                Direction::Up => &self.pacmans[0],
                 Direction::Right => &self.pacmans[1],
-                Direction::Down  => &self.pacmans[2],
-                Direction::Left  => &self.pacmans[3],
+                Direction::Down => &self.pacmans[2],
+                Direction::Left => &self.pacmans[3],
             };
-            Image::new().rect(offset(self.entity_sq(x, y)))
-                .draw(pac_texture, &c.draw_state, c.transform, g);
+            Image::new().rect(offset(self.entity_sq(x, y))).draw(
+                pac_texture,
+                &c.draw_state,
+                c.transform,
+                g,
+            );
         }
 
-
-        let pick_color = |c| if controler.frightened() { &self.frightened } else { c };
+        let pick_color = |c| {
+            if controler.frightened() {
+                &self.frightened
+            } else {
+                c
+            }
+        };
 
         for (i, ghost) in controler.get_ghosts().iter().enumerate() {
-            Image::new().rect(offset(self.entity_sq(ghost.x(), ghost.y())))
-                .draw(pick_color(&self.ghost_textures[i]), &c.draw_state, c.transform, g);
+            Image::new()
+                .rect(offset(self.entity_sq(ghost.x(), ghost.y())))
+                .draw(
+                    pick_color(&self.ghost_textures[i]),
+                    &c.draw_state,
+                    c.transform,
+                    g,
+                );
         }
-
 
         // DEBUG
         // for (i, sqr) in controler.ghost_targets().iter().enumerate() {
@@ -231,8 +251,7 @@ impl View {
             x as f64 * self.tile_size,
             y as f64 * self.tile_size,
             self.tile_size,
-            self.tile_size
+            self.tile_size,
         ]
     }
 }
-
